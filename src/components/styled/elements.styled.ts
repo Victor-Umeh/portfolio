@@ -1,11 +1,11 @@
 import styled from "styled-components";
+import { CssPropsType } from "../../utils/styled-prop-model";
 
-export const Button = styled.button<props: {}>`
+export const Button = styled.button<CssPropsType>`
   outline: none;
   border: none;
   width: max-content;
   background: transparent;
-  ...${props}
 `;
 
 export const StyledNav = styled.div`
@@ -16,4 +16,5 @@ export const StyledNav = styled.div`
   margin-inline: auto;
   background-color: #faf9f6;
   padding: 2.6rem;
+  font-family: "";
 `;
