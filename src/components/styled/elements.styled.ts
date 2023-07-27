@@ -1,5 +1,13 @@
 import styled from "styled-components";
 
+export const Button = styled.button<props: {}>`
+  outline: none;
+  border: none;
+  width: max-content;
+  background: transparent;
+  ...${props}
+`;
+
 export const StyledNav = styled.div`
   width: auto;
   display: flex;

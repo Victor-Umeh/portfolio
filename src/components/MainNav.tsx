@@ -1,7 +1,6 @@
-import { StyledNav } from "./styled/nav.styled";
-import { Button } from "./styled/button.styled";
-import homeIcon from "../../public/home-icon-circle.svg";
-import darkModeIcon from "../../public/moon-icon.svg";
+import { StyledNav, Button } from "./styled/elements.styled";
+import homeIcon from "../assets/home-icon-circle.svg";
+import darkModeIcon from "../assets/moon-icon.svg";
 
 const MainNav = () => {
   return (
