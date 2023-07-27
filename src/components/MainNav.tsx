@@ -1,33 +1,36 @@
-import { StyledNav, Button } from "./styled/elements.styled";
+import { useState } from "react";
+import {
+  StyledNav,
+  Hamburger,
+  ColorMode,
+  Line,
+} from "./styled/elements.styled";
 import homeIcon from "../assets/home-icon-circle.svg";
-import darkModeIcon from "../assets/moon-icon.svg";
+import darkThemeIcon from "../assets/dark-theme.svg";
+import lightThemeIcon from "../assets/light-theme.svg";
 
-const MainNav = () => {
+const MainNav: React.FC = () => {
+  const [theme, setTheme] = useState<string>("light");
+
   return (
     <StyledNav>
-      <img src={homeIcon} alt="" />
-      <Button style={{ marginLeft: "auto", marginRight: "1rem" }}>
-        <img src={darkModeIcon} alt="" />
-      </Button>
-      <Button>
-        <span
-          style={{
-            height: "3px",
-            width: "4.4rem",
-            backgroundColor: "#474444",
-            display: "block",
-            marginBottom: ".7rem",
-          }}
-        ></span>
-        <span
-          style={{
-            height: "3px",
-            width: "4.4rem",
-            backgroundColor: "#474444",
-            display: "block",
-          }}
-        ></span>
-      </Button>
+      <img src={homeIcon} alt="Home icon" />
+
+      <ColorMode
+        onClick={() => {
+          setTheme((prev) => (prev === "light" ? "dark" : "light"));
+        }}
+      >
+        <img
+          src={theme === "light" ? darkThemeIcon : lightThemeIcon}
+          alt="color theme switcher"
+        />
+      </ColorMode>
+
+      <Hamburger>
+        <Line />
+        <Line />
+      </Hamburger>
     </StyledNav>
   );
 };
