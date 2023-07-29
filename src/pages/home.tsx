@@ -11,12 +11,14 @@ const Home: React.FC = () => {
   return (
     <Main>
       <HeroSection>
+
         <HeroCard>
           <CardHeader>HI, am Victor</CardHeader>
-          <CardHeader $fontz="2rem" $fontf=" Antonio" as="span">
+          <CardHeader as="span" $fontz="2rem" $fontf=" Antonio">
             Frontend.......
           </CardHeader>
         </HeroCard>
+        
       </HeroSection>
     </Main>
   );

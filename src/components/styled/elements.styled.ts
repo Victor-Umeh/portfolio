@@ -50,6 +50,7 @@ export const StyledNav = styled.nav<Props>`
   background-color: ${({ theme }) => theme.body};
   padding-block: 2rem;
   padding-inline: clamp(2rem, 8vw, 20rem);
+  z-index: 999;
 
   /* 
   @media (min-width: 481px) {

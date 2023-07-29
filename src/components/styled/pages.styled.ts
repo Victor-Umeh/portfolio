@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import imgMobile from "../../assets/mobile-img.jpg";
+// import imgMobile from "../../assets/mobile-img.jpg";
+import img from "../../assets/desktop-img.jpg";
 
 export const StyledPicture = styled.picture`
   width: 100%;
@@ -7,12 +8,17 @@ export const StyledPicture = styled.picture`
 `;
 
 export const HeroSection = styled.section`
-  background-image: url(${imgMobile});
-  background-repeat: no-repeat;
-  background-size: contain;
+  background: url(${img}) 40% no-repeat;
+  background-size: cover;
   display: grid;
   place-items: center;
-  height: 50vh;
+  min-height: 50vh;
+
+  @media (min-width: 768px) {
+    background-position: right 0%;  
+    min-height: calc(100vh - 8rem);
+    width: 60%;
+  }
 `;
 
 export const HeroCard = styled.section`
@@ -20,6 +26,7 @@ export const HeroCard = styled.section`
   justify-content: center;
   flex-direction: column;
   width: 90%;
+  max-width: 500px;
   height: 245px;
   border: 0.5px solid #474444;
   background: linear-gradient(
@@ -31,6 +38,7 @@ export const HeroCard = styled.section`
     rgba(255, 0, 0, 0.76) 140%
   );
   backdrop-filter: blur(3px);
+  z-index: 0;
 `;
 export const CardHeader = styled.h1<{ $fontz?: string; $fontf?: string }>`
   text-align: center;
@@ -40,3 +48,7 @@ export const CardHeader = styled.h1<{ $fontz?: string; $fontf?: string }>`
   font-weight: 400;
   text-transform: uppercase;
 `;
+
+export const AboutSect = styled.section`
+  text-align: center;
+`
