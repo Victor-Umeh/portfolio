@@ -20,7 +20,9 @@ body {
   font-family: 'Anton', sans-serif;
   font-size: 1.6rem;
   background-color: #FAF9F6;
+  /* background-color: #171B20; */
 // font-family: 'Poppins', sans-serif;
+/* #171B20 */
 }
 `;
 

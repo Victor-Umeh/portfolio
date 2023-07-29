@@ -4,24 +4,22 @@ import { ThemeProvider } from "styled-components";
 import {
   StyledNav,
   Hamburger,
-  ColorMode,
+  StyledBtn,
   Line,
   List,
   Link,
 } from "./styled/elements.styled";
-import homeIcon from "../assets/home-icon-circle.svg";
+// import homeIcon from "../assets/home-icon-circle.svg";
 import darkThemeIcon from "../assets/dark-theme.svg";
 import lightThemeIcon from "../assets/light-theme.svg";
 
 const LightTheme = {
-  header: "#171B20",
   text: "#474444",
   body: "#F5F5F5",
   accent: "#171B20",
 };
 
 const DarkTheme = {
-  header: "#F5F5F5",
   text: "#D9D9D9",
   body: "#171B20",
   accent: "#F5F5F5",
@@ -46,8 +44,7 @@ const MainNav: React.FC = () => {
           <circle cx="17.7778" cy="5" r="5" fill={logoColor} />
           <circle cx="30.5555" cy="5" r="5" fill={logoColor} />
         </svg>
-
-        <ColorMode
+        <StyledBtn
           onClick={() => {
             setTheme(!theme);
           }}
@@ -56,16 +53,21 @@ const MainNav: React.FC = () => {
             src={theme ? darkThemeIcon : lightThemeIcon}
             alt="color theme switcher"
           />
-        </ColorMode>
+        </StyledBtn>
 
         <Hamburger>
           <Line />
           <Line />
         </Hamburger>
 
-        {/* <List>
-          <Link></Link>
-        </List> */}
+        <List>
+          <Link>Home</Link>
+          <Link>Work</Link>
+          <Link>About</Link>
+          <Link>Resume</Link>
+
+          <img src={""} alt="" />
+        </List>
       </StyledNav>
     </ThemeProvider>
   );
