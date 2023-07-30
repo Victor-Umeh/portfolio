@@ -1,15 +1,21 @@
 // import birdImgMobile from "../assets/mobile-img.jpg";
 // import birdImgDesktop from "../assets/desktop-img.jpg";
+
 import {
   HeroSection,
   HeroCard,
   CardHeader,
   AboutSect,
   SubText,
-  NameTag,
   AboutContent,
 } from "../components/styled/home.styled";
-import { Main, StyledCta } from "../components/styled/elements.styled";
+import {
+  Main,
+  CtaButton,
+  Contact,
+  NameTag,
+  // ContactButton,
+} from "../components/styled/elements.styled";
 
 const Home: React.FC = () => {
   return (
@@ -17,7 +23,11 @@ const Home: React.FC = () => {
       <HeroSection>
         <HeroCard>
           <CardHeader>Hi, I am Victor</CardHeader>
-          <CardHeader as="span" $fontz="2rem" $fontf=" Antonio">
+          <CardHeader
+            as="span"
+            $fontf=" Antonio"
+            style={{ fontSize: "clamp(1.5rem, 2.5vw, 2rem)" }}
+          >
             Frontend.......
           </CardHeader>
         </HeroCard>
@@ -26,7 +36,7 @@ const Home: React.FC = () => {
       <AboutSect>
         <AboutContent>
           <NameTag>Victor Onyeka Umeh.</NameTag>
-          <SubText as="h2" $fontz="2rem" marginTop="5rem" $fontw="bold">
+          <SubText as="h2" $fontz="2.7rem" marginTop="5rem" $fontw="bold">
             About
           </SubText>
           <SubText
@@ -39,10 +49,11 @@ const Home: React.FC = () => {
             Hi, I am a frontend developer, logo designer and photo editor in
             Jos, Nigeria. Eager to expand knowledge and skills
           </SubText>
+
+          <CtaButton>Explore</CtaButton>
         </AboutContent>
       </AboutSect>
-
-      <StyledCta></StyledCta>
+      <Contact pos={true}>Contact</Contact>
     </Main>
   );
 };

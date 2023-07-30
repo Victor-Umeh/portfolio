@@ -1,5 +1,4 @@
 import styled from "styled-components";
-// import imgMobile from "../../assets/mobile-img.jpg";
 import img from "../../assets/desktop-img.jpg";
 
 interface HeaderProps {
@@ -78,6 +77,7 @@ export const SubText = styled(CardHeader)`
   color: ${({ color }) => color};
   margin-inline: auto;
   font-family: "poppins";
+  text-transform: none;
   @media (min-width: 768px) {
     margin-inline: 0;
     margin-top: 1rem;
@@ -87,6 +87,7 @@ export const AboutSect = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  flex-direction: column;
   text-align: center;
   width: 90%;
   margin-inline: auto;
@@ -105,24 +106,10 @@ export const AboutContent = styled.section`
   align-items: center;
   justify-content: center;
   height: 90%;
+  /* border: 2px solid red; */
 
   @media (min-width: 768px) {
     align-items: flex-start;
     padding-inline: 3rem;
-  }
-`;
-
-export const NameTag = styled.span`
-  position: absolute;
-  top: 0.5rem;
-
-  font-size: 1.1rem;
-  font-family: "poppins";
-  color: #474444;
-  width: max-content;
-
-  @media (min-width: 768px) {
-    top: 0;
-    right: 0;
   }
 `;
