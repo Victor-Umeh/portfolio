@@ -15,13 +15,15 @@ import lightThemeIcon from "../assets/light-theme.svg";
 
 const LightTheme = {
   text: "#474444",
-  body: "#F5F5F5",
+  body: "#FCFBF8",
   accent: "#171B20",
+  heroText: "#474444",
 };
 
 const DarkTheme = {
   text: "#D9D9D9",
   body: "#171B20",
+  heroText: "#474444",
   accent: "#F5F5F5",
 };
 

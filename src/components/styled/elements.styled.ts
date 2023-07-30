@@ -6,8 +6,8 @@ interface Props {
 }
 
 export const Button = styled.button`
-  outline: none;
-  border: none;
+  outline: 0px;
+  border: 0px;
   background: transparent;
 `;
 
@@ -120,6 +120,21 @@ export const Link = styled.li<Props>`
   }
 `;
 
-export const Main = styled.main`
+export const Main = styled.main<Props>`
   width: 100%;
+  background-color: ${({ theme }) => theme.body};
+
+  @media (min-width: 481px) {
+  }
+  @media (min-width: 768px) {
+    display: flex;
+  }
+  /*
+@media (min-width: 1025px) {
+ 
+} */
+`;
+
+export const StyledCta = styled(Button)`
+  padding: 1rem 2rem;
 `;
