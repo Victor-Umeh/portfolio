@@ -42,18 +42,23 @@ export const HeroCard = styled.section`
   height: 245px;
   min-height: 275px;
   border: 0.5px solid #474444;
-  background: linear-gradient(
+  /* background: linear-gradient(
     218deg,
     rgba(255, 255, 255, 0) 0%,
     rgba(242, 235, 171, 0.1) 10.47%,
     rgba(242, 235, 171, 0.1) 10.48%,
     rgba(215, 193, 0, 0.3) 76.96%,
     rgba(255, 0, 0, 0.76) 140%
+  ); */
+  background: linear-gradient(
+    218deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(83, 234, 255, 0.1) 24.48%,
+    rgba(86, 141, 138, 0.3) 73.96%,
+    rgba(11, 39, 48, 0.76) 140%
   );
   backdrop-filter: blur(3px);
   z-index: 0;
-  @media (min-width: 768px) {
-  }
 `;
 export const CardHeader = styled.h1<HeaderProps>`
   text-align: center;

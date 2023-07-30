@@ -86,11 +86,14 @@ export const List = styled.ul<Props>`
   width: 100%;
   height: 100vh;
   position: absolute;
-  /* display: none; */
+  display: none;
+  /* top: -100rem; */
   top: 7.7rem;
   left: 0;
   right: 0;
   bottom: 0;
+  /* height: 0%;
+  visibility: hidden; */
   /* 
   @media (min-width: 481px) {
   
@@ -142,16 +145,15 @@ export const CtaButton = styled(Button)`
   position: relative;
   padding: 1rem 4rem;
   color: ${({ theme }) => theme.accent};
-  margin-top: ${({ pos }) => (pos ? 0 : "3rem")};
+  margin-top: 1.5rem;
   border: 1px solid #474444;
   border-radius: 5rem;
   overflow: hidden;
-  transition: all 600ms;
   transform-origin: left;
-  cursor: pointer;
-
-  right: ${({ pos }) => pos && "50%"};
+  right: ${({ pos }) => pos && "-50%"};
   transform: ${({ pos }) => pos && "translateX(-50%)"};
+  transition: all 600ms;
+  cursor: pointer;
 
   &:before {
     content: "";
@@ -166,7 +168,6 @@ export const CtaButton = styled(Button)`
   }
 
   &:hover {
-    transform: scaleX(1.1);
     color: ${({ theme }) => theme.text};
   }
 
