@@ -76,52 +76,81 @@ export const Line = styled.span<Props>`
   display: block;
 `;
 
+export const Menu = styled.div<Props>`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4vw;
+  padding-top: 8rem;
+  background-color: ${({ theme }) => theme.body};
+  height: 100vh;
+  position: absolute;
+  top: 7.6rem;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* height: 0%;*/
+  /* visibility: hidden;  */
+`;
+
 export const List = styled.ul<Props>`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 6vw;
-  padding-top: 15rem;
+  gap: clamp(2rem, 5vw, 6rem);
   background-color: ${({ theme }) => theme.body};
-  width: 100%;
-  height: 100vh;
-  position: absolute;
-  display: none;
-  /* top: -100rem; */
-  top: 7.7rem;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  /* height: 0%;
-  visibility: hidden; */
-  /* 
-  @media (min-width: 481px) {
-  
-  }
-*/
+
   @media (min-width: 768px) {
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
-    gap: clamp(3rem, 8vw, 12rem);
   }
-  /*
-  @media (min-width: 1025px) {
-   
-  } */
 `;
 
 export const Link = styled.li<Props>`
   font-family: "Poppins", sans-serif;
   font-size: 3rem;
+  padding: 0.5rem;
   list-style: none;
   color: ${({ theme }) => theme.accent};
-  transition: all 300ms;
+  transform-origin: center;
+  transition: all 600ms;
   cursor: pointer;
 
   &:hover {
-    font-weight: bold;
-    font-size: 3.5rem;
+    font-weight: 600;
+    transform: scale(1.2);
+  }
+`;
+
+export const SocialBlock = styled(List)`
+  position: relative;
+  font-size: 2rem;
+  gap: 0.5rem;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    /* align-items: center; */
+    /* justify-content: center; */
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: -2rem;
+    width: 100vw;
+    height: 1px;
+    background-color: ${({ theme }) => theme.text};
+  }
+`;
+
+export const SocialLink = styled.a`
+  font-size: 2.6rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.6;
   }
 `;
 
@@ -130,15 +159,9 @@ export const Main = styled.main<Props>`
   background-color: ${({ theme }) => theme.body};
   position: relative;
 
-  @media (min-width: 481px) {
-  }
   @media (min-width: 768px) {
     display: flex;
   }
-  /*
-@media (min-width: 1025px) {
- 
-} */
 `;
 
 export const CtaButton = styled(Button)`

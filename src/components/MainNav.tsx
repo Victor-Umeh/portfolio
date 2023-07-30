@@ -1,13 +1,21 @@
 import { useState } from "react";
 import { ThemeProvider } from "styled-components";
-
+import {
+  BiLogoGmail,
+  BiLogoTwitter,
+  BiLogoLinkedinSquare,
+} from "react-icons/bi";
+import { IoLogoWhatsapp } from "react-icons/io";
 import {
   StyledNav,
   Hamburger,
   StyledBtn,
   Line,
+  Menu,
   List,
   Link,
+  SocialLink,
+  SocialBlock,
 } from "./styled/elements.styled";
 // import homeIcon from "../assets/home-icon-circle.svg";
 import darkThemeIcon from "../assets/dark-theme.svg";
@@ -31,6 +39,7 @@ const MainNav: React.FC = () => {
   const [theme, setTheme] = useState<boolean>(true);
 
   const logoColor = theme ? "#171B20" : "#F5F5F5";
+  const isLight = theme ? LightTheme : DarkTheme;
 
   return (
     <ThemeProvider theme={theme ? LightTheme : DarkTheme}>
@@ -62,14 +71,29 @@ const MainNav: React.FC = () => {
           <Line />
         </Hamburger>
 
-        <List>
-          <Link>Home</Link>
-          <Link>Work</Link>
-          <Link>About</Link>
-          <Link>Resume</Link>
-
+        <Menu>
+          <List>
+            <Link>Home</Link>
+            <Link>Work</Link>
+            <Link>About</Link>
+            <Link>Resume</Link>
+          </List>
+          <SocialBlock as="div">
+            <SocialLink href="">
+              <BiLogoLinkedinSquare style={{ color: isLight.text }} />
+            </SocialLink>
+            <SocialLink href="">
+              <IoLogoWhatsapp style={{ color: isLight.text }} />
+            </SocialLink>
+            <SocialLink href="">
+              <BiLogoTwitter style={{ color: isLight.text }} />
+            </SocialLink>
+            <SocialLink href="">
+              <BiLogoGmail style={{ color: isLight.text }} />
+            </SocialLink>
+          </SocialBlock>
           <img src={""} alt="" />
-        </List>
+        </Menu>
       </StyledNav>
     </ThemeProvider>
   );
