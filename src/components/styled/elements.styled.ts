@@ -7,6 +7,16 @@ interface Props {
   auto?: boolean;
 }
 
+export const Main = styled.main<Props>`
+  width: 100%;
+  background-color: ${({ theme }) => theme.body};
+  position: relative;
+
+  @media (min-width: 768px) {
+    display: flex;
+  }
+`;
+
 export const Button = styled.button<Props>`
   outline: 0px;
   border: 0px;
@@ -156,16 +166,6 @@ export const SocialLink = styled.a`
 
   &:hover {
     opacity: 0.5;
-  }
-`;
-
-export const Main = styled.main<Props>`
-  width: 100%;
-  background-color: ${({ theme }) => theme.body};
-  position: relative;
-
-  @media (min-width: 768px) {
-    display: flex;
   }
 `;
 
