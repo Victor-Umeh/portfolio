@@ -4,6 +4,7 @@ import styled from "styled-components";
 interface Props {
   theme: {};
   pos?: boolean;
+  auto?: boolean;
 }
 
 export const Button = styled.button<Props>`
@@ -18,7 +19,7 @@ export const StyledBtn = styled(Button)`
   justify-content: center;
   width: 26px;
   aspect-ratio: 1;
-  margin-left: auto;
+  margin-left: ${({ auto }) => auto && "auto"};
   margin-right: 2rem;
   padding: 0.4rem;
   border: 1px solid ${({ theme }) => theme.accent};
@@ -80,24 +81,24 @@ export const Menu = styled.div<Props>`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 4vw;
+  gap: 0vw;
   padding-top: 8rem;
   background-color: ${({ theme }) => theme.body};
   height: 100vh;
-  position: absolute;
-  top: 7.6rem;
+  position: fixed;
+  top: 6.5rem;
   left: 0;
   right: 0;
   bottom: 0;
-  /* height: 0%;*/
-  /* visibility: hidden;  */
+  /* display: none; */
+  visibility: hidden;
 `;
 
 export const List = styled.ul<Props>`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: clamp(2rem, 5vw, 6rem);
+  gap: min(3vw, 4rem);
   background-color: ${({ theme }) => theme.body};
 
   @media (min-width: 768px) {
@@ -126,21 +127,24 @@ export const Link = styled.li<Props>`
 export const SocialBlock = styled(List)`
   position: relative;
   font-size: 2rem;
-  gap: 0.5rem;
-
-  @media (min-width: 768px) {
-    flex-direction: row;
-    /* align-items: center; */
-    /* justify-content: center; */
-  }
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+  flex-direction: row;
+  width: 34vw;
+  min-width: max-content;
+  margin-top: 1rem;
 
   &::before {
     position: absolute;
     content: "";
-    top: -2rem;
-    width: 100vw;
-    height: 1px;
+    width: 100%;
+    height: 5rem;
+    opacity: 0.1;
     background-color: ${({ theme }) => theme.text};
+  }
+
+  @media (min-width: 768px) {
   }
 `;
 
@@ -148,9 +152,10 @@ export const SocialLink = styled.a`
   font-size: 2.6rem;
   padding: 0.5rem 1rem;
   cursor: pointer;
+  z-index: 10;
 
   &:hover {
-    opacity: 0.6;
+    opacity: 0.5;
   }
 `;
 

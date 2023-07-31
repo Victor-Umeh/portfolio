@@ -55,10 +55,12 @@ const MainNav: React.FC = () => {
           <circle cx="17.7778" cy="5" r="5" fill={logoColor} />
           <circle cx="30.5555" cy="5" r="5" fill={logoColor} />
         </svg>
+        <StyledBtn auto={true}>En</StyledBtn>
         <StyledBtn
           onClick={() => {
             setTheme(!theme);
           }}
+          auto={false}
         >
           <img
             src={theme ? darkThemeIcon : lightThemeIcon}
@@ -78,6 +80,7 @@ const MainNav: React.FC = () => {
             <Link>About</Link>
             <Link>Resume</Link>
           </List>
+
           <SocialBlock as="div">
             <SocialLink href="">
               <BiLogoLinkedinSquare style={{ color: isLight.text }} />
