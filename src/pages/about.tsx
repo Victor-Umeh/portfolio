@@ -1,5 +1,6 @@
-import { Main } from "../components/styled/elements.styled";
+import { Main, Contact } from "../components/styled/elements.styled";
 import { StyledCanvas, AboutWrapper } from "../components/styled/About.styled";
+
 const about = () => {
   return (
     <Main>
@@ -32,11 +33,12 @@ const about = () => {
           </div>
         </StyledCanvas>
         <StyledCanvas min="30vh" width="35%">
-          <div className="article">
+          <div className="article hobbies__img">
             <p>Hobbies</p>
           </div>
         </StyledCanvas>
       </AboutWrapper>
+      <Contact pos={true}>Contact</Contact>
     </Main>
   );
 };

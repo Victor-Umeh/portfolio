@@ -5,12 +5,15 @@ interface Props {
   theme: {};
   pos?: boolean;
   auto?: boolean;
+  top?: string;
 }
 
 export const Main = styled.main<Props>`
   width: 100%;
   background-color: ${({ theme }) => theme.body};
   position: relative;
+  border: 1px solid red;
+  height: 90vh;
 
   @media (min-width: 768px) {
     display: flex;
@@ -214,6 +217,7 @@ export const CtaButton = styled(Button)`
 export const Contact = styled(CtaButton)`
   background-color: #179d75;
   color: white;
+  top: ${({ top }) => top && ""};
 
   &:before {
     background: white;
