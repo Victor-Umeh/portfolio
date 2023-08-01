@@ -4,8 +4,38 @@ const about = () => {
   return (
     <Main>
       <AboutWrapper>
-      <StyledCanvas min="58vh">About</StyledCanvas>
-      <StyledCanvas min="30vh">About</StyledCanvas>
+        <StyledCanvas min="58vh" width="65%">
+          <div className="article">
+            <div>
+              <p>Hi,</p>
+              <p>My name is Victor Onyeka Umeokoli.</p>
+              <p>
+                I am a frontend developer, logo & vector designer and an
+                aspiring blockchain developer.
+              </p>
+            </div>
+
+            <div>
+              <h3>Hobbies</h3>
+              <p>
+                I love hiking, reading fictional and comic books, learning new
+                things that catches my interest or that is required for a job.
+                On my leisure time I watch soccer or animes.
+              </p>
+            </div>
+            <p>
+              My technical skills and tools I work with are HTML, CSS,
+              tailwindcss, SASS, styled-components, git, Javascript, Typescript,
+              Figma, Adobe XD, Photoshop, Illustrator, Lightroom and others
+              .......
+            </p>
+          </div>
+        </StyledCanvas>
+        <StyledCanvas min="30vh" width="35%">
+          <div className="article">
+            <p>Hobbies</p>
+          </div>
+        </StyledCanvas>
       </AboutWrapper>
     </Main>
   );

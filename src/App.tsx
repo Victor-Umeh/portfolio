@@ -1,3 +1,5 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import GlobalStyles from "./components/styled/global.styled";
 import MainNav from "./components/MainNav";
 import Home from "./pages/home";
@@ -8,8 +10,12 @@ const App = () => {
     <>
       <GlobalStyles />
       <MainNav />
-      {/* <Home /> */}
-      <About />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 };
