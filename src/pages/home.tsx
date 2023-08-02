@@ -1,6 +1,3 @@
-// import birdImgMobile from "../assets/mobile-img.jpg";
-// import birdImgDesktop from "../assets/desktop-img.jpg";
-
 import {
   HeroSection,
   HeroCard,
@@ -9,13 +6,9 @@ import {
   SubText,
   AboutContent,
 } from "../components/styled/home.styled";
-import {
-  Main,
-  CtaButton,
-  Contact,
-  NameTag,
-  // ContactButton,
-} from "../components/styled/elements.styled";
+import { ExploreBtn } from "../components/styled/ExploreBtn.styled";
+import { Contact } from "../components/styled/ContactBtn.styled";
+import { Main, NameTag } from "../components/styled/elements.styled";
 
 const Home: React.FC = () => {
   return (
@@ -50,7 +43,7 @@ const Home: React.FC = () => {
             Jos, Nigeria. Eager to expand knowledge and skills
           </SubText>
 
-          <CtaButton>Explore</CtaButton>
+          <ExploreBtn>Explore</ExploreBtn>
         </AboutContent>
       </AboutSect>
       <Contact pos={true}>Contact</Contact>

@@ -1,15 +1,22 @@
 import styled from "styled-components";
-// import { CssPropsType } from ../../utils/styled-prop-model;
-
+import { Button } from "./Button.styled";
 interface Props {
   theme: {};
   pos?: boolean;
+  auto?: boolean;
+  top?: string;
 }
 
-export const Button = styled.button<Props>`
-  outline: 0px;
-  border: 0px;
-  background: transparent;
+export const Main = styled.main<Props>`
+  width: 100%;
+  background-color: ${({ theme }) => theme.body};
+  position: relative;
+  border: 1px solid red;
+  height: 89vh;
+
+  @media (min-width: 768px) {
+    display: flex;
+  }
 `;
 
 export const StyledBtn = styled(Button)`
@@ -18,7 +25,7 @@ export const StyledBtn = styled(Button)`
   justify-content: center;
   width: 26px;
   aspect-ratio: 1;
-  margin-left: auto;
+  margin-left: ${({ auto }) => auto && "auto"};
   margin-right: 2rem;
   padding: 0.4rem;
   border: 1px solid ${({ theme }) => theme.accent};
@@ -80,24 +87,24 @@ export const Menu = styled.div<Props>`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 4vw;
+  gap: 0vw;
   padding-top: 8rem;
   background-color: ${({ theme }) => theme.body};
   height: 100vh;
-  position: absolute;
-  top: 7.6rem;
+  position: fixed;
+  top: 6.5rem;
   left: 0;
   right: 0;
   bottom: 0;
-  /* height: 0%;*/
-  /* visibility: hidden;  */
+  /* display: none; */
+  visibility: hidden;
 `;
 
 export const List = styled.ul<Props>`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: clamp(2rem, 5vw, 6rem);
+  gap: min(3vw, 4rem);
   background-color: ${({ theme }) => theme.body};
 
   @media (min-width: 768px) {
@@ -126,21 +133,24 @@ export const Link = styled.li<Props>`
 export const SocialBlock = styled(List)`
   position: relative;
   font-size: 2rem;
-  gap: 0.5rem;
-
-  @media (min-width: 768px) {
-    flex-direction: row;
-    /* align-items: center; */
-    /* justify-content: center; */
-  }
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+  flex-direction: row;
+  width: 34vw;
+  min-width: max-content;
+  margin-top: 1rem;
 
   &::before {
     position: absolute;
     content: "";
-    top: -2rem;
-    width: 100vw;
-    height: 1px;
+    width: 100%;
+    height: 5rem;
+    opacity: 0.1;
     background-color: ${({ theme }) => theme.text};
+  }
+
+  @media (min-width: 768px) {
   }
 `;
 
@@ -148,80 +158,12 @@ export const SocialLink = styled.a`
   font-size: 2.6rem;
   padding: 0.5rem 1rem;
   cursor: pointer;
+  z-index: 10;
 
   &:hover {
-    opacity: 0.6;
+    opacity: 0.5;
   }
 `;
-
-export const Main = styled.main<Props>`
-  width: 100%;
-  background-color: ${({ theme }) => theme.body};
-  position: relative;
-
-  @media (min-width: 768px) {
-    display: flex;
-  }
-`;
-
-export const CtaButton = styled(Button)`
-  position: relative;
-  padding: 1rem 4rem;
-  color: ${({ theme }) => theme.accent};
-  margin-top: 1.5rem;
-  border: 1px solid #474444;
-  border-radius: 5rem;
-  overflow: hidden;
-  transform-origin: left;
-  right: ${({ pos }) => pos && "-50%"};
-  transform: ${({ pos }) => pos && "translateX(-50%)"};
-  transition: all 600ms;
-  cursor: pointer;
-
-  &:before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: #474444;
-    opacity: 0.2;
-    transform: scaleX(0);
-    transform-origin: center;
-    z-index: -100;
-    transition: all 600ms;
-  }
-
-  &:hover {
-    color: ${({ theme }) => theme.text};
-  }
-
-  &:hover:before {
-    transform: scaleX(1);
-  }
-
-  @media (min-width: 768px) {
-    position: ${({ pos }) => (pos ? "absolute" : "relative")};
-    right: ${({ pos }) => pos && "13rem"};
-    bottom: ${({ pos }) => pos && "10rem"};
-    transform: translateX(0);
-  }
-`;
-
-export const Contact = styled(CtaButton)`
-  background-color: #179d75;
-  color: white;
-
-  &:before {
-    background: white;
-  }
-`;
-
-export const CtaWrapper = styled.div`
-  padding: 3rem 2rem;
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-`;
-
 export const NameTag = styled.span`
   position: absolute;
   top: 0.5rem;
