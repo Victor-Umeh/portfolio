@@ -4,7 +4,7 @@ const about = () => {
   return (
     <>
       <AboutWrapper>
-        <StyledCanvas min="58vh" width="65%">
+        <StyledCanvas width="65%">
           <div className="article">
             <div>
               <p>Hey there,</p>
@@ -18,7 +18,6 @@ const about = () => {
                 aspiring blockchain developer.
               </p>
             </div>
-
             <div>
               <h3>Hobbies</h3>
               <p>
@@ -35,7 +34,7 @@ const about = () => {
             </p>
           </div>
         </StyledCanvas>
-        <StyledCanvas min="30vh" width="35%">
+        <StyledCanvas width="35%" dis="none">
           <div className="article hobbies__img">
             <p>Hobbies</p>
           </div>

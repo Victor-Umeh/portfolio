@@ -8,7 +8,6 @@ interface Props {
 }
 
 export const Main = styled.main<Props>`
-  width: 100%;
   background-color: ${({ theme }) => theme.body};
   position: relative;
   /* border: 1px solid red; */

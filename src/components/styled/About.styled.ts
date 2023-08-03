@@ -1,31 +1,32 @@
 import styled from "styled-components";
 
 interface Props {
-  min: string;
-  max?: string;
   width: string;
+  dis?: string;
 }
 export const AboutWrapper = styled.section`
   display: flex;
   flex-direction: column;
-  width: 90%;
+  width: 85%;
+  height: 100%;
   margin-inline: auto;
-  gap: 0rem;
+  /* border: 1px solid red; */
 
   @media (min-width: 768px) {
+    flex-direction: row;
     justify-content: stretch;
     width: 84%;
-    gap: 6rem;
+    gap: 1vw;
   }
 `;
 export const StyledCanvas = styled.section<Props>`
-  padding: 2rem 0;
-  min-height: ${({ min }) => min};
-  max-height: ${({ max }) => max};
+  display: ${({ dis }) => dis};
+  height: 100%;
   position: relative;
   font-family: "Poppins", sans-serif;
 
   @media (min-width: 768px) {
+    display: block;
     height: 100%;
     width: ${({ width }) => width};
     padding-block: 4rem;
@@ -35,13 +36,16 @@ export const StyledCanvas = styled.section<Props>`
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    padding: 3rem 8rem;
+    padding: 3rem;
     border: 1px solid gray;
-    min-height: 30%;
+    max-height: 100%;
+    height: 100%;
+
     overflow-y: auto;
 
     @media (min-width: 768px) {
       height: 100%;
+      padding: 3rem 5rem;
     }
   }
 
