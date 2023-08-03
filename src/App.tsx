@@ -4,6 +4,7 @@ import GlobalStyles from "./components/styled/global.styled";
 import MainNav from "./components/MainNav";
 import Home from "./pages/home";
 import About from "./pages/about";
+
 import Container from "./components/Container";
 
 const App = () => {

@@ -87,7 +87,6 @@ export const Menu = styled.div<Props>`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0vw;
   padding-top: 8rem;
   background-color: ${({ theme }) => theme.body};
   height: 100vh;
@@ -151,7 +150,13 @@ export const SocialBlock = styled(StyledList)`
     width: 100%;
     height: 5rem;
     opacity: 0.1;
+    width: 100%;
+    height: 5rem;
+    opacity: 0.1;
     background-color: ${({ theme }) => theme.text};
+  }
+
+  @media (min-width: 768px) {
   }
 `;
 
@@ -165,6 +170,7 @@ export const SocialLink = styled.a`
     opacity: 0.5;
   }
 `;
+
 export const NameTag = styled.span`
   position: absolute;
   top: 0.5rem;

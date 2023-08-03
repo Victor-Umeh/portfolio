@@ -12,6 +12,7 @@ const about = () => {
                 I'm Victor Umeokoli or Umeh for short living in Jos, plateau
                 state Nigeria
               </p>
+
               <p>
                 I am a frontend developer, logo & vector designer and an
                 aspiring blockchain developer.
