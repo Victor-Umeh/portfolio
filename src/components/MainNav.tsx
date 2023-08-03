@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import {
   BiLogoGmail,
@@ -12,8 +13,8 @@ import {
   StyledBtn,
   Line,
   Menu,
-  List,
-  Link,
+  StyledList,
+  StyledLink,
   SocialLink,
   SocialBlock,
 } from "./styled/elements.styled";
@@ -74,12 +75,20 @@ const MainNav: React.FC = () => {
         </Hamburger>
 
         <Menu>
-          <List>
-            <Link>Home</Link>
-            <Link>Work</Link>
-            <Link>About</Link>
-            <Link>Resume</Link>
-          </List>
+          <StyledList>
+            <StyledLink>
+              <Link to={"/"}>Home</Link>
+            </StyledLink>
+            <StyledLink>
+              <Link to={"/work"}>Work</Link>
+            </StyledLink>
+            <StyledLink>
+              <Link to={"/about"}>About</Link>
+            </StyledLink>
+            <StyledLink>
+              <Link to={"/resume"}>Resume</Link>
+            </StyledLink>
+          </StyledList>
 
           <SocialBlock as="div">
             <SocialLink href="">

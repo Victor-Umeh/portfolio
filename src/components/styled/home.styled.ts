@@ -5,8 +5,8 @@ interface HeaderProps {
   $fontw?: string;
   $fontz?: string;
   $fontf?: string;
-  marginTop?: string;
-  minWidth?: string;
+  $marginTop?: string;
+  $minWidth?: string;
   color?: string;
 }
 
@@ -22,7 +22,6 @@ export const HeroSection = styled.section`
   align-items: center;
   justify-content: center;
   min-height: 50vh;
-  /* min-width: 100%; */
 
   @media (min-width: 768px) {
     background-position: center 0%;
@@ -77,8 +76,8 @@ export const CardHeader = styled.h1<HeaderProps>`
 `;
 export const SubText = styled(CardHeader)`
   font-weight: ${({ $fontw }) => $fontw};
-  margin-top: ${({ marginTop }) => marginTop};
-  min-width: ${({ minWidth }) => minWidth};
+  margin-top: ${({ $marginTop: marginTop }) => marginTop};
+  min-width: ${({ $minWidth: minWidth }) => minWidth};
   color: ${({ color }) => color};
   margin-inline: auto;
   font-family: "poppins";

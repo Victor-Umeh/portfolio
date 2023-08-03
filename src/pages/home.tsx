@@ -7,12 +7,11 @@ import {
   AboutContent,
 } from "../components/styled/home.styled";
 import { ExploreBtn } from "../components/styled/ExploreBtn.styled";
-import { Contact } from "../components/styled/ContactBtn.styled";
-import { Main, NameTag } from "../components/styled/elements.styled";
+import { NameTag } from "../components/styled/elements.styled";
 
 const Home: React.FC = () => {
   return (
-    <Main>
+    <>
       <HeroSection>
         <HeroCard>
           <CardHeader>Hi, I am Victor</CardHeader>
@@ -29,25 +28,23 @@ const Home: React.FC = () => {
       <AboutSect>
         <AboutContent>
           <NameTag>Victor Onyeka Umeh.</NameTag>
-          <SubText as="h2" $fontz="2.7rem" marginTop="5rem" $fontw="bold">
+          <SubText as="h2" $fontz="2.7rem" $marginTop="5rem" $fontw="bold">
             About
           </SubText>
           <SubText
             as="p"
             $fontz="1.4rem"
-            minWidth="20ch"
-            marginTop="1.1rem"
+            $minWidth="20ch"
+            $marginTop="1.1rem"
             color="000000"
           >
             Hi, I am a frontend developer, logo designer and photo editor in
             Jos, Nigeria. Eager to expand knowledge and skills
           </SubText>
-
           <ExploreBtn>Explore</ExploreBtn>
         </AboutContent>
       </AboutSect>
-      <Contact pos={true}>Contact</Contact>
-    </Main>
+    </>
   );
 };
 

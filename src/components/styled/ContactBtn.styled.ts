@@ -1,24 +1,28 @@
 import styled from "styled-components";
 import { ExploreBtn } from "./ExploreBtn.styled";
 
-export const Contact = styled(ExploreBtn)`
+interface Props {
+  bottom?: string;
+  right?: string;
+  top?: string;
+}
+export const Contact = styled(ExploreBtn)<Props>`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 5rem;
+  width: 4.5rem;
   aspect-ratio: 1;
   background-color: indianred;
   color: white;
   border-radius: 50%;
-  padding: 2rem;
+  padding: 1rem;
   margin-top: 0;
-  position: absolute;
-  bottom: 1rem;
-  right: 2rem;
-  /* border: none; */
+  position: fixed;
+  bottom: 0.5rem;
+  right: 1rem;
 
   & .icon {
-    font-size: 2.8rem;
+    font-size: 2.3rem;
     margin-bottom: 0.6rem;
     rotate: -180deg;
   }
@@ -28,15 +32,8 @@ export const Contact = styled(ExploreBtn)`
   }
 
   @media (min-width: 768px) {
-    width: 5.6rem;
-    right: 5rem;
-    bottom: 5rem;
+    width: 5.2rem;
+    right: 7rem;
+    bottom: 6rem;
   }
 `;
-
-// export const CtaWrapper = styled.div`
-//   padding: 3rem 2rem;
-//   display: flex;
-//   justify-content: center;
-//   gap: 2rem;
-// `;

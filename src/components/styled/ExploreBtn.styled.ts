@@ -20,7 +20,7 @@ export const ExploreBtn = styled(Button)`
     position: absolute;
     inset: 0;
     background: #474444;
-    opacity: 0.2;
+    opacity: 0.15;
     transform: scaleX(0);
     transform-origin: center;
     z-index: -100;

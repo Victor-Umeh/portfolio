@@ -10,13 +10,17 @@ const App = () => {
   return (
     <>
       <GlobalStyles />
-      <MainNav />
       <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="test" element={<Container />}></Route>
-        </Routes>
+        <MainNav />
+        <Container>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/test" element={<Container />}></Route>
+            <Route path="/work" element={<Container />}></Route>
+            <Route path="/resume" element={<Container />}></Route>
+          </Routes>
+        </Container>
       </BrowserRouter>
     </>
   );

@@ -11,8 +11,8 @@ export const Main = styled.main<Props>`
   width: 100%;
   background-color: ${({ theme }) => theme.body};
   position: relative;
-  border: 1px solid red;
-  height: 89vh;
+  /* border: 1px solid red; */
+  height: 90vh;
 
   @media (min-width: 768px) {
     display: flex;
@@ -100,7 +100,7 @@ export const Menu = styled.div<Props>`
   visibility: hidden;
 `;
 
-export const List = styled.ul<Props>`
+export const StyledList = styled.ul<Props>`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -114,12 +114,11 @@ export const List = styled.ul<Props>`
   }
 `;
 
-export const Link = styled.li<Props>`
+export const StyledLink = styled.li<Props>`
   font-family: "Poppins", sans-serif;
   font-size: 3rem;
   padding: 0.5rem;
   list-style: none;
-  color: ${({ theme }) => theme.accent};
   transform-origin: center;
   transition: all 600ms;
   cursor: pointer;
@@ -128,9 +127,14 @@ export const Link = styled.li<Props>`
     font-weight: 600;
     transform: scale(1.2);
   }
+
+  & a {
+    color: ${({ theme }) => theme.accent};
+    text-decoration: none;
+  }
 `;
 
-export const SocialBlock = styled(List)`
+export const SocialBlock = styled(StyledList)`
   position: relative;
   font-size: 2rem;
   display: flex;
@@ -148,9 +152,6 @@ export const SocialBlock = styled(List)`
     height: 5rem;
     opacity: 0.1;
     background-color: ${({ theme }) => theme.text};
-  }
-
-  @media (min-width: 768px) {
   }
 `;
 
