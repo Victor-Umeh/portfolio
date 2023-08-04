@@ -18,6 +18,7 @@ import {
   StyledLink,
   SocialLink,
   SocialBlock,
+  StyledText,
 } from "./styled/elements.styled";
 // import homeIcon from "../assets/home-icon-circle.svg";
 import darkThemeIcon from "../assets/dark-theme.svg";
@@ -71,12 +72,12 @@ const MainNav: React.FC = () => {
           />
         </StyledBtn>
 
-        <StyledLink>
-          <Link to={"/work"}>
-            Works
+        <StyledText fz="1.6rem">
+          <Link to={"/work"}>Works</Link>
+          <span>
             <FaArrowRight />
-          </Link>
-        </StyledLink>
+          </span>
+        </StyledText>
 
         <Hamburger>
           <Line />

@@ -5,10 +5,11 @@ import { ToolsWrapper } from "./Tools.styled";
 interface Props {
   theme: {};
   pos?: boolean;
-  auto?: boolean;
+  auto?: false;
   top?: string;
   pad?: string;
   border?: string;
+  fz?: string;
 }
 export const StyledWrapper = styled(ToolsWrapper)<Props>`
   max-width: 500px;
@@ -52,10 +53,13 @@ export const StyledBtn = styled(Button)`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 26px;
+  width: 25px;
   aspect-ratio: 1;
+  font-weight: 600;
+  /* font-family: poppins; */
+  color: ${({ theme }) => theme.accent};
   margin-left: ${({ auto }) => auto && "auto"};
-  margin-right: 2rem;
+  margin-right: 2.5rem;
   padding: 0.4rem;
   border: 1px solid ${({ theme }) => theme.accent};
   border-radius: 4px;
@@ -89,20 +93,10 @@ export const StyledNav = styled.nav<Props>`
   padding-inline: clamp(2rem, 8vw, 20rem);
   z-index: 999;
 
-  /* 
-  @media (min-width: 481px) {
-  
-  }
-*/
-
   @media (min-width: 768px) {
     padding-block: 2.5rem;
     border-bottom: 1px solid ${({ theme }) => theme.accent};
   }
-  /*
-  @media (min-width: 1025px) {
-   
-  } */
 `;
 
 export const Line = styled.span<Props>`
@@ -144,7 +138,7 @@ export const StyledList = styled.ul<Props>`
 
 export const StyledLink = styled.li<Props>`
   font-family: "Poppins", sans-serif;
-  font-size: 3rem;
+  font-size: ${({ fz }) => fz || "3rem"};
   padding: 0.5rem;
   list-style: none;
   transform-origin: center;
@@ -159,6 +153,41 @@ export const StyledLink = styled.li<Props>`
   & a {
     color: ${({ theme }) => theme.accent};
     text-decoration: none;
+  }
+`;
+export const StyledText = styled(StyledLink)`
+  display: none;
+
+  @media (min-width: 768px) {
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 10rem;
+    margin-right: 10rem;
+    gap: 3px;
+    /* border: 1px solid red; */
+
+    & span {
+      display: flex;
+      align-items: center;
+      rotate: 45deg;
+      font-size: 1.2rem;
+      color: ${({ theme }) => theme.accent};
+      transition: rotate 300ms;
+    }
+
+    &:hover {
+      font-weight: 500;
+      transform: scale(1);
+    }
+
+    &:hover {
+      gap: 5px;
+    }
+    &:hover span {
+      rotate: 0deg;
+    }
   }
 `;
 
