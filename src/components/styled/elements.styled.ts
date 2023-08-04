@@ -79,7 +79,7 @@ export const Hamburger = styled(Button)`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.8rem;
+  gap: 1rem;
   cursor: pointer;
 `;
 
@@ -113,16 +113,21 @@ export const Menu = styled.div<MenuProps>`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 20rem;
+  padding-top: 10rem;
   background-color: ${({ theme }) => theme.body};
   height: 100vh;
   position: fixed;
   /* top: ${({ open }) => (open ? "0" : "-100rem")}; */
   left: 0;
   right: 0;
-  bottom: ${({ open }) => (open ? "-8.6rem" : "100rem")};
+  bottom: ${({ open }) => (open ? "-6.5rem" : "100rem")};
   z-index: -999;
   transition: bottom 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+
+  @media (min-width: 768px) {
+    padding-top: 20rem;
+    bottom: ${({ open }) => (open ? "-8.6rem" : "100rem")};
+  }
 `;
 
 export const StyledList = styled.ul<Props>`
