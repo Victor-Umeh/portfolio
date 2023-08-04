@@ -7,6 +7,7 @@ import {
   BiLogoLinkedinSquare,
 } from "react-icons/bi";
 import { IoLogoWhatsapp } from "react-icons/io";
+import { FaArrowRight } from "react-icons/fa";
 import {
   StyledNav,
   Hamburger,
@@ -69,6 +70,13 @@ const MainNav: React.FC = () => {
             alt="color theme switcher"
           />
         </StyledBtn>
+
+        <StyledLink>
+          <Link to={"/work"}>
+            Works
+            <FaArrowRight />
+          </Link>
+        </StyledLink>
 
         <Hamburger>
           <Line />
