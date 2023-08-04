@@ -59,8 +59,7 @@ export const StyledBtn = styled(Button)`
   justify-content: center;
   width: 25px;
   aspect-ratio: 1;
-  font-weight: 600;
-  /* font-family: poppins; */
+  font-weight: 400;
   color: ${({ theme }) => theme.accent};
   margin-left: ${({ auto }) => auto && "auto"};
   margin-right: 2.5rem;
@@ -71,7 +70,8 @@ export const StyledBtn = styled(Button)`
   cursor: pointer;
 
   &:hover {
-    transform: scale(1.1);
+    font-weight: 400;
+    transform: scale(1.05);
     border-radius: 50%;
   }
 `;
