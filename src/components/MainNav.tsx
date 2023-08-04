@@ -41,6 +41,7 @@ const DarkTheme = {
 
 const MainNav: React.FC = () => {
   const [theme, setTheme] = useState<boolean>(true);
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
   const logoColor = theme ? "#171B20" : "#F5F5F5";
   const isLight = theme ? LightTheme : DarkTheme;
@@ -79,12 +80,13 @@ const MainNav: React.FC = () => {
           </span>
         </StyledText>
 
-        <Hamburger>
+        <Hamburger onClick={() => setIsMenuOpen(!isMenuOpen)}>
+          {/* {console.log(isMenuOpen)} */}
           <Line />
           <Line />
         </Hamburger>
 
-        <Menu>
+        <Menu open={isMenuOpen}>
           <StyledList>
             <StyledLink>
               <Link to={"/"}>Home</Link>

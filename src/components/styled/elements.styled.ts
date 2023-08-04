@@ -11,6 +11,9 @@ interface Props {
   border?: string;
   fz?: string;
 }
+interface MenuProps extends Props {
+  open: boolean;
+}
 export const StyledWrapper = styled(ToolsWrapper)<Props>`
   max-width: 500px;
   margin-block: 3rem;
@@ -106,27 +109,27 @@ export const Line = styled.span<Props>`
   display: block;
 `;
 
-export const Menu = styled.div<Props>`
+export const Menu = styled.div<MenuProps>`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 8rem;
+  padding-top: 20rem;
   background-color: ${({ theme }) => theme.body};
   height: 100vh;
   position: fixed;
-  top: 6.5rem;
+  /* top: ${({ open }) => (open ? "0" : "-100rem")}; */
   left: 0;
   right: 0;
-  bottom: 0;
-  /* display: none; */
-  visibility: hidden;
+  bottom: ${({ open }) => (open ? "-8.6rem" : "100rem")};
+  z-index: -999;
+  transition: bottom 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
 `;
 
 export const StyledList = styled.ul<Props>`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: min(3vw, 4rem);
+  gap: min(4vw, 8rem);
   background-color: ${({ theme }) => theme.body};
 
   @media (min-width: 768px) {
@@ -196,9 +199,9 @@ export const SocialBlock = styled(StyledList)`
   font-size: 2rem;
   display: flex;
   justify-content: center;
-  gap: 0.8rem;
+  gap: 4rem;
   flex-direction: row;
-  width: 34vw;
+  width: 38vw;
   min-width: max-content;
   margin-top: 1rem;
 
