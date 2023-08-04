@@ -1,11 +1,40 @@
 import styled from "styled-components";
 import { Button } from "./Button.styled";
+import { ToolsWrapper } from "./Tools.styled";
+
 interface Props {
   theme: {};
   pos?: boolean;
   auto?: boolean;
   top?: string;
+  pad?: string;
+  border?: string;
 }
+export const StyledWrapper = styled(ToolsWrapper)<Props>`
+  max-width: 500px;
+  margin-block: 3rem;
+  padding: ${({ pad }) => pad};
+  height: auto;
+  overflow-y: auto;
+  /* border: ${({ border }) => border}; */
+`;
+export const ProjectCard = styled.div`
+  min-height: 18rem;
+  margin-bottom: 2rem;
+  border: 1px solid grey;
+  background-color: white;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.1);
+
+  & a:hover {
+    cursor: pointer;
+    color: indianred;
+  }
+  &:hover {
+    opacity: 0.5;
+  }
+`;
 
 export const Main = styled.main<Props>`
   background-color: ${({ theme }) => theme.body};

@@ -31,9 +31,10 @@ const LightTheme = {
 
 const DarkTheme = {
   text: "#D9D9D9",
-  body: "#171B20",
+  body: "#0d1c22",
   heroText: "#474444",
   accent: "#F5F5F5",
+  othe: "#11272f",
 };
 
 const MainNav: React.FC = () => {

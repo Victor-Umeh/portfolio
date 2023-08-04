@@ -10,7 +10,7 @@ export const Contact = styled(ExploreBtn)<Props>`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 4.5rem;
+  width: 5.5rem;
   aspect-ratio: 1;
   background-color: indianred;
   color: white;
@@ -18,8 +18,9 @@ export const Contact = styled(ExploreBtn)<Props>`
   padding: 1rem;
   margin-top: 0;
   position: fixed;
-  bottom: 0.5rem;
-  right: 1rem;
+  bottom: 1rem;
+  right: 3rem;
+  border: none;
 
   & .icon {
     font-size: 2.3rem;
@@ -32,8 +33,13 @@ export const Contact = styled(ExploreBtn)<Props>`
   }
 
   @media (min-width: 768px) {
-    width: 5.2rem;
+    width: 6rem;
     right: 7rem;
     bottom: 6rem;
+
+    &:hover {
+      scale: 1.05;
+      transition: scale 400ms;
+    }
   }
 `;

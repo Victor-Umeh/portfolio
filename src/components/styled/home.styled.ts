@@ -77,11 +77,15 @@ export const CardHeader = styled.h1<HeaderProps>`
 export const SubText = styled(CardHeader)`
   font-weight: ${({ $fontw }) => $fontw};
   margin-top: ${({ $marginTop: marginTop }) => marginTop};
-  min-width: ${({ $minWidth: minWidth }) => minWidth};
+  /* min-width: ${({ $minWidth: minWidth }) => minWidth}; */
   color: ${({ color }) => color};
-  margin-inline: auto;
+  /* margin-inline: auto; */
   font-family: "poppins";
   text-transform: none;
+  text-align: left;
+  margin-right: auto;
+  /* border: 1px solid red; */
+
   @media (min-width: 768px) {
     margin-inline: 0;
     margin-top: 1rem;
@@ -92,9 +96,9 @@ export const AboutSect = styled.section`
   flex-direction: column;
   justify-content: center;
   flex-direction: column;
-  text-align: center;
   width: 90%;
   margin-inline: auto;
+  /* border: 1px solid red; */
 
   @media (min-width: 768px) {
     width: 40%;
@@ -103,7 +107,7 @@ export const AboutSect = styled.section`
 
 export const AboutContent = styled.section`
   position: relative;
-  width: 60%;
+  width: min(90%, 450px);
   margin-inline: auto;
   display: flex;
   flex-direction: column;

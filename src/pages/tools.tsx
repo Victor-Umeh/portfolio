@@ -10,7 +10,7 @@ const Tools = () => {
     <>
       <ToolsWrapper>
         <StyledHeader>Work Flow</StyledHeader>
-        <StyledSection>
+        <StyledSection mb="7rem">
           <Tool>FIGMA</Tool>
           <Tool>ADOBE XD</Tool>
           <Tool>PHOTOSHOP</Tool>
@@ -20,8 +20,8 @@ const Tools = () => {
           <Tool>LIGHTROOM</Tool>
         </StyledSection>
 
-        <StyledHeader mt="6rem">Frontend</StyledHeader>
-        <StyledSection>
+        <StyledHeader>Frontend</StyledHeader>
+        <StyledSection mb="7rem">
           <Tool>HTML</Tool>
           <Tool>CSS</Tool>
           <Tool>SASS</Tool>

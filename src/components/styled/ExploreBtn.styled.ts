@@ -5,6 +5,7 @@ export const ExploreBtn = styled(Button)`
   position: relative;
   padding: 1rem 4rem;
   color: ${({ theme }) => theme.accent};
+  margin-right: auto;
   margin-top: 1.5rem;
   border: 0.5px solid #474444;
   border-radius: 5rem;
