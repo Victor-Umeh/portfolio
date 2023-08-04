@@ -20,19 +20,20 @@ export const StyledWrapper = styled(ToolsWrapper)<Props>`
 `;
 export const ProjectCard = styled.div`
   min-height: 18rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.8rem;
   border: 1px solid grey;
   background-color: white;
   border-radius: 8px;
   padding: 1rem;
-  box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 2px rgba(0, 0, 0, 0.1);
 
   & a:hover {
     cursor: pointer;
     color: indianred;
   }
   &:hover {
-    opacity: 0.5;
+    opacity: 0.8;
+    box-shadow: 0 10px 8px rgba(0, 0, 0, 0.1);
   }
 `;
 
