@@ -46,6 +46,10 @@ const MainNav: React.FC = () => {
   const logoColor = theme ? "#171B20" : "#F5F5F5";
   const isLight = theme ? LightTheme : DarkTheme;
 
+  const handleToggle = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <ThemeProvider theme={theme ? LightTheme : DarkTheme}>
       <StyledNav>
@@ -80,14 +84,13 @@ const MainNav: React.FC = () => {
           </span>
         </StyledText>
 
-        <Hamburger onClick={() => setIsMenuOpen(!isMenuOpen)}>
-          {/* {console.log(isMenuOpen)} */}
-          <Line />
-          <Line />
+        <Hamburger onClick={handleToggle} open={isMenuOpen}>
+          <Line isTop={true} open={isMenuOpen} />
+          <Line isTop={false} open={isMenuOpen} />
         </Hamburger>
 
         <Menu open={isMenuOpen}>
-          <StyledList>
+          <StyledList onClick={handleToggle}>
             <StyledLink>
               <Link to={"/"}>Home</Link>
             </StyledLink>

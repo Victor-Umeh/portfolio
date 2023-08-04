@@ -13,6 +13,7 @@ interface Props {
 }
 interface MenuProps extends Props {
   open: boolean;
+  isTop?: boolean;
 }
 export const StyledWrapper = styled(ToolsWrapper)<Props>`
   max-width: 500px;
@@ -75,14 +76,6 @@ export const StyledBtn = styled(Button)`
   }
 `;
 
-export const Hamburger = styled(Button)`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-  cursor: pointer;
-`;
-
 export const StyledNav = styled.nav<Props>`
   width: auto;
   display: flex;
@@ -101,12 +94,33 @@ export const StyledNav = styled.nav<Props>`
     border-bottom: 1px solid ${({ theme }) => theme.accent};
   }
 `;
+export const Hamburger = styled(Button)<MenuProps>`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  transform: rotate(${({ open }) => (open ? "180deg" : "0deg")});
+  transition: all 400ms;
 
-export const Line = styled.span<Props>`
+  & span {
+    transition: all 400ms;
+  }
+`;
+
+export const Line = styled.span<MenuProps>`
   height: 2px;
   width: 4.5rem;
   background-color: ${({ theme }) => theme.accent};
   display: block;
+  transform: translateY(
+      ${({ isTop, open }) =>
+        (isTop && open ? "5px" : null) || (!isTop && open ? "-7px" : null)}
+    )
+    rotate(
+      ${({ isTop, open }) =>
+        (isTop && open ? "45deg" : null) || (!isTop && open ? "-45deg" : null)}
+    );
 `;
 
 export const Menu = styled.div<MenuProps>`
@@ -122,7 +136,7 @@ export const Menu = styled.div<MenuProps>`
   right: 0;
   bottom: ${({ open }) => (open ? "-6.5rem" : "100rem")};
   z-index: -999;
-  transition: bottom 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition: bottom 400ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
 
   @media (min-width: 768px) {
     padding-top: 20rem;
@@ -173,26 +187,23 @@ export const StyledText = styled(StyledLink)`
     justify-content: flex-start;
     width: 10rem;
     margin-right: 10rem;
-    gap: 3px;
+    gap: 6px;
     /* border: 1px solid red; */
 
     & span {
       display: flex;
       align-items: center;
       rotate: 45deg;
-      font-size: 1.2rem;
+      font-size: 1.15rem;
       color: ${({ theme }) => theme.accent};
-      transition: rotate 300ms;
+      transition: rotate 600ms;
     }
 
     &:hover {
-      font-weight: 500;
+      font-weight: 400;
       transform: scale(1);
     }
 
-    &:hover {
-      gap: 5px;
-    }
     &:hover span {
       rotate: 0deg;
     }
