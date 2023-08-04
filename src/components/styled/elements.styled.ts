@@ -110,7 +110,7 @@ export const Hamburger = styled(Button)<MenuProps>`
 
 export const Line = styled.span<MenuProps>`
   height: 2px;
-  width: 4.5rem;
+  width: 5rem;
   background-color: ${({ theme }) => theme.accent};
   display: block;
   transform: translateY(
