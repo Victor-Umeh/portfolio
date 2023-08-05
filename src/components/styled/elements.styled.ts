@@ -21,16 +21,32 @@ export const StyledWrapper = styled(ToolsWrapper)<Props>`
   padding: ${({ pad }) => pad};
   height: auto;
   overflow-y: auto;
-  /* border: ${({ border }) => border}; */
 `;
+
+export const ProjectWrapper = styled(StyledWrapper)`
+  display: grid;
+  gap: 2rem;
+
+  @media (min-width: 768px) {
+    align-content: start;
+    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
+    gap: min(3vw, 3rem);
+    width: 64%;
+    max-width: inherit;
+    padding-top: 4rem;
+    /* border: 1px solid red; */
+  }
+`;
+
 export const ProjectCard = styled.div`
-  min-height: 18rem;
-  margin-bottom: 1.8rem;
+  height: 20rem;
   border: 1px solid grey;
   background-color: white;
   border-radius: 8px;
   padding: 1rem;
   box-shadow: 0 4px 2px rgba(0, 0, 0, 0.1);
+  transition: all 0.8s cubic-bezier(0.785, 0.135, 0.15, 0.86);
 
   & a:hover {
     cursor: pointer;
@@ -45,7 +61,6 @@ export const ProjectCard = styled.div`
 export const Main = styled.main<Props>`
   background-color: ${({ theme }) => theme.body};
   position: relative;
-  /* border: 1px solid red; */
   height: 90vh;
 
   @media (min-width: 768px) {
@@ -101,10 +116,10 @@ export const Hamburger = styled(Button)<MenuProps>`
   gap: 1rem;
   cursor: pointer;
   transform: rotate(${({ open }) => (open ? "180deg" : "0deg")});
-  transition: all 400ms;
+  transition: all 0.8s cubic-bezier(0.785, 0.135, 0.15, 0.86);
 
   & span {
-    transition: all 400ms;
+    transition: all 0.8s cubic-bezier(0.785, 0.135, 0.15, 0.86);
   }
 `;
 
@@ -131,12 +146,12 @@ export const Menu = styled.div<MenuProps>`
   background-color: ${({ theme }) => theme.body};
   height: 100vh;
   position: fixed;
-  /* top: ${({ open }) => (open ? "0" : "-100rem")}; */
   left: 0;
   right: 0;
   bottom: ${({ open }) => (open ? "-6.5rem" : "100rem")};
   z-index: -999;
-  transition: bottom 400ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  z-index: -999;
+  transition: bottom 0.8s cubic-bezier(0.785, 0.135, 0.15, 0.86);
 
   @media (min-width: 768px) {
     padding-top: 20rem;
@@ -188,7 +203,6 @@ export const StyledText = styled(StyledLink)`
     width: 10rem;
     margin-right: 10rem;
     gap: 6px;
-    /* border: 1px solid red; */
 
     & span {
       display: flex;

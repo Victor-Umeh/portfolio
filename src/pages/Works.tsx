@@ -1,15 +1,15 @@
 import {
-  StyledWrapper,
+  ProjectWrapper,
   ProjectCard,
 } from "../components/styled/elements.styled";
 
 const Works = () => {
   return (
-    <StyledWrapper>
+    <ProjectWrapper>
       <ProjectCard>works</ProjectCard>
       <ProjectCard>works</ProjectCard>
       <ProjectCard>works</ProjectCard>
-    </StyledWrapper>
+    </ProjectWrapper>
   );
 };
 
