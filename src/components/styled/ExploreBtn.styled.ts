@@ -4,7 +4,7 @@ import { Button } from "./Button.styled";
 export const ExploreBtn = styled(Button)`
   position: relative;
   padding: 1rem 4rem;
-  color: ${({ theme }) => theme.accent};
+  color: ${({ theme }) => theme.colors.accent};
   margin-right: auto;
   margin-top: 1.5rem;
   border: 0.5px solid #474444;
@@ -20,7 +20,7 @@ export const ExploreBtn = styled(Button)`
     content: "";
     position: absolute;
     inset: 0;
-    background: #474444;
+    background: ${({ theme }) => theme.colors.heroText};
     opacity: 0.15;
     transform: scaleX(0);
     transform-origin: center;
@@ -29,7 +29,7 @@ export const ExploreBtn = styled(Button)`
   }
 
   &:hover {
-    color: ${({ theme }) => theme.text};
+    color: ${({ theme }) => theme.colors.text};
   }
 
   &:hover:before {

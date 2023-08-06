@@ -40,7 +40,7 @@ export const HeroCard = styled.section`
   width: min(90%, 450px);
   height: 245px;
   min-height: 275px;
-  border: 0.5px solid #474444;
+  border: 0.5px solid ${({ theme }) => theme.colors.text};
   /* background: linear-gradient(
     218deg,
     rgba(255, 255, 255, 0) 0%,
@@ -62,7 +62,7 @@ export const HeroCard = styled.section`
 export const CardHeader = styled.h1<HeaderProps>`
   text-align: center;
   font-family: ${({ $fontf = "anton" }) => $fontf}, sans-serif;
-  color: #474444;
+  color: ${({ theme }) => theme.colors.text};
   /* color: ${({ theme }) => theme.heroText}; */
   font-size: ${({ $fontz = "4.2rem" }) => $fontz};
   font-weight: 400;
@@ -77,14 +77,11 @@ export const CardHeader = styled.h1<HeaderProps>`
 export const SubText = styled(CardHeader)`
   font-weight: ${({ $fontw }) => $fontw};
   margin-top: ${({ $marginTop: marginTop }) => marginTop};
-  /* min-width: ${({ $minWidth: minWidth }) => minWidth}; */
   color: ${({ color }) => color};
-  /* margin-inline: auto; */
   font-family: "poppins";
   text-transform: none;
   text-align: left;
   margin-right: auto;
-  /* border: 1px solid red; */
 
   @media (min-width: 768px) {
     margin-inline: 0;
@@ -98,7 +95,6 @@ export const AboutSect = styled.section`
   flex-direction: column;
   width: 90%;
   margin-inline: auto;
-  /* border: 1px solid red; */
 
   @media (min-width: 768px) {
     width: 40%;
@@ -114,7 +110,6 @@ export const AboutContent = styled.section`
   align-items: center;
   justify-content: center;
   height: 90%;
-  /* border: 2px solid red; */
 
   @media (min-width: 768px) {
     align-items: flex-start;

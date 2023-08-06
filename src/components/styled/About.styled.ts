@@ -10,7 +10,6 @@ export const AboutWrapper = styled.section`
   width: 85%;
   height: 100%;
   margin-inline: auto;
-  /* border: 1px solid red; */
 
   @media (min-width: 768px) {
     flex-direction: row;
@@ -24,6 +23,11 @@ export const StyledCanvas = styled.section<Props>`
   height: 100%;
   position: relative;
   font-family: "Poppins", sans-serif;
+
+  & div,
+  p {
+    color: ${({ theme }) => theme.colors.text};
+  }
 
   @media (min-width: 768px) {
     display: block;

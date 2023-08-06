@@ -1,12 +1,12 @@
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
-*{
-  padding: 0;
+*,
+*::before,
+*::after {
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
-  /* transition: all 300ms; */
-
 }
 
 html{
@@ -21,7 +21,7 @@ img{
 body {
   font-family: 'Anton', sans-serif;
   font-size: 1.6rem;
-  background-color: #FAF9F6;
+  background-color: ${({ theme }) => theme.colors.body};
 
   /* background-color: #171B20; */
 // font-family: 'Poppins', sans-serif;

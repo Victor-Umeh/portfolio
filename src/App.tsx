@@ -1,5 +1,5 @@
-// import { useThemePallete } from "../context/ThemeContext";
-import ThemeProvider from "./context/ThemeContext";
+import { ThemeProvider } from "styled-components";
+import { light, dark } from "./components/styled/theme.styled";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import GlobalStyles from "./components/styled/global.styled";
@@ -11,25 +11,23 @@ import Works from "./pages/Works";
 import Resume from "./pages/resume";
 import Container from "./components/Container";
 
-const App = () => {
+const App = (): React.ReactNode => {
   return (
-    <>
-      <GlobalStyles />
-      <BrowserRouter>
-        <ThemeProvider>
-          <MainNav />
-          <Container>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/work" element={<Works />}></Route>
-              <Route path="/resume" element={<Resume />}></Route>
-              <Route path="/uses" element={<Tools />}></Route>
-            </Routes>
-          </Container>
-        </ThemeProvider>
-      </BrowserRouter>
-    </>
+    <BrowserRouter>
+      <ThemeProvider theme={dark}>
+        <GlobalStyles />
+        <MainNav />
+        <Container>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/work" element={<Works />}></Route>
+            <Route path="/resume" element={<Resume />}></Route>
+            <Route path="/uses" element={<Tools />}></Route>
+          </Routes>
+        </Container>
+      </ThemeProvider>
+    </BrowserRouter>
   );
 };
 

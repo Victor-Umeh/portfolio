@@ -38,14 +38,14 @@ const DarkTheme = {
   othe: "#11272f",
 };
 
-const MainNav: React.FC = () => {
+const MainNav = (): React.ReactNode => {
   const [theme, setTheme] = useState<boolean>(true);
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
   const logoColor = theme ? "#171B20" : "#F5F5F5";
   const isLight = theme ? LightTheme : DarkTheme;
 
-  const handleToggle = () => {
+  const handleToggle = (): void => {
     setIsMenuOpen(!isMenuOpen);
   };
 

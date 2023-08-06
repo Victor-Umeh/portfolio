@@ -35,14 +35,13 @@ export const ProjectWrapper = styled(StyledWrapper)`
     width: 64%;
     max-width: inherit;
     padding-top: 4rem;
-    /* border: 1px solid red; */
   }
 `;
 
 export const ProjectCard = styled.div`
   height: 20rem;
   border: 1px solid grey;
-  background-color: white;
+  background-color: ${({ theme }) => theme.colors.accent};
   border-radius: 8px;
   padding: 1rem;
   box-shadow: 0 7px 2px rgba(0, 0, 0, 0.1);
@@ -59,7 +58,7 @@ export const ProjectCard = styled.div`
 `;
 
 export const Main = styled.main<Props>`
-  background-color: ${({ theme }) => theme.body};
+  background-color: ${({ theme }) => theme.colors.body};
   position: relative;
   height: 90vh;
 
@@ -75,11 +74,11 @@ export const StyledBtn = styled(Button)`
   width: 25px;
   aspect-ratio: 1;
   font-weight: 400;
-  color: ${({ theme }) => theme.accent};
+  color: ${({ theme }) => theme.colors.accent};
   margin-left: ${({ auto }) => auto && "auto"};
   margin-right: 2.5rem;
   padding: 0.4rem;
-  border: 1px solid ${({ theme }) => theme.accent};
+  border: 1px solid ${({ theme }) => theme.colors.accent};
   border-radius: 4px;
   transition: all 300ms;
   cursor: pointer;
@@ -99,14 +98,14 @@ export const StyledNav = styled.nav<Props>`
   align-items: center;
   justify-content: space-between;
   margin-inline: auto;
-  background-color: ${({ theme }) => theme.body};
+  background-color: ${({ theme }) => theme.colors.body};
   padding-block: 2rem;
   padding-inline: clamp(2rem, 8vw, 20rem);
   z-index: 999;
 
   @media (min-width: 768px) {
     padding-block: 2.5rem;
-    border-bottom: 1px solid ${({ theme }) => theme.accent};
+    border-bottom: 1px solid ${({ theme }) => theme.colors.accent};
   }
 `;
 export const Hamburger = styled(Button)<MenuProps>`
@@ -126,7 +125,7 @@ export const Hamburger = styled(Button)<MenuProps>`
 export const Line = styled.span<MenuProps>`
   height: 2px;
   width: 5rem;
-  background-color: ${({ theme }) => theme.accent};
+  background-color: ${({ theme }) => theme.colors.accent};
   display: block;
   transform: translateY(
       ${({ isTop, open }) =>
@@ -143,14 +142,13 @@ export const Menu = styled.div<MenuProps>`
   flex-direction: column;
   align-items: center;
   padding-top: 10rem;
-  background-color: ${({ theme }) => theme.body};
+  background-color: ${({ theme }) => theme.colors.body};
   height: 100vh;
   position: fixed;
   left: 0;
   right: 0;
   bottom: ${({ open }) => (open ? "-6.5rem" : "100rem")};
-  z-index: -999;
-  z-index: -999;
+  z-index: -1;
   transition: bottom 0.8s cubic-bezier(0.785, 0.135, 0.15, 0.86);
 
   @media (min-width: 768px) {
@@ -164,7 +162,7 @@ export const StyledList = styled.ul<Props>`
   flex-direction: column;
   align-items: center;
   gap: min(4vw, 8rem);
-  background-color: ${({ theme }) => theme.body};
+  background-color: ${({ theme }) => theme.colors.body};
 
   @media (min-width: 768px) {
     flex-direction: row;
@@ -188,7 +186,7 @@ export const StyledLink = styled.li<Props>`
   }
 
   & a {
-    color: ${({ theme }) => theme.accent};
+    color: ${({ theme }) => theme.colors.accent};
     text-decoration: none;
   }
 `;
@@ -209,7 +207,7 @@ export const StyledText = styled(StyledLink)`
       align-items: center;
       rotate: 45deg;
       font-size: 1.15rem;
-      color: ${({ theme }) => theme.accent};
+      color: ${({ theme }) => theme.colors.accent};
       transition: rotate 600ms;
     }
 
@@ -244,7 +242,7 @@ export const SocialBlock = styled(StyledList)`
     width: 100%;
     height: 5rem;
     opacity: 0.1;
-    background-color: ${({ theme }) => theme.text};
+    background-color: ${({ theme }) => theme.colors.text};
   }
 
   @media (min-width: 768px) {
