@@ -1,3 +1,5 @@
+// import { useThemePallete } from "../context/ThemeContext";
+import ThemeProvider from "./context/ThemeContext";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import GlobalStyles from "./components/styled/global.styled";
@@ -14,16 +16,18 @@ const App = () => {
     <>
       <GlobalStyles />
       <BrowserRouter>
-        <MainNav />
-        <Container>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/work" element={<Works />}></Route>
-            <Route path="/resume" element={<Resume />}></Route>
-            <Route path="/uses" element={<Tools />}></Route>
-          </Routes>
-        </Container>
+        <ThemeProvider>
+          <MainNav />
+          <Container>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/work" element={<Works />}></Route>
+              <Route path="/resume" element={<Resume />}></Route>
+              <Route path="/uses" element={<Tools />}></Route>
+            </Routes>
+          </Container>
+        </ThemeProvider>
       </BrowserRouter>
     </>
   );

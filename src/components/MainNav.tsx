@@ -20,7 +20,6 @@ import {
   SocialBlock,
   StyledText,
 } from "./styled/elements.styled";
-// import homeIcon from "../assets/home-icon-circle.svg";
 import darkThemeIcon from "../assets/dark-theme.svg";
 import lightThemeIcon from "../assets/light-theme.svg";
 

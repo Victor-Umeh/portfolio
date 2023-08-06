@@ -45,7 +45,7 @@ export const ProjectCard = styled.div`
   background-color: white;
   border-radius: 8px;
   padding: 1rem;
-  box-shadow: 0 4px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 7px 2px rgba(0, 0, 0, 0.1);
   transition: all 0.8s cubic-bezier(0.785, 0.135, 0.15, 0.86);
 
   & a:hover {
@@ -54,7 +54,7 @@ export const ProjectCard = styled.div`
   }
   &:hover {
     opacity: 0.8;
-    box-shadow: 0 10px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 8px rgba(0, 0, 0, 0.15);
   }
 `;
 
@@ -116,10 +116,10 @@ export const Hamburger = styled(Button)<MenuProps>`
   gap: 1rem;
   cursor: pointer;
   transform: rotate(${({ open }) => (open ? "180deg" : "0deg")});
-  transition: all 0.8s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition: transform 0.8s cubic-bezier(0.785, 0.135, 0.15, 0.86);
 
   & span {
-    transition: all 0.8s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    transition: transform 0.8s cubic-bezier(0.785, 0.135, 0.15, 0.86);
   }
 `;
 
