@@ -24,7 +24,7 @@ export const Contact = styled(ExploreBtn)<Props>`
   z-index: 999;
 
   & .icon {
-    font-size: 2.3rem;
+    font-size: 2.5rem;
     margin-bottom: 0.6rem;
     rotate: -180deg;
   }
@@ -40,7 +40,8 @@ export const Contact = styled(ExploreBtn)<Props>`
 
     &:hover {
       scale: 1.05;
-      transition: scale 400ms;
+      transition: scale 800ms;
+      color: white;
     }
   }
 `;

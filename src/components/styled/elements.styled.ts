@@ -13,7 +13,7 @@ interface Props {
 }
 interface MenuProps extends Props {
   open: boolean;
-  isTop?: boolean;
+  istop?: boolean;
 }
 export const StyledWrapper = styled(ToolsWrapper)<Props>`
   max-width: 500px;
@@ -128,12 +128,12 @@ export const Line = styled.span<MenuProps>`
   background-color: ${({ theme }) => theme.colors.accent};
   display: block;
   transform: translateY(
-      ${({ isTop, open }) =>
-        (isTop && open ? "5px" : null) || (!isTop && open ? "-7px" : null)}
+      ${({ istop, open }) =>
+        (istop && open ? "5px" : null) || (!istop && open ? "-7px" : null)}
     )
     rotate(
-      ${({ isTop, open }) =>
-        (isTop && open ? "45deg" : null) || (!isTop && open ? "-45deg" : null)}
+      ${({ istop, open }) =>
+        (istop && open ? "45deg" : null) || (!istop && open ? "-45deg" : null)}
     );
 `;
 

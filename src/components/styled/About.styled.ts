@@ -54,9 +54,12 @@ export const StyledCanvas = styled.section<Props>`
   }
 
   & .hobbies__img {
-    background-color: lightgreen;
+    background-color: transparent;
     display: none;
 
+    & p {
+      color: ${({ theme }) => theme.colors.text} !important;
+    }
     @media (min-width: 768px) {
       min-height: 200px;
       display: block;

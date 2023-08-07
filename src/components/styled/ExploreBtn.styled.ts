@@ -7,7 +7,7 @@ export const ExploreBtn = styled(Button)`
   color: ${({ theme }) => theme.colors.accent};
   margin-right: auto;
   margin-top: 1.5rem;
-  border: 0.5px solid #474444;
+  border: 0.5px solid ${({ theme }) => theme.colors.text};
   border-radius: 5rem;
   overflow: hidden;
   transform-origin: left;
