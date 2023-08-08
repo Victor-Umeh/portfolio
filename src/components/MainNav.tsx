@@ -24,10 +24,11 @@ import darkThemeIcon from "../assets/dark-theme.svg";
 import lightThemeIcon from "../assets/light-theme.svg";
 
 interface Props {
-  toggleTheme: (bool: unknown) => any;
+  toggleTheme: (initialTheme: boolean) => any;
+  initialTheme: boolean;
 }
 
-const MainNav = ({ toggleTheme }: Props) => {
+const MainNav = ({ toggleTheme, initialTheme }: Props) => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   const theme = useTheme();
 
@@ -55,10 +56,7 @@ const MainNav = ({ toggleTheme }: Props) => {
 
       <StyledBtn auto={true}>En</StyledBtn>
 
-      <StyledBtn
-        onClick={() => toggleTheme((prev: unknown) => !prev)}
-        auto={false}
-      >
+      <StyledBtn onClick={() => toggleTheme(!initialTheme)} auto={false}>
         <img
           src={lightTheme ? darkThemeIcon : lightThemeIcon}
           alt="color theme switcher"
@@ -73,8 +71,8 @@ const MainNav = ({ toggleTheme }: Props) => {
       </StyledText>
 
       <Hamburger onClick={handleToggle} open={isMenuOpen}>
-        <Line istop={true} open={isMenuOpen} />
-        <Line istop={false} open={isMenuOpen} />
+        <Line istop={"top"} open={isMenuOpen} />
+        <Line istop={"bottom"} open={isMenuOpen} />
       </Hamburger>
 
       <Menu open={isMenuOpen}>

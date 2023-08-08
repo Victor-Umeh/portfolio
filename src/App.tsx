@@ -1,6 +1,6 @@
 import { ThemeProvider } from "styled-components";
 // import { ThemeProps } from "./components/styled/theme.styled";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { light, dark } from "./components/styled/theme.styled";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -13,21 +13,28 @@ import Works from "./pages/Works";
 import Resume from "./pages/resume";
 import Container from "./components/Container";
 
-// interface Props extends ThemeProps {
-//   setInitialTheme?: React.Dispatch<React.SetStateAction<Props>>;
-// }
-
 const App = (): React.ReactNode => {
   const [initialTheme, setInitilaTheme] = useState<boolean>(true);
-  const theme = initialTheme ? dark : light;
+  const theme = initialTheme ? light : dark;
 
-  const toggleTheme = (bool: any) => setInitilaTheme(bool);
+  useEffect(() => {
+    const currentTheme = localStorage.getItem("current-theme");
 
+    if (currentTheme) {
+      const storedTheme = currentTheme === "false" ? false : true;
+      setInitilaTheme(storedTheme);
+    }
+  }, []);
+
+  const toggleTheme = (bool: any) => {
+    setInitilaTheme(bool);
+    localStorage.setItem("current-theme", JSON.stringify(bool));
+  };
   return (
     <BrowserRouter>
       <ThemeProvider theme={theme}>
         <GlobalStyles />
-        <MainNav toggleTheme={toggleTheme} />
+        <MainNav toggleTheme={toggleTheme} initialTheme={initialTheme} />
         <Container>
           <Routes>
             <Route path="/" element={<Home />} />

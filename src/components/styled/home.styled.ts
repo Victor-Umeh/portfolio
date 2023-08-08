@@ -22,6 +22,8 @@ export const HeroSection = styled.section`
   align-items: center;
   justify-content: center;
   min-height: 50vh;
+  /* filter: invert(1); */
+  /* mix-blend-mode: multiply; */
 
   @media (min-width: 768px) {
     background-position: center 0%;

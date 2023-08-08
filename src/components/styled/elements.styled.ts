@@ -13,7 +13,7 @@ interface Props {
 }
 interface MenuProps extends Props {
   open: boolean;
-  istop?: boolean;
+  istop?: string;
 }
 export const StyledWrapper = styled(ToolsWrapper)<Props>`
   max-width: 500px;
@@ -41,18 +41,18 @@ export const ProjectWrapper = styled(StyledWrapper)`
 export const ProjectCard = styled.div`
   height: 20rem;
   border: 1px solid grey;
-  background-color: ${({ theme }) => theme.colors.accent};
+  background-color: ${({ theme }) => theme.colors.body};
   border-radius: 8px;
   padding: 1rem;
   box-shadow: 0 7px 2px rgba(0, 0, 0, 0.1);
-  transition: all 0.8s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition: opacity, box-shadow 0.8s cubic-bezier(0.785, 0.135, 0.15, 0.86);
 
   & a:hover {
     cursor: pointer;
     color: indianred;
   }
   &:hover {
-    opacity: 0.8;
+    opacity: 0.95;
     box-shadow: 0 10px 8px rgba(0, 0, 0, 0.15);
   }
 `;
@@ -101,7 +101,7 @@ export const StyledNav = styled.nav<Props>`
   background-color: ${({ theme }) => theme.colors.body};
   padding-block: 2rem;
   padding-inline: clamp(2rem, 8vw, 20rem);
-  z-index: 999;
+  z-index: 10;
 
   @media (min-width: 768px) {
     padding-block: 2.5rem;
@@ -129,11 +129,13 @@ export const Line = styled.span<MenuProps>`
   display: block;
   transform: translateY(
       ${({ istop, open }) =>
-        (istop && open ? "5px" : null) || (!istop && open ? "-7px" : null)}
+        (istop === "top" && open ? "5px" : null) ||
+        (istop === "bottom" && open ? "-7px" : null)}
     )
     rotate(
       ${({ istop, open }) =>
-        (istop && open ? "45deg" : null) || (!istop && open ? "-45deg" : null)}
+        (istop === "top" && open ? "45deg" : null) ||
+        (istop === "bottom" && open ? "-45deg" : null)}
     );
 `;
 
@@ -148,12 +150,12 @@ export const Menu = styled.div<MenuProps>`
   left: 0;
   right: 0;
   bottom: ${({ open }) => (open ? "-6.5rem" : "100rem")};
-  z-index: -1;
+  z-index: -10;
   transition: bottom 0.8s cubic-bezier(0.785, 0.135, 0.15, 0.86);
 
   @media (min-width: 768px) {
     padding-top: 20rem;
-    bottom: ${({ open }) => (open ? "-8.6rem" : "100rem")};
+    bottom: ${({ open }) => (open ? "-7.9rem" : "100rem")};
   }
 `;
 
@@ -265,7 +267,7 @@ export const NameTag = styled.span`
   top: 0.5rem;
   font-size: 1.1rem;
   font-family: "poppins";
-  color: #474444;
+  color: ${({ theme }) => theme.colors.text};
   width: max-content;
 
   @media (min-width: 768px) {
