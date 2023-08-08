@@ -22,9 +22,18 @@ export const HeroSection = styled.section`
   align-items: center;
   justify-content: center;
   min-height: 50vh;
-  /* filter: invert(1); */
-  /* mix-blend-mode: multiply; */
 
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 60%;
+    background-color: ${({ theme }) => theme.colors.body};
+    opacity: ${({ theme }) => (theme.name === "light-theme" ? 0.2 : 0.9)};
+    z-index: 0;
+  }
   @media (min-width: 768px) {
     background-position: center 0%;
     min-height: calc(100vh - 8rem);
@@ -43,6 +52,7 @@ export const HeroCard = styled.section`
   height: 245px;
   min-height: 275px;
   border: 0.5px solid ${({ theme }) => theme.colors.text};
+  /* z-index: 100; */
   /* background: linear-gradient(
     218deg,
     rgba(255, 255, 255, 0) 0%,

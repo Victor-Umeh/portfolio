@@ -154,8 +154,8 @@ export const Menu = styled.div<MenuProps>`
   transition: bottom 0.8s cubic-bezier(0.785, 0.135, 0.15, 0.86);
 
   @media (min-width: 768px) {
-    padding-top: 20rem;
-    bottom: ${({ open }) => (open ? "-7.9rem" : "100rem")};
+    padding-top: 8rem;
+    bottom: ${({ open }) => (open ? "-8.55rem" : "100rem")};
   }
 `;
 
