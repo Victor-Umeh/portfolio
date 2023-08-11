@@ -3,18 +3,22 @@ import {
   StyledInput,
   StyledTextArea,
   StyledButton,
+  Overlay,
 } from "./styled/elements.styled";
 
 const FormModal = () => {
   return (
-    <StyledForm>
-      <div>
-        <StyledInput />
-        <StyledInput />
-      </div>
-      <StyledTextArea />
-      <StyledButton>Send</StyledButton>
-    </StyledForm>
+    <>
+      <Overlay />
+      <StyledForm>
+        <div>
+          <StyledInput />
+          <StyledInput />
+        </div>
+        <StyledTextArea />
+        <StyledButton>Send</StyledButton>
+      </StyledForm>
+    </>
   );
 };
 

@@ -1,12 +1,11 @@
-export interface ThemeProps {
+interface ThemeProps {
   name: string;
   colors: {
-    text: string;
-    body: string;
-    accent: string;
-    heroText: string;
-    shadow: string;
-    // swiper: string;
+    text: "#1e293b" | "#cbd5e1";
+    body: "#f8fafc" | "#0f172a";
+    accent: "#0f172a" | "#F5F5F5";
+    heroText: "#474444" | "#474444";
+    shadow: "#0f172a" | "#020617";
   };
 }
 
@@ -31,4 +30,4 @@ export const dark: ThemeProps = {
     shadow: "#020617",
   },
 };
-``
+``;

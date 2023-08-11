@@ -10,11 +10,6 @@ interface HeaderProps {
   color?: string;
 }
 
-export const StyledPicture = styled.picture`
-  width: 100%;
-  height: 100vh;
-`;
-
 export const HeroSection = styled.section`
   background: url(${img}) 40% no-repeat;
   background-size: cover;
@@ -22,7 +17,6 @@ export const HeroSection = styled.section`
   align-items: center;
   justify-content: center;
   min-height: 50vh;
-
   &:before {
     content: "";
     position: absolute;

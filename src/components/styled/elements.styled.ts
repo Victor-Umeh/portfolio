@@ -291,7 +291,34 @@ export const NameTag = styled.span`
     right: 0;
   }
 `;
+export const Overlay = styled.div`
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(5, 5, 15, 0.6);
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(3px);
+  z-index: 100;
+`;
 export const StyledForm = styled.form`
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 550px;
+  padding: 1.5rem;
+  background: linear-gradient(
+    218deg,
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(130, 234, 255, 0.1) 44.48%,
+    rgba(86, 141, 183, 0.2) 73.96%,
+    rgba(11, 39, 90, 0.36) 140%
+  );
+  border: 1px solid ${({ theme }) => theme.colors.text};
+  z-index: 999;
   @media (min-width: 768px) {
   }
 `;
