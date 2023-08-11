@@ -25,8 +25,8 @@ export const Contact = styled(ExploreBtn)<Props>`
 
   & .icon {
     font-size: 2.5rem;
-    margin-bottom: 0.6rem;
-    rotate: -180deg;
+    margin-top: 0.6rem;
+    /* rotate: -180deg; */
   }
 
   &:before {

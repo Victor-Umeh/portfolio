@@ -1,8 +1,7 @@
 import { ThemeProvider } from "styled-components";
-// import { ThemeProps } from "./components/styled/theme.styled";
 import { useState, useEffect } from "react";
 import { light, dark } from "./components/styled/theme.styled";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 import GlobalStyles from "./components/styled/global.styled";
 import MainNav from "./components/MainNav";
@@ -21,7 +20,7 @@ const App = (): React.ReactNode => {
     const currentTheme = localStorage.getItem("current-theme");
 
     if (currentTheme) {
-      const storedTheme = currentTheme === "false" ? false : true;
+      const storedTheme = JSON.parse(currentTheme);
       setInitilaTheme(storedTheme);
     }
   }, []);
@@ -31,21 +30,19 @@ const App = (): React.ReactNode => {
     localStorage.setItem("current-theme", JSON.stringify(bool));
   };
   return (
-    <BrowserRouter>
-      <ThemeProvider theme={theme}>
-        <GlobalStyles />
-        <MainNav toggleTheme={toggleTheme} initialTheme={initialTheme} />
-        <Container>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/work" element={<Works />}></Route>
-            <Route path="/resume" element={<Resume />}></Route>
-            <Route path="/uses" element={<Tools />}></Route>
-          </Routes>
-        </Container>
-      </ThemeProvider>
-    </BrowserRouter>
+    <ThemeProvider theme={theme}>
+      <GlobalStyles />
+      <MainNav toggleTheme={toggleTheme} initialTheme={initialTheme} />
+      <Container>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/work" element={<Works />}></Route>
+          <Route path="/resume" element={<Resume />}></Route>
+          <Route path="/uses" element={<Tools />}></Route>
+        </Routes>
+      </Container>
+    </ThemeProvider>
   );
 };
 

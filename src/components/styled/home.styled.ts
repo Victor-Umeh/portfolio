@@ -29,9 +29,9 @@ export const HeroSection = styled.section`
     left: 0;
     right: 0;
     height: 100%;
-    width: 60%;
+    width: 100%;
     background-color: ${({ theme }) => theme.colors.body};
-    opacity: ${({ theme }) => (theme.name === "light-theme" ? 0.2 : 0.9)};
+    opacity: ${({ theme }) => (theme.name === "light-theme" ? 0.5 : 0.96)};
     z-index: 0;
   }
   @media (min-width: 768px) {
@@ -40,6 +40,9 @@ export const HeroSection = styled.section`
     width: 60%;
     justify-content: flex-start;
     padding-inline: 8%;
+    &:before {
+      width: 60%;
+    }
   }
 `;
 
@@ -52,21 +55,12 @@ export const HeroCard = styled.section`
   height: 245px;
   min-height: 275px;
   border: 0.5px solid ${({ theme }) => theme.colors.text};
-  /* z-index: 100; */
-  /* background: linear-gradient(
-    218deg,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(242, 235, 171, 0.1) 10.47%,
-    rgba(242, 235, 171, 0.1) 10.48%,
-    rgba(215, 193, 0, 0.3) 76.96%,
-    rgba(255, 0, 0, 0.76) 140%
-  ); */
   background: linear-gradient(
     218deg,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(83, 234, 255, 0.1) 24.48%,
-    rgba(86, 141, 138, 0.3) 73.96%,
-    rgba(11, 39, 48, 0.76) 140%
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(130, 234, 255, 0.1) 44.48%,
+    rgba(86, 141, 183, 0.2) 73.96%,
+    rgba(11, 39, 90, 0.36) 140%
   );
   backdrop-filter: blur(3px);
   z-index: 0;
@@ -75,7 +69,6 @@ export const CardHeader = styled.h1<HeaderProps>`
   text-align: center;
   font-family: ${({ $fontf = "anton" }) => $fontf}, sans-serif;
   color: ${({ theme }) => theme.colors.text};
-  /* color: ${({ theme }) => theme.heroText}; */
   font-size: ${({ $fontz = "4.2rem" }) => $fontz};
   font-weight: 400;
   text-transform: uppercase;

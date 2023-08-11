@@ -5,7 +5,7 @@ export interface ThemeProps {
     body: string;
     accent: string;
     heroText: string;
-    other: string;
+    shadow: string;
     // swiper: string;
   };
 }
@@ -13,23 +13,22 @@ export interface ThemeProps {
 export const light: ThemeProps = {
   name: "light-theme",
   colors: {
-    text: "#474444",
-    body: "#FCFBF8",
-    accent: "#171B20",
+    text: "#1e293b",
+    body: "#f8fafc",
+    accent: "#0f172a",
     heroText: "#474444",
-    other: "#11272f",
-    // swiper: "lightgreen",
+    shadow: "#0f172a",
   },
 };
 
 export const dark: ThemeProps = {
   name: "dark-theme",
   colors: {
-    text: "#D9D9D9",
-    body: "#0d1c22",
-    heroText: "#474444",
+    text: "#cbd5e1",
+    body: "#0f172a",
     accent: "#F5F5F5",
-    other: "#11272f",
-    // swiper: "",
+    heroText: "#474444",
+    shadow: "#020617",
   },
 };
+``

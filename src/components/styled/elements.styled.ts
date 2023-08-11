@@ -44,7 +44,11 @@ export const ProjectCard = styled.div`
   background-color: ${({ theme }) => theme.colors.body};
   border-radius: 8px;
   padding: 1rem;
-  box-shadow: 0 7px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 7px 2px
+    ${({ theme }) =>
+      theme.name === "light-theme"
+        ? "rgba(0, 10, 20, 0.1)"
+        : "rgba(0, 10, 20, 0.4)"};
   transition: opacity, box-shadow 0.8s cubic-bezier(0.785, 0.135, 0.15, 0.86);
 
   & a:hover {
@@ -53,7 +57,11 @@ export const ProjectCard = styled.div`
   }
   &:hover {
     opacity: 0.95;
-    box-shadow: 0 10px 8px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 10px 8px
+      ${({ theme }) =>
+        theme.name === "light-theme"
+          ? "rgba(0, 10, 20, 0.1)"
+          : "rgba(0, 10, 20, 0.4)"};
   }
 `;
 
@@ -103,9 +111,17 @@ export const StyledNav = styled.nav<Props>`
   padding-inline: clamp(2rem, 8vw, 20rem);
   z-index: 10;
 
+  & img {
+    width: 40px;
+  }
+
   @media (min-width: 768px) {
     padding-block: 2.5rem;
     border-bottom: 1px solid ${({ theme }) => theme.colors.accent};
+
+    & img {
+      width: 50px;
+    }
   }
 `;
 export const Hamburger = styled(Button)<MenuProps>`
@@ -275,3 +291,12 @@ export const NameTag = styled.span`
     right: 0;
   }
 `;
+export const StyledForm = styled.form`
+  @media (min-width: 768px) {
+  }
+`;
+export const StyledTextArea = styled.textarea`
+  resize: vertical;
+`;
+export const StyledInput = styled.input``;
+export const StyledButton = styled.button``;

@@ -1,11 +1,11 @@
 import { Contact } from "./styled/ContactBtn.styled";
-import { AiFillPhone } from "react-icons/ai";
+import { AiFillMessage } from "react-icons/ai";
 
 const ContactBtn = () => {
   return (
     <Contact>
       <span className="icon">
-        <AiFillPhone />
+        <AiFillMessage />
       </span>
     </Contact>
   );

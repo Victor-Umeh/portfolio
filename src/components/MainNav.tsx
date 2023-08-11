@@ -22,6 +22,7 @@ import {
 } from "./styled/elements.styled";
 import darkThemeIcon from "../assets/dark-theme.svg";
 import lightThemeIcon from "../assets/light-theme.svg";
+import logo from "../assets/logo.svg";
 
 interface Props {
   toggleTheme: (initialTheme: boolean) => any;
@@ -33,7 +34,6 @@ const MainNav = ({ toggleTheme, initialTheme }: Props) => {
   const theme = useTheme();
 
   const lightTheme = theme.name === "light-theme";
-  const logoColor = lightTheme ? "#171B20" : "#F5F5F5";
 
   //toggle burger menu
   const handleToggle = (): void => {
@@ -42,17 +42,9 @@ const MainNav = ({ toggleTheme, initialTheme }: Props) => {
 
   return (
     <StyledNav>
-      <svg
-        width="36"
-        height="10"
-        viewBox="0 0 36 10"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <circle cx="5" cy="5" r="5" fill={logoColor} />
-        <circle cx="17.7778" cy="5" r="5" fill={logoColor} />
-        <circle cx="30.5555" cy="5" r="5" fill={logoColor} />
-      </svg>
+      <Link to={"/"}>
+        <img src={logo} alt="" />
+      </Link>
 
       <StyledBtn auto={true}>En</StyledBtn>
 
