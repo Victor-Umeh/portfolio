@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { Button } from "./Button.styled";
 import { ToolsWrapper } from "./Tools.styled";
+import { ExploreBtn } from "./ExploreBtn.styled";
 
 interface Props {
   theme: {};
@@ -303,13 +304,17 @@ export const Overlay = styled.div`
   z-index: 100;
 `;
 export const StyledForm = styled.form`
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 4rem;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 80%;
   max-width: 550px;
-  padding: 1.5rem;
+  padding: 4rem;
   background: linear-gradient(
     218deg,
     rgba(255, 255, 255, 0.05) 0%,
@@ -317,13 +322,60 @@ export const StyledForm = styled.form`
     rgba(86, 141, 183, 0.2) 73.96%,
     rgba(11, 39, 90, 0.36) 140%
   );
-  border: 1px solid ${({ theme }) => theme.colors.text};
+  outline: 10px solid ${({ theme }) => theme.colors.text};
+  border: 2px solid ${({ theme }) => theme.colors.body};
   z-index: 999;
-  @media (min-width: 768px) {
+  font-family: "poppins";
+
+  & label {
+    margin-bottom: 2rem;
+  }
+  & h2,
+  p {
+    color: ${({ theme }) => theme.colors.text};
+    text-align: center;
+  }
+
+  & p {
+    font-size: 1.5rem;
+    max-width: 42ch;
+    margin-inline: auto;
   }
 `;
 export const StyledTextArea = styled.textarea`
-  resize: vertical;
+  display: block;
+  resize: none;
+  padding: 0 1rem;
+  background-color: transparent;
+  color: ${({ theme }) => theme.colors.text};
+  border: 0;
+  outline: 0;
+  border-bottom: 1.5px solid ${({ theme }) => theme.colors.text};
+  font-size: 1.6rem;
+
+  &::placeholder {
+    font-size: 1.6rem;
+    transform: translateY(1.2rem);
+  }
 `;
-export const StyledInput = styled.input``;
-export const StyledButton = styled.button``;
+export const StyledInput = styled.input`
+  display: block;
+  font-size: 1.6rem;
+  color: ${({ theme }) => theme.colors.text};
+  width: 100%;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  padding: 0.5rem 1rem;
+  border-bottom: 1.5px solid ${({ theme }) => theme.colors.text};
+
+  &::placeholder {
+    font-size: 1.4rem;
+    margin-top: -20rem;
+  }
+`;
+export const StyledButton = styled(ExploreBtn)`
+  background-color: indianred;
+  border: none;
+  padding: 1.5rem 5rem;
+`;
