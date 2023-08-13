@@ -29,10 +29,6 @@ export const Contact = styled(ExploreBtn)<Props>`
     /* rotate: -180deg; */
   }
 
-  &:before {
-    background: white;
-  }
-
   @media (min-width: 768px) {
     width: 6rem;
     right: 7rem;

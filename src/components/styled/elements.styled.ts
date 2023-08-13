@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { Button } from "./Button.styled";
 import { ToolsWrapper } from "./Tools.styled";
 import { ExploreBtn } from "./ExploreBtn.styled";
+import { motion } from "framer-motion";
 
 interface Props {
   theme: {};
@@ -292,7 +293,7 @@ export const NameTag = styled.span`
     right: 0;
   }
 `;
-export const Overlay = styled.div`
+export const Overlay = styled(motion.div)`
   position: fixed;
   top: 50%;
   left: 50%;
@@ -303,7 +304,7 @@ export const Overlay = styled.div`
   backdrop-filter: blur(3px);
   z-index: 100;
 `;
-export const StyledForm = styled.form`
+export const StyledForm = styled(motion.form)`
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -326,7 +327,7 @@ export const StyledForm = styled.form`
   border: 2px solid ${({ theme }) => theme.colors.body};
   z-index: 999;
   font-family: "poppins";
-
+  backdrop-filter: blur(3px);
   & label {
     margin-bottom: 2rem;
   }
@@ -355,7 +356,6 @@ export const StyledTextArea = styled.textarea`
 
   &::placeholder {
     font-size: 1.6rem;
-    transform: translateY(1.2rem);
   }
 `;
 export const StyledInput = styled.input`
@@ -366,12 +366,11 @@ export const StyledInput = styled.input`
   background-color: transparent;
   border: 0;
   outline: 0;
-  padding: 0.5rem 1rem;
+  padding: 1rem;
   border-bottom: 1.5px solid ${({ theme }) => theme.colors.text};
 
   &::placeholder {
     font-size: 1.4rem;
-    margin-top: -20rem;
   }
 `;
 export const StyledButton = styled(ExploreBtn)`

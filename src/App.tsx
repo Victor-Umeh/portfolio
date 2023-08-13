@@ -2,7 +2,7 @@ import { ThemeProvider } from "styled-components";
 import { useState, useEffect } from "react";
 import { light, dark } from "./components/styled/theme.styled";
 import { Routes, Route } from "react-router-dom";
-
+import ContactFormProvider from "./context/formModalContext";
 import GlobalStyles from "./components/styled/global.styled";
 import MainNav from "./components/MainNav";
 import Home from "./pages/home";
@@ -33,15 +33,17 @@ const App = (): React.ReactNode => {
     <ThemeProvider theme={theme}>
       <GlobalStyles />
       <MainNav toggleTheme={toggleTheme} initialTheme={initialTheme} />
-      <Container>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/work" element={<Works />}></Route>
-          <Route path="/resume" element={<Resume />}></Route>
-          <Route path="/uses" element={<Tools />}></Route>
-        </Routes>
-      </Container>
+      <ContactFormProvider>
+        <Container>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/work" element={<Works />}></Route>
+            <Route path="/resume" element={<Resume />}></Route>
+            <Route path="/uses" element={<Tools />}></Route>
+          </Routes>
+        </Container>
+      </ContactFormProvider>
     </ThemeProvider>
   );
 };

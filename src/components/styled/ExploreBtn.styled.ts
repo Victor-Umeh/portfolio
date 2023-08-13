@@ -21,7 +21,7 @@ export const ExploreBtn = styled(Button)`
     position: absolute;
     inset: 0;
     background: ${({ theme }) => theme.colors.heroText};
-    opacity: 0.15;
+    opacity: 0.17;
     transform: scaleX(0);
     transform-origin: center;
     z-index: -100;

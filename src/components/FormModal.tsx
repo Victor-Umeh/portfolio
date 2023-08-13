@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useContactFormContext } from "../context/formModalContext";
+// import { motion, AnimatePresence } from "framer-motion";
 import {
   StyledForm,
   StyledInput,
@@ -7,12 +8,36 @@ import {
   Overlay,
 } from "./styled/elements.styled";
 
+const overlayVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      duration: 0.3,
+    },
+  },
+};
+
+// const formVariants = {
+//   hidden: { Y: "-1000" },
+//   visible: {
+//     Y: 100,
+//     transition: {
+//       duration: 1,
+//     },
+//   },
+// };
+
 const FormModal = () => {
-  const [showForm, setShowForm] = useState(false);
+  const { showFormModal } = useContactFormContext();
   return (
-    showForm && (
+    showFormModal && (
       <>
-        <Overlay />
+        <Overlay
+          variants={overlayVariants}
+          initial="hidden"
+          animate="visible"
+        />
         <StyledForm>
           <label>
             <h2>CONTACT ME</h2>
