@@ -24,9 +24,8 @@ export const Contact = styled(ExploreBtn)<Props>`
   z-index: 999;
 
   & .icon {
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin-top: 0.6rem;
-    /* rotate: -180deg; */
   }
 
   @media (min-width: 768px) {

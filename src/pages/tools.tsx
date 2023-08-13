@@ -9,17 +9,11 @@ const Tools = () => {
   return (
     <>
       <ToolsWrapper>
-        <StyledHeader>Work Flow</StyledHeader>
-        <StyledSection mb="7rem">
-          <Tool>FIGMA</Tool>
-          <Tool>ADOBE XD</Tool>
-          <Tool>PHOTOSHOP</Tool>
-          <Tool>ILLUSTRATOR</Tool>
-          <Tool>GIT</Tool>
-          <Tool>GITHUB</Tool>
-          <Tool>LIGHTROOM</Tool>
-        </StyledSection>
-
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia quae
+          sed quaerat alias! Quo earum totam neque vel non odio magni officia,
+          excepturi sint, quasi vero saepe libero, facilis quas.
+        </p>
         <StyledHeader>Frontend</StyledHeader>
         <StyledSection mb="7rem">
           <Tool>HTML</Tool>
@@ -30,6 +24,17 @@ const Tools = () => {
           <Tool>JAVASCRIPT</Tool>
           <Tool>TYPESCRIPT</Tool>
           <Tool>REACT</Tool>
+        </StyledSection>
+
+        <StyledHeader>Work Flow</StyledHeader>
+        <StyledSection mb="7rem">
+          <Tool>FIGMA</Tool>
+          <Tool>ADOBE XD</Tool>
+          <Tool>PHOTOSHOP</Tool>
+          <Tool>ILLUSTRATOR</Tool>
+          <Tool>GIT</Tool>
+          <Tool>GITHUB</Tool>
+          <Tool>LIGHTROOM</Tool>
         </StyledSection>
       </ToolsWrapper>
     </>

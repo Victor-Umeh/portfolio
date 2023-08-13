@@ -48,7 +48,7 @@ const FormModal = () => {
           </label>
 
           <StyledInput type="text" placeholder="Your Name" />
-          <StyledInput type="text" placeholder="Your Email" />
+          <StyledInput type="email" placeholder="Your Email" />
           <StyledTextArea placeholder="Your Message" />
           <StyledButton>Send</StyledButton>
         </StyledForm>

@@ -181,7 +181,7 @@ export const StyledList = styled.ul<Props>`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: min(4vw, 8rem);
+  gap: min(3vw, 5rem);
   background-color: ${({ theme }) => theme.colors.body};
 
   @media (min-width: 768px) {
@@ -199,11 +199,6 @@ export const StyledLink = styled.li<Props>`
   transform-origin: center;
   transition: all 600ms;
   cursor: pointer;
-
-  &:hover {
-    font-weight: 600;
-    transform: scale(1.2);
-  }
 
   & a {
     color: ${({ theme }) => theme.colors.accent};
@@ -249,7 +244,7 @@ export const SocialBlock = styled(StyledList)`
   justify-content: center;
   gap: 4rem;
   flex-direction: row;
-  width: 38vw;
+  width: 44vw;
   min-width: max-content;
   margin-top: 1rem;
 
@@ -316,16 +311,9 @@ export const StyledForm = styled(motion.form)`
   width: 80%;
   max-width: 550px;
   padding: 4rem;
-  background: linear-gradient(
-    218deg,
-    rgba(255, 255, 255, 0.05) 0%,
-    rgba(130, 234, 255, 0.1) 44.48%,
-    rgba(86, 141, 183, 0.2) 73.96%,
-    rgba(11, 39, 90, 0.36) 140%
-  );
-  outline: 10px solid ${({ theme }) => theme.colors.text};
-  border: 2px solid ${({ theme }) => theme.colors.body};
-  z-index: 999;
+  background: ${({ theme }) => theme.colors.body};
+  outline: 15px solid ${({ theme }) => theme.colors.accent};
+  z-index: 888;
   font-family: "poppins";
   backdrop-filter: blur(3px);
   & label {

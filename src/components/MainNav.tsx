@@ -73,13 +73,16 @@ const MainNav = ({ toggleTheme, initialTheme }: Props) => {
             <Link to={"/"}>Home</Link>
           </StyledLink>
           <StyledLink>
-            <Link to={"/work"}>Work</Link>
+            <Link to={"/resume"}>Resume</Link>
+          </StyledLink>
+          <StyledLink>
+            <Link to={"/work"}>Works</Link>
           </StyledLink>
           <StyledLink>
             <Link to={"/about"}>About</Link>
           </StyledLink>
           <StyledLink>
-            <Link to={"/resume"}>Resume</Link>
+            <Link to={"/uses"}>Tools</Link>
           </StyledLink>
         </StyledList>
 
