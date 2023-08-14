@@ -296,7 +296,7 @@ export const Overlay = styled(motion.div)`
   background-color: rgba(5, 5, 15, 0.6);
   width: 100vw;
   height: 100vh;
-  backdrop-filter: blur(3px);
+  backdrop-filter: blur(1.5px);
   z-index: 100;
 `;
 export const StyledForm = styled(motion.form)`
@@ -362,7 +362,13 @@ export const StyledInput = styled.input`
   }
 `;
 export const StyledButton = styled(ExploreBtn)`
+  font-weight: bold;
+  color: white;
   background-color: indianred;
   border: none;
   padding: 1.5rem 5rem;
+
+  &:hover {
+    color: white;
+  }
 `;
