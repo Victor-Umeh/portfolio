@@ -1,109 +1,77 @@
 import { StyledCanvas } from "./styled/About.styled";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { A11y, Autoplay, Pagination } from "swiper/modules";
+import { A11y, Autoplay, EffectCreative } from "swiper/modules";
 import "swiper/swiper-bundle.css";
-
-import hiking from "../assets/images/hiker.jpg";
-import soccer from "../assets/images/soccer.jpg";
-import coding from "../assets/images/coding.jpg";
-import learn from "../assets/images/learn.jpg";
-
-const Image = {
-  hiking: hiking,
-  soccer: soccer,
-  coding: coding,
-  learn: learn,
-} as const;
+import hiking from "/images/hiker.jpg";
+import soccer from "/images/soccer.jpg";
+import coding from "/images/coding.jpg";
+import learn from "/images/learn.jpg";
 
 const Hobbies = [
   {
     text: "Hiking",
-    img: Image.hiking,
+    img: hiking,
   },
   {
     text: "Coding",
-    img: Image.coding,
+    img: coding,
   },
   {
     text: "Soccer",
-    img: Image.soccer,
+    img: soccer,
   },
   {
     text: "Learning",
-    img: Image.learn,
+    img: learn,
   },
 ];
 
-const Slides = () => {
-  return (
-    <>
-      {Hobbies.map((hobby) => (
-        <SwiperSlide className="swiper" key={hobby.text}>
-          <span>{hobby.text}</span>
-          {/* {console.log(hobby.img)} */}
-
-          <img
-            src={hobby.img}
-            alt={hobby.text}
-            style={{ height: "100%", objectFit: "cover" }}
-          />
-        </SwiperSlide>
-      ))}
-    </>
-  );
-};
-
 const Slider = () => {
   return (
-    <StyledCanvas width="32%">
+    <StyledCanvas width="32%" dis="none">
       <Swiper
-        modules={[A11y, Autoplay, Pagination]}
+        modules={[A11y, Autoplay, EffectCreative]}
         spaceBetween={0}
         slidesPerView={1}
+        grabCursor={true}
+        effect={"creative"}
+        creativeEffect={{
+          prev: {
+            shadow: true,
+            origin: "left center",
+            translate: ["-5%", 0, -200],
+            rotate: [0, 100, 0],
+          },
+          next: {
+            origin: "right center",
+            translate: ["5%", 0, -200],
+            rotate: [0, -100, 0],
+          },
+        }}
         autoplay={{
-          delay: 2500,
+          delay: 2300,
           disableOnInteraction: false,
         }}
         loop={true}
-        pagination={{
-          clickable: true,
-        }}
         onSlideChange={() => console.log("slide change")}
         onSwiper={(swiper) => console.log(swiper)}
         style={{
           height: "100%",
-          border: "1px solid black",
         }}
       >
-        <Slides />
+        {Hobbies.map((hobby) => (
+          <SwiperSlide className="swiper" key={hobby.text}>
+            <span>{hobby.text}</span>
+            <img
+              src={hobby.img}
+              alt={hobby.text}
+              style={{ width: "100%", height: "100%", objectFit: "cover" }}
+            />
+          </SwiperSlide>
+        ))}
       </Swiper>
     </StyledCanvas>
   );
 };
 
 export default Slider;
-
-{
-  /* 
-      <div className="article hobbies__img">
-        <p>Hobbies</p>
-      </div> 
-      
-      <StyledCanvas width="100%" dis="none">
-      </StyledCanvas>
-
-      return {Hobbies.map((hobby) => (
-    {
-    <SwiperSlide className="swiper" key={hobby.text}>
-      <span>{hobby.text}</span>
-      <img
-        src={hobby.img}
-        alt={hobby.text}
-        style={{ height: "100%", objectFit: "cover" }}
-      />
-    </SwiperSlide>
-  }))
-}
-};
-*/
-}

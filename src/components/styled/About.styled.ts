@@ -21,7 +21,7 @@ export const StyledCanvas = styled.section<Props>`
   display: ${({ dis }) => dis};
   position: relative;
   font-family: "Poppins", sans-serif;
-  /* border: 3px solid green; */
+  /* height: 100%; */
 
   & .article {
     display: flex;
@@ -29,8 +29,8 @@ export const StyledCanvas = styled.section<Props>`
     gap: 2rem;
     color: ${({ theme }) => theme.colors.text};
     padding: 3rem;
-    /* border: 1px solid gray; */
-    height: 100%;
+    min-height: 100%;
+    border: 1px solid ${({ theme }) => theme.text};
     overflow-y: auto;
   }
 
@@ -49,6 +49,16 @@ export const StyledCanvas = styled.section<Props>`
 
     & h3 {
       color: orangered;
+    }
+
+    & .swiper .swiper-slide span {
+      position: absolute;
+      bottom: 5rem;
+      left: 50%;
+      font-size: 4rem;
+      color: white;
+      opacity: 0.4;
+      transform: translateX(-50%);
     }
   }
 `;
