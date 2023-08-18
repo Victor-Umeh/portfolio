@@ -7,6 +7,7 @@ import {
   StyledButton,
   Overlay,
 } from "./styled/elements.styled";
+import { useEffect } from "react";
 
 const overlayVariants = {
   hidden: { opacity: 0 },
@@ -16,51 +17,51 @@ const overlayVariants = {
 };
 
 const formVariants = {
-  hidden: { top: "-100vh" },
+  hidden: { left: "-100vw" },
   visible: {
-    top: "50%",
+    left: "50%",
     transition: {
-      duration: 0.5,
       type: "spring",
+      damp: 30,
+      stiffness: 110,
     },
   },
 };
 
 const FormModal = () => {
-  const { showFormModal } = useContactFormContext();
+  const { showFormModal, setShowFormModal } = useContactFormContext();
+  useEffect(() => {});
   return (
     showFormModal && (
-      <>
-        <AnimatePresence>
-          <Overlay
-            variants={overlayVariants}
-            initial="hidden"
-            animate="visible"
-            exit="hidden"
-          />
-        </AnimatePresence>
-        <AnimatePresence>
-          <StyledForm
-            variants={formVariants}
-            initial="hidden"
-            animate="visible"
-            exit="hidden"
-          >
-            <label>
-              <h2>CONTACT ME</h2>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos
-                voluptatibus laboriosam alias,
-              </p>
-            </label>
+      <AnimatePresence>
+        <Overlay
+          variants={overlayVariants}
+          initial="hidden"
+          animate="visible"
+          exit="hidden"
+          onClick={() => setShowFormModal(!showFormModal)}
+        />
 
-            <StyledInput type="text" placeholder="Your Name" />
-            <StyledInput type="email" placeholder="Your Email" />
-            <StyledTextArea placeholder="Your Message" />
-            <StyledButton>Send</StyledButton>
-          </StyledForm>
-        </AnimatePresence>
-      </>
+        <StyledForm
+          variants={formVariants}
+          initial="hidden"
+          animate="visible"
+          exit={{ right: "100vw" }}
+        >
+          <label>
+            <h2>CONTACT ME</h2>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos
+              voluptatibus laboriosam alias,
+            </p>
+          </label>
+
+          <StyledInput type="text" placeholder="Your Name" />
+          <StyledInput type="email" placeholder="Your Email" />
+          <StyledTextArea placeholder="Your Message" />
+          <StyledButton>Send</StyledButton>
+        </StyledForm>
+      </AnimatePresence>
     )
   );
 };

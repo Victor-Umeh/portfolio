@@ -92,6 +92,7 @@ export const StyledBtn = styled(Button)`
   border-radius: 4px;
   transition: all 300ms;
   cursor: pointer;
+  z-index: -100;
 
   &:hover {
     font-weight: 400;
@@ -103,10 +104,10 @@ export const StyledBtn = styled(Button)`
 export const StyledNav = styled.nav<Props>`
   width: auto;
   display: flex;
-  position: sticky;
-  top: 0;
   align-items: center;
   justify-content: space-between;
+  position: sticky;
+  top: 0;
   margin-inline: auto;
   background-color: ${({ theme }) => theme.colors.body};
   padding-block: 2rem;
@@ -134,7 +135,7 @@ export const Hamburger = styled(Button)<MenuProps>`
   cursor: pointer;
   transform: rotate(${({ open }) => (open ? "180deg" : "0deg")});
   transition: transform 0.8s cubic-bezier(0.785, 0.135, 0.15, 0.86);
-
+  z-index: 1;
   & span {
     transition: transform 0.8s cubic-bezier(0.785, 0.135, 0.15, 0.86);
   }
@@ -168,7 +169,6 @@ export const Menu = styled.div<MenuProps>`
   left: 0;
   right: 0;
   bottom: ${({ open }) => (open ? "-6.5rem" : "100rem")};
-  z-index: -10;
   transition: bottom 0.8s cubic-bezier(0.785, 0.135, 0.15, 0.86);
 
   @media (min-width: 768px) {
@@ -207,6 +207,7 @@ export const StyledLink = styled.li<Props>`
 `;
 export const StyledText = styled(StyledLink)`
   display: none;
+  z-index: -1;
 
   @media (min-width: 768px) {
     display: block;
@@ -312,10 +313,12 @@ export const StyledForm = styled(motion.form)`
   max-width: 550px;
   padding: 4rem;
   background: ${({ theme }) => theme.colors.body};
-  outline: 15px solid ${({ theme }) => theme.colors.accent};
+  outline: 1px solid ${({ theme }) => theme.colors.accent};
+  border-radius: 14px;
   z-index: 888;
   font-family: "poppins";
   backdrop-filter: blur(3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   & label {
     margin-bottom: 2rem;
   }

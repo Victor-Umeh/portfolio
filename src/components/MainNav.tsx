@@ -42,7 +42,7 @@ const MainNav = ({ toggleTheme, initialTheme }: Props) => {
 
   return (
     <StyledNav>
-      <Link to={"/"}>
+      <Link to={"/"} style={{ zIndex: -1 }}>
         <img src={logo} alt="" />
       </Link>
 

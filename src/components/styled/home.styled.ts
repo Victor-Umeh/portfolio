@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 import img from "../../assets/desktop-img.jpg";
 
@@ -40,7 +41,7 @@ export const HeroSection = styled.section`
   }
 `;
 
-export const HeroCard = styled.section`
+export const HeroCard = styled(motion.section)`
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -100,7 +101,7 @@ export const AboutSect = styled.section`
   }
 `;
 
-export const AboutContent = styled.section`
+export const AboutContent = styled(motion.section)`
   position: relative;
   width: min(90%, 450px);
   margin-inline: auto;

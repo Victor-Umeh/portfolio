@@ -13,7 +13,17 @@ const Home: React.FC = () => {
   return (
     <>
       <HeroSection>
-        <HeroCard>
+        <HeroCard
+          initial={{ x: "-100vh" }}
+          animate={{ x: 0 }}
+          transition={{
+            delay: 1,
+            duration: 0.5,
+            type: "spring",
+            damp: 20,
+            stiffness: 100,
+          }}
+        >
           <CardHeader>Hi, I am Victor</CardHeader>
           <CardHeader
             as="span"
@@ -26,7 +36,17 @@ const Home: React.FC = () => {
       </HeroSection>
 
       <AboutSect>
-        <AboutContent>
+        <AboutContent
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{
+            delay: 1,
+            duration: 0.5,
+            type: "spring",
+            damp: 20,
+            stiffness: 100,
+          }}
+        >
           <NameTag>Victor Onyeka Umeh.</NameTag>
           <SubText as="h2" $fontz="2.7rem" $marginTop="5rem" $fontw="bold">
             About

@@ -1,11 +1,18 @@
 import { Contact } from "./styled/ContactBtn.styled";
 import { useContactFormContext } from "../context/formModalContext";
 import { AiFillMessage, AiFillCloseCircle } from "react-icons/ai";
+import { useEffect } from "react";
 
 const ContactBtn = () => {
   const { showFormModal, setShowFormModal } = useContactFormContext();
+  const handleClick = () => setShowFormModal(!showFormModal);
+
+  useEffect(() => {
+    setShowFormModal(false);
+  }, []);
+
   return (
-    <Contact onClick={() => setShowFormModal(!showFormModal)}>
+    <Contact onClick={handleClick}>
       <span className="icon">
         {showFormModal ? <AiFillCloseCircle /> : <AiFillMessage />}
       </span>

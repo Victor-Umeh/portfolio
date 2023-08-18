@@ -1,10 +1,10 @@
 import { StyledCanvas, AboutWrapper } from "../components/styled/About.styled";
-
+import Slider from "../components/slider";
 const about = () => {
   return (
     <>
       <AboutWrapper>
-        <StyledCanvas width="65%">
+        <StyledCanvas width="100%">
           <div className="article">
             <div>
               <p>Hey there,</p>
@@ -34,11 +34,7 @@ const about = () => {
             </p>
           </div>
         </StyledCanvas>
-        <StyledCanvas width="35%" dis="none">
-          <div className="article hobbies__img">
-            <p>Hobbies</p>
-          </div>
-        </StyledCanvas>
+        <Slider />
       </AboutWrapper>
     </>
   );
