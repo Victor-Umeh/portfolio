@@ -1,6 +1,6 @@
 import { StyledCanvas } from "./styled/About.styled";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { A11y, Autoplay, EffectCreative } from "swiper/modules";
+import { A11y, Autoplay, EffectFade } from "swiper/modules";
 import "swiper/swiper-bundle.css";
 import hiking from "/images/hiker.jpg";
 import soccer from "/images/soccer.jpg";
@@ -28,28 +28,15 @@ const Hobbies = [
 
 const Slider = () => {
   return (
-    <StyledCanvas width="32%" dis="none">
+    <StyledCanvas width="30%" dis="none">
       <Swiper
-        modules={[A11y, Autoplay, EffectCreative]}
+        modules={[A11y, Autoplay, EffectFade]}
         spaceBetween={0}
         slidesPerView={1}
         grabCursor={true}
-        effect={"creative"}
-        creativeEffect={{
-          prev: {
-            shadow: true,
-            origin: "left center",
-            translate: ["-5%", 0, -200],
-            rotate: [0, 100, 0],
-          },
-          next: {
-            origin: "right center",
-            translate: ["5%", 0, -200],
-            rotate: [0, -100, 0],
-          },
-        }}
+        effect={"fade"}
         autoplay={{
-          delay: 2300,
+          delay: 3000,
           disableOnInteraction: false,
         }}
         loop={true}

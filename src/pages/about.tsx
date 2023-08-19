@@ -4,7 +4,7 @@ const about = () => {
   return (
     <>
       <AboutWrapper>
-        <StyledCanvas width="100%">
+        <StyledCanvas width="55%">
           <div className="article">
             <div>
               <p>Hey there,</p>

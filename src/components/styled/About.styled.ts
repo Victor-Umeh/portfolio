@@ -13,6 +13,7 @@ export const AboutWrapper = styled.section`
   @media (min-width: 768px) {
     flex-direction: row;
     align-items: center;
+    justify-content: center;
     width: 84%;
     gap: 1vw;
   }
@@ -21,7 +22,7 @@ export const StyledCanvas = styled.section<Props>`
   display: ${({ dis }) => dis};
   position: relative;
   font-family: "Poppins", sans-serif;
-  /* height: 100%; */
+  height: 100%;
 
   & .article {
     display: flex;
@@ -30,27 +31,25 @@ export const StyledCanvas = styled.section<Props>`
     color: ${({ theme }) => theme.colors.text};
     padding: 3rem;
     min-height: 100%;
-    border: 1px solid ${({ theme }) => theme.text};
     overflow-y: auto;
+  }
+  & h3 {
+    color: orangered;
   }
 
   @media (min-width: 768px) {
     display: block;
     height: 100%;
-    width: ${({ width }) => width};
+    width: ${({ width }) => (width ? width : "50%")};
     padding-block: 4rem;
-
-    display: block;
-    max-width: 100%;
 
     & p {
       margin-block: 10px;
     }
 
-    & h3 {
-      color: orangered;
+    & .swiper .swiper-wrapper {
+      width: 100%;
     }
-
     & .swiper .swiper-slide span {
       position: absolute;
       bottom: 5rem;
