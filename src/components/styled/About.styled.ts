@@ -59,5 +59,12 @@ export const StyledCanvas = styled.section<Props>`
       opacity: 0.4;
       transform: translateX(-50%);
     }
+    & .swiper .swiper-slide span:nth-child(2) {
+      top: 2rem;
+      font-weight: bold;
+      font-size: 2rem;
+      opacity: 0.5;
+      letter-spacing: 0.8rem;
+    }
   }
 `;

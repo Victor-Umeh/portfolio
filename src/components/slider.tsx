@@ -28,7 +28,7 @@ const Hobbies = [
 
 const Slider = () => {
   return (
-    <StyledCanvas width="30%" dis="none">
+    <StyledCanvas width="33%" dis="none">
       <Swiper
         modules={[A11y, Autoplay, EffectFade]}
         spaceBetween={0}
@@ -49,6 +49,7 @@ const Slider = () => {
         {Hobbies.map((hobby) => (
           <SwiperSlide className="swiper" key={hobby.text}>
             <span>{hobby.text}</span>
+            <span>HOBBIES</span>
             <img
               src={hobby.img}
               alt={hobby.text}
