@@ -61,7 +61,6 @@ export const HeroCard = styled(motion.section)`
   z-index: 0;
 `;
 export const CardHeader = styled.h1<HeaderProps>`
-  text-align: center;
   font-family: ${({ $fontf = "anton" }) => $fontf}, sans-serif;
   color: ${({ theme }) => theme.colors.text};
   font-size: ${({ $fontz = "4.2rem" }) => $fontz};
@@ -80,7 +79,6 @@ export const SubText = styled(CardHeader)`
   color: ${({ color }) => color};
   font-family: "poppins";
   text-transform: none;
-  text-align: left;
   margin-right: auto;
 
   @media (min-width: 768px) {

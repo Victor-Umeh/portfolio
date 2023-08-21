@@ -21,7 +21,6 @@ export const Contact = styled(ExploreBtn)<Props>`
   bottom: 1rem;
   right: 3rem;
   border: none;
-  z-index: 999;
 
   & .icon {
     font-size: 3rem;

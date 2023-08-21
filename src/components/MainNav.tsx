@@ -22,7 +22,7 @@ import {
 } from "./styled/elements.styled";
 import darkThemeIcon from "../assets/dark-theme.svg";
 import lightThemeIcon from "../assets/light-theme.svg";
-import logo from "../assets/logo.svg";
+import logo from "/logo.svg";
 
 interface Props {
   toggleTheme: (initialTheme: boolean) => any;

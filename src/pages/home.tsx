@@ -31,6 +31,8 @@ const IntroCard = () => {
       showCursor: false,
       bindInputFocusEvents: true,
       backDelay: 1000,
+      loop: true,
+      loopCount: 2,
     });
 
     return () => {
@@ -41,12 +43,14 @@ const IntroCard = () => {
 
   return (
     <>
-      <CardHeader>Hi, I am Victor</CardHeader>
+      <CardHeader style={{ fontSize: "clamp(2.5rem, 4vw, 3.5rem)" }}>
+        Hi, I am Victor
+      </CardHeader>
       <CardHeader
         as="span"
         $fontf=" Antonio"
         style={{
-          fontSize: "clamp(1rem, 2vw, 1.6rem)",
+          fontSize: "clamp(1.3rem, 2vw, 1.6rem)",
           height: "2.5vh",
         }}
         ref={el}
@@ -60,8 +64,8 @@ const Home = () => {
     <>
       <HeroSection>
         <HeroCard
-          initial={{ scaleX: 0 }}
-          animate={{ scaleX: 1, originX: "left" }}
+          initial={{ scaleY: 0 }}
+          animate={{ scaleY: 1, originY: "top" }}
           transition={{
             delay: 1,
             duration: 1,

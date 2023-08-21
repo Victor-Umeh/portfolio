@@ -164,16 +164,18 @@ export const Menu = styled.div<MenuProps>`
   align-items: center;
   padding-top: 10rem;
   background-color: ${({ theme }) => theme.colors.body};
-  height: 100vh;
+  height: 92%;
   position: fixed;
   left: 0;
   right: 0;
-  bottom: ${({ open }) => (open ? "-6.5rem" : "100rem")};
-  transition: bottom 0.8s cubic-bezier(0.785, 0.135, 0.15, 0.86);
-
+  bottom: 0;
+  transform: scaleY(${({ open }) => (open ? 1 : 0)});
+  transform-origin: top;
+  transition: transform 0.8s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  z-index: 999;
   @media (min-width: 768px) {
     padding-top: 8rem;
-    bottom: ${({ open }) => (open ? "-8.55rem" : "100rem")};
+    height: 89%;
   }
 `;
 
@@ -298,7 +300,7 @@ export const Overlay = styled(motion.div)`
   width: 100vw;
   height: 100vh;
   backdrop-filter: blur(1.5px);
-  z-index: 100;
+  z-index: 20;
 `;
 export const StyledForm = styled(motion.form)`
   display: flex;

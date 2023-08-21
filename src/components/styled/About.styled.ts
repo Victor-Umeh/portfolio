@@ -23,6 +23,7 @@ export const StyledCanvas = styled.section<Props>`
   position: relative;
   font-family: "Poppins", sans-serif;
   height: 100%;
+  z-index: 0;
 
   & .article {
     display: flex;
