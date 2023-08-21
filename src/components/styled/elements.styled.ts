@@ -78,6 +78,7 @@ export const Main = styled.main<Props>`
 `;
 
 export const StyledBtn = styled(Button)`
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -98,6 +99,28 @@ export const StyledBtn = styled(Button)`
     font-weight: 400;
     transform: scale(1.05);
     border-radius: 50%;
+  }
+
+  & .lang__wrapper {
+    position: absolute;
+    bottom: -4.5rem;
+    width: 180px;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0);
+    background-color: ${({ theme }) => theme.colors.accent};
+
+    /* &::before {
+      content: "";
+      position: absolute;
+      top: -0.5rem;
+      transform: rotate(45deg);
+      width: 30px;
+      aspect-ratio: 1;
+      background-color: inherit;
+    } */
   }
 `;
 

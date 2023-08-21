@@ -1,6 +1,7 @@
 //@ts-ignore
 import Typed from "typed.js";
 import { useEffect, useRef } from "react";
+import { useTranslation } from "react-i18next";
 import {
   HeroSection,
   HeroCard,
@@ -13,6 +14,7 @@ import { ExploreBtn } from "../components/styled/ExploreBtn.styled";
 import { NameTag } from "../components/styled/elements.styled";
 
 const IntroCard = () => {
+  const { t } = useTranslation();
   // Create reference to store the DOM element containing the animation
   const el = useRef(null);
 
@@ -44,7 +46,8 @@ const IntroCard = () => {
   return (
     <>
       <CardHeader style={{ fontSize: "clamp(2.5rem, 4vw, 3.5rem)" }}>
-        Hi, I am Victor
+        {t("greet")}
+        Victor
       </CardHeader>
       <CardHeader
         as="span"

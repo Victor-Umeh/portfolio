@@ -9,7 +9,9 @@ i18next
     fallbackLng: "en",
     resources: {
       en: {
-        translation: {},
+        translation: {
+          greet: "Hi, I am ",
+        },
       },
     },
   });

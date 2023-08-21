@@ -11,7 +11,6 @@ import { FaArrowRight } from "react-icons/fa";
 import {
   StyledNav,
   Hamburger,
-  StyledBtn,
   Line,
   Menu,
   StyledList,
@@ -19,10 +18,12 @@ import {
   SocialLink,
   SocialBlock,
   StyledText,
+  StyledBtn,
 } from "./styled/elements.styled";
 import darkThemeIcon from "../assets/dark-theme.svg";
 import lightThemeIcon from "../assets/light-theme.svg";
 import logo from "/logo.svg";
+import LanguageSelector from "./LanguageSelector";
 
 interface Props {
   toggleTheme: (initialTheme: boolean) => any;
@@ -46,7 +47,8 @@ const MainNav = ({ toggleTheme, initialTheme }: Props) => {
         <img src={logo} alt="" />
       </Link>
 
-      <StyledBtn auto={true}>En</StyledBtn>
+      {/* <StyledBtn auto={true}>En</StyledBtn> */}
+      <LanguageSelector />
 
       <StyledBtn onClick={() => toggleTheme(!initialTheme)} auto={false}>
         <img
