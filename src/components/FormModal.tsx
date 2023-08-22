@@ -22,8 +22,8 @@ const formVariants = {
     left: "50%",
     transition: {
       type: "spring",
-      damp: 30,
-      stiffness: 110,
+      stiffness: 200,
+      damping: 19,
     },
   },
 };

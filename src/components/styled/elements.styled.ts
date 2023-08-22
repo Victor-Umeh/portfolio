@@ -84,43 +84,55 @@ export const StyledBtn = styled(Button)`
   justify-content: center;
   width: 25px;
   aspect-ratio: 1;
-  font-weight: 400;
+  font-size: 1.5rem;
+  font-weight: 300;
   color: ${({ theme }) => theme.colors.accent};
   margin-left: ${({ auto }) => auto && "auto"};
   margin-right: 2.5rem;
   padding: 0.4rem;
-  border: 1px solid ${({ theme }) => theme.colors.accent};
-  border-radius: 4px;
-  transition: all 300ms;
+  /* border: 1px solid ${({ theme }) => theme.colors.accent}; */
+  border-radius: 50%;
+  transition: transform 300ms;
   cursor: pointer;
-  z-index: -100;
 
-  &:hover {
-    font-weight: 400;
-    transform: scale(1.05);
-    border-radius: 50%;
+  &:hover:not() {
+    opacity: 0.5;
   }
 
   & .lang__wrapper {
     position: absolute;
-    bottom: -4.5rem;
+    bottom: -24rem;
     width: 180px;
-    padding: 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    transform: scale(0);
+    flex-direction: column;
     background-color: ${({ theme }) => theme.colors.accent};
 
-    /* &::before {
+    &::before {
       content: "";
       position: absolute;
-      top: -0.5rem;
-      transform: rotate(45deg);
+      top: 0.85rem;
+      left: 50%;
+      transform: rotate(45deg) translateX(-50%);
       width: 30px;
       aspect-ratio: 1;
       background-color: inherit;
-    } */
+      z-index: -1;
+    }
+
+    & .lang__selector {
+      outline: 0px;
+      border: 0px;
+      color: ${({ theme }) => theme.colors.body};
+      background-color: transparent;
+      font-size: 1.5rem;
+      font-weight: bold;
+      display: block;
+      width: 100%;
+      padding-block: 1rem;
+      cursor: pointer;
+    }
   }
 `;
 

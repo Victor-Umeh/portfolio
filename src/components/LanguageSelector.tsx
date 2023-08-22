@@ -1,6 +1,7 @@
 import React from "react";
 import { StyledBtn } from "./styled/elements.styled";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 const lngs = {
   en: { nativeName: "English" },
@@ -11,34 +12,50 @@ const lngs = {
   sw: { nativeName: "Swahili" },
 } as const;
 
-// const dropdownVariants = {
-//   visible: { scaleY: 1 },
-// };
 type TDropdown = "close" | "open";
 
 const LanguageSelector = () => {
+  const { i18n } = useTranslation();
   const [showDropdown, setShowDropdown] = React.useState<TDropdown>("close");
   return (
     <StyledBtn
+      as={"div"}
       auto={true}
-      onMouseOver={() => {
-        setShowDropdown("open");
-      }}
-      onMouseLeave={() => {
-        setShowDropdown("close");
-      }}
+      onClick={() =>
+        setShowDropdown((prev) => (prev === "close" ? "open" : "close"))
+      }
     >
-      En
+      Lang
       <motion.div
         className="lang__wrapper"
-        initial={{ opacity: 0, x: -200 }}
+        initial={{
+          scaleY: 0,
+          y: -200,
+        }}
         animate={{
           originY: "top",
-          opacity: showDropdown === "open" ? 1 : 0,
-          x: 0,
+          scaleY: showDropdown === "open" ? 1 : 0,
+          y: showDropdown === "open" ? 0 : -200,
         }}
-        transition={{ duration: 0.2 }}
-      ></motion.div>
+        transition={{
+          duration: 0.3,
+          type: "spring",
+          stiffness: 200,
+          damping: 18,
+        }}
+      >
+        {Object.keys(lngs).map((lng) => (
+          <button
+            className="lang__selector"
+            type="submit"
+            key={lng}
+            onClick={() => i18n.changeLanguage(lng)}
+            disabled={i18n.resolvedLanguage === lng}
+          >
+            {lngs[lng].nativeName}
+          </button>
+        ))}
+      </motion.div>
     </StyledBtn>
   );
 };
