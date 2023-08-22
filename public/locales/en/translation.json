@@ -1,5 +1,5 @@
 {
-  "home": {
+  "homePage": {
     "greet": "Hi, I am ",
     "aboutText": "About",
     "heroText": "Hi, I am a frontend developer, logo designer and photo editor in Jos, Nigeria. Eager to expand knowledge and skills",
@@ -12,5 +12,13 @@
     "works": "Works",
     "about": "About",
     "tools": "Tools"
+  },
+  "aboutPage": {
+    "description": "Hey there,",
+    "brief": "I'm Victor Umeokoli or Umeh for short living in Jos, plateau state Nigeria",
+    "skills": "I am a frontend developer, logo & vector designer an aspiring blockchain developer.",
+    "hobby": "Hobbies",
+    "hobbyDesc": "I love hiking, reading fictional and comic books learning new things that catches my interest or that is for job.On my leisure time I watch soccer or animes.",
+    "skillsList": "My technical skills and tools I work with are HTML, CSS,tailwindcss, SASS, styled-components, git, Javascript, Typescript, Figma, Adobe XD, Photoshop, Illustrator, Lightroom and others ......."
   }
 }

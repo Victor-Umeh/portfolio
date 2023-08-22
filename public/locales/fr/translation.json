@@ -1,8 +1,25 @@
 {
-  "home": {
+  "homePage": {
     "greet": "Salut je suis ",
     "aboutText": "À propos",
     "heroText": "Bonjour, je suis développeur frontend, concepteur de logo et éditeur de photos à Jos, au Nigeria. Désireux d'élargir ses connaissances et ses compétences",
     "exploreBtn": "Explorer"
+  },
+
+  "nav": {
+    "home": "Maison",
+    "resume": "CV",
+    "works": "Travaux",
+    "about": "À propos",
+    "tools": "Outils"
+  },
+
+  "aboutPage": {
+    "description": "Salut,",
+    "brief": "Je m'appelle Victor Umeokoli ou Umeh pour une courte période de vie à Jos, dans l'État du plateau du Nigeria.",
+    "skills": "Je suis un développeur frontend, un concepteur de logos et de vecteurs et un aspirant développeur blockchain.",
+    "hobby": "Loisirs",
+    "hobbyDesc": "J'aime faire de la randonnée, lire des livres de fiction et des bandes dessinées, apprendre de nouvelles choses qui m'intéressent ou qui sont pour le travail. Pendant mon temps libre, je regarde du football ou des animes.",
+    "skillsList": "Mes compétences techniques et les outils avec lesquels je travaille sont HTML, CSS, tailwindcss, SASS, styled-components, git, Javascript, Typescript, Figma, Adobe XD, Photoshop, Illustrator, Lightroom et autres ......."
   }
 }

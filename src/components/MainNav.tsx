@@ -25,6 +25,7 @@ import darkThemeIcon from "../assets/dark-theme.svg";
 import lightThemeIcon from "../assets/light-theme.svg";
 import logo from "/logo.svg";
 import LanguageSelector from "./LanguageSelector";
+import "../i18n";
 
 interface Props {
   toggleTheme: (initialTheme: boolean) => any;

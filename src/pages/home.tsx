@@ -46,7 +46,7 @@ const IntroCard = () => {
   return (
     <>
       <CardHeader style={{ fontSize: "clamp(2.5rem, 4vw, 3.5rem)" }}>
-        {t("home.greet")}
+        {t("homePage.greet")}
         Victor
       </CardHeader>
       <CardHeader
@@ -98,7 +98,7 @@ const Home = () => {
         >
           <NameTag>Victor Onyeka Umeh.</NameTag>
           <SubText as="h2" $fontz="2.7rem" $marginTop="5rem" $fontw="bold">
-            {t("home.aboutText")}
+            {t("homePage.aboutText")}
           </SubText>
           <SubText
             as="p"
@@ -107,9 +107,9 @@ const Home = () => {
             $marginTop="1.1rem"
             color="000000"
           >
-            {t("home.heroText")}
+            {t("homePage.heroText")}
           </SubText>
-          <ExploreBtn>{t("home.exploreBtn")}</ExploreBtn>
+          <ExploreBtn>{t("homePage.exploreBtn")}</ExploreBtn>
         </AboutContent>
       </AboutSect>
     </>
