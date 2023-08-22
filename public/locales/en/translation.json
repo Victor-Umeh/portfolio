@@ -1,0 +1,16 @@
+{
+  "home": {
+    "greet": "Hi, I am ",
+    "aboutText": "About",
+    "heroText": "Hi, I am a frontend developer, logo designer and photo editor in Jos, Nigeria. Eager to expand knowledge and skills",
+    "exploreBtn": "Explore"
+  },
+
+  "nav": {
+    "home": "Home",
+    "resume": "Resume",
+    "works": "Works",
+    "about": "About",
+    "tools": "Tools"
+  }
+}

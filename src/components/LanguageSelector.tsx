@@ -3,19 +3,30 @@ import { StyledBtn } from "./styled/elements.styled";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 
-const lngs = {
+type TData = {
+  nativeName: string;
+};
+/*
+Reference source---------------------------
+######stackoverflow.com/questions/56568423/typescript-no-index-signature-with-a-parameter-of-type-string-was-found-on-ty
+*/
+type TLngs = {
+  [key: string]: TData;
+};
+const lngs: TLngs = {
   en: { nativeName: "English" },
   fr: { nativeName: "French" },
   ig: { nativeName: "Igbo" },
   hau: { nativeName: "Hausa" },
   yo: { nativeName: "Yoruba" },
-  sw: { nativeName: "Swahili" },
-} as const;
+};
 
 type TDropdown = "close" | "open";
 
 const LanguageSelector = () => {
+  //i18next translation hook
   const { i18n } = useTranslation();
+
   const [showDropdown, setShowDropdown] = React.useState<TDropdown>("close");
   return (
     <StyledBtn

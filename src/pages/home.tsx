@@ -46,7 +46,7 @@ const IntroCard = () => {
   return (
     <>
       <CardHeader style={{ fontSize: "clamp(2.5rem, 4vw, 3.5rem)" }}>
-        {t("greet")}
+        {t("home.greet")}
         Victor
       </CardHeader>
       <CardHeader
@@ -63,6 +63,7 @@ const IntroCard = () => {
 };
 
 const Home = () => {
+  const { t } = useTranslation();
   return (
     <>
       <HeroSection>
@@ -97,7 +98,7 @@ const Home = () => {
         >
           <NameTag>Victor Onyeka Umeh.</NameTag>
           <SubText as="h2" $fontz="2.7rem" $marginTop="5rem" $fontw="bold">
-            About
+            {t("home.aboutText")}
           </SubText>
           <SubText
             as="p"
@@ -106,10 +107,9 @@ const Home = () => {
             $marginTop="1.1rem"
             color="000000"
           >
-            Hi, I am a frontend developer, logo designer and photo editor in
-            Jos, Nigeria. Eager to expand knowledge and skills
+            {t("home.heroText")}
           </SubText>
-          <ExploreBtn>Explore</ExploreBtn>
+          <ExploreBtn>{t("home.exploreBtn")}</ExploreBtn>
         </AboutContent>
       </AboutSect>
     </>

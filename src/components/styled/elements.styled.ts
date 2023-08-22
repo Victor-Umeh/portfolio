@@ -101,12 +101,13 @@ export const StyledBtn = styled(Button)`
 
   & .lang__wrapper {
     position: absolute;
-    bottom: -24rem;
+    bottom: -21.5rem;
     width: 180px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    padding-block: 1rem;
     background-color: ${({ theme }) => theme.colors.accent};
 
     &::before {
@@ -127,11 +128,16 @@ export const StyledBtn = styled(Button)`
       color: ${({ theme }) => theme.colors.body};
       background-color: transparent;
       font-size: 1.5rem;
-      font-weight: bold;
       display: block;
       width: 100%;
       padding-block: 1rem;
       cursor: pointer;
+
+      &:disabled {
+        opacity: 0.6;
+        font-size: 1.6rem;
+        font-weight: bold;
+      }
     }
   }
 `;

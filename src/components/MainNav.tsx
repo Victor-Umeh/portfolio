@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { useTheme } from "styled-components";
 import { Link } from "react-router-dom";
 import {
@@ -31,6 +32,7 @@ interface Props {
 }
 
 const MainNav = ({ toggleTheme, initialTheme }: Props) => {
+  const { t } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   const theme = useTheme();
 
@@ -47,7 +49,6 @@ const MainNav = ({ toggleTheme, initialTheme }: Props) => {
         <img src={logo} alt="" />
       </Link>
 
-      {/* <StyledBtn auto={true}>En</StyledBtn> */}
       <LanguageSelector />
 
       <StyledBtn onClick={() => toggleTheme(!initialTheme)} auto={false}>
@@ -58,7 +59,7 @@ const MainNav = ({ toggleTheme, initialTheme }: Props) => {
       </StyledBtn>
 
       <StyledText fz="1.6rem">
-        <Link to={"/work"}>Works</Link>
+        <Link to={"/work"}>{t("nav.works")}</Link>
         <span>
           <FaArrowRight />
         </span>
@@ -72,19 +73,19 @@ const MainNav = ({ toggleTheme, initialTheme }: Props) => {
       <Menu open={isMenuOpen}>
         <StyledList onClick={handleToggle}>
           <StyledLink>
-            <Link to={"/"}>Home</Link>
+            <Link to={"/"}>{t("nav.home")}</Link>
           </StyledLink>
           <StyledLink>
-            <Link to={"/resume"}>Resume</Link>
+            <Link to={"/resume"}>{t("nav.resume")}</Link>
           </StyledLink>
           <StyledLink>
-            <Link to={"/work"}>Works</Link>
+            <Link to={"/work"}>{t("nav.works")}</Link>
           </StyledLink>
           <StyledLink>
-            <Link to={"/about"}>About</Link>
+            <Link to={"/about"}>{t("nav.about")}</Link>
           </StyledLink>
           <StyledLink>
-            <Link to={"/uses"}>Tools</Link>
+            <Link to={"/uses"}>{t("nav.tools")}</Link>
           </StyledLink>
         </StyledList>
 
