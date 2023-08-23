@@ -5,11 +5,24 @@ import {
 
 const Works = () => {
   return (
-    <ProjectWrapper>
-      <ProjectCard>works</ProjectCard>
-      <ProjectCard>works</ProjectCard>
-      <ProjectCard>works</ProjectCard>
-    </ProjectWrapper>
+    <>
+      <ProjectWrapper>
+        <h2>Works</h2>
+        <div className="project__wrapper">
+          <ProjectCard>
+            <div className="project__context">
+              <h3>Project Name</h3>
+              <p className="project__desc">Project desc</p>
+              <p>technologies used</p>
+            </div>
+            <span className="links">
+              <a href={""}>Live</a>
+              <a href={""}>GitHub</a>
+            </span>
+          </ProjectCard>
+        </div>
+      </ProjectWrapper>
+    </>
   );
 };
 

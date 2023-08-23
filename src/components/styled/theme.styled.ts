@@ -6,6 +6,7 @@ interface ThemeProps {
     accent: "#0f172a" | "#F5F5F5";
     heroText: "#474444" | "#474444";
     shadow: "#0f172a" | "#020617";
+    links: "orangered" | "purple";
   };
 }
 
@@ -17,6 +18,7 @@ export const light: ThemeProps = {
     accent: "#0f172a",
     heroText: "#474444",
     shadow: "#0f172a",
+    links: "orangered",
   },
 };
 
@@ -28,6 +30,7 @@ export const dark: ThemeProps = {
     accent: "#F5F5F5",
     heroText: "#474444",
     shadow: "#020617",
+    links: "purple",
   },
 };
 ``;

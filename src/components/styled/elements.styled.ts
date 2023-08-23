@@ -18,59 +18,95 @@ interface MenuProps extends Props {
   istop?: string;
 }
 export const StyledWrapper = styled(ToolsWrapper)<Props>`
-  max-width: 500px;
-  margin-block: 3rem;
-  padding: ${({ pad }) => pad};
-  height: auto;
-  overflow-y: auto;
+  max-width: 850px;
+  /* margin-block: 3rem; */
+  margin-bottom: 0;
+  /* padding: ${({ pad }) => pad}; */
+
+  .resume {
+    width: 100%;
+    border-radius: 8px;
+    background-color: white;
+    border: 1px solid ${({ theme }) => theme.colors.text};
+    padding: 2rem;
+    margin-bottom: 3rem;
+
+    p {
+      text-align: left;
+      width: 100%;
+    }
+  }
 `;
 
 export const ProjectWrapper = styled(StyledWrapper)`
-  display: grid;
-  gap: 2rem;
+  width: 90%;
+  max-width: 700px;
+  padding-top: clamp(1rem, 5vh, 10rem);
+  overflow-y: visible;
+  margin-block: 0;
 
-  @media (min-width: 768px) {
-    align-content: start;
+  & p {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+  }
+  & h2 {
+    font-size: 2.3rem;
+    margin-bottom: 1rem;
+    letter-spacing: 0.2rem;
+  }
+
+  & .project__wrapper {
+    display: flex;
     justify-content: center;
-    grid-template-columns: repeat(2, 1fr);
-    gap: min(3vw, 3rem);
-    width: 64%;
-    max-width: inherit;
-    padding-top: 4rem;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding-bottom: 8rem;
+
+    @media (min-width: 768px) {
+      gap: 3rem;
+    }
   }
 `;
 
 export const ProjectCard = styled.div`
-  height: 20rem;
-  border: 1px solid grey;
-  background-color: ${({ theme }) => theme.colors.body};
-  border-radius: 8px;
-  padding: 1rem;
-  box-shadow: 0 7px 2px
-    ${({ theme }) =>
-      theme.name === "light-theme"
-        ? "rgba(0, 10, 20, 0.1)"
-        : "rgba(0, 10, 20, 0.4)"};
-  transition: opacity, box-shadow 0.8s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  height: 18rem;
+  padding: 1.8rem 2.3rem 2.3rem 2.3rem;
+  background-color: ${({ theme }) => theme.colors.text};
+  border-radius: 0.7rem;
 
-  & a:hover {
-    cursor: pointer;
-    color: indianred;
+  h3 {
+    font-size: 2.4rem;
   }
-  &:hover {
-    opacity: 0.95;
-    box-shadow: 0 10px 8px
-      ${({ theme }) =>
-        theme.name === "light-theme"
-          ? "rgba(0, 10, 20, 0.1)"
-          : "rgba(0, 10, 20, 0.4)"};
+
+  h3,
+  p {
+    color: ${({ theme }) => theme.colors.body};
+    line-height: 1.6;
+  }
+  .project__context {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .links {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    & a {
+      color: ${({ theme }) => theme.colors.links};
+    }
+    & a:hover {
+      opacity: 0.7;
+    }
   }
 `;
 
 export const Main = styled.main<Props>`
   background-color: ${({ theme }) => theme.colors.body};
   position: relative;
-  height: 90vh;
+  height: 88vh;
 
   @media (min-width: 768px) {
     display: flex;

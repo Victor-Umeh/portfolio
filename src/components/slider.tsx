@@ -24,7 +24,7 @@ const Hobbies = [
     text: "Learning",
     img: learn,
   },
-];
+] as const;
 
 const Slider = () => {
   return (

@@ -31,7 +31,6 @@ export const HeroSection = styled.section`
   }
   @media (min-width: 768px) {
     background-position: center 0%;
-    min-height: calc(100vh - 8rem);
     width: 60%;
     justify-content: flex-start;
     padding-inline: 8%;
