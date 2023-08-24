@@ -49,7 +49,7 @@ const dropdownLinks = [
 
 const MainNav = ({ toggleTheme, initialTheme }: Props) => {
   const { t } = useTranslation();
-  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(true);
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   const [currentImage, setCurrentImage] = useState<string | undefined>(
     images[0]
   );
@@ -58,7 +58,7 @@ const MainNav = ({ toggleTheme, initialTheme }: Props) => {
   const lightTheme = theme.name === "light-theme";
 
   //toggle burger menu
-  const handleToggle = (): void => {
+  const handleToggle = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
@@ -90,6 +90,7 @@ const MainNav = ({ toggleTheme, initialTheme }: Props) => {
       </Hamburger>
 
       <Menu open={isMenuOpen}>
+        {/* Nav Links */}
         <StyledList onClick={handleToggle}>
           {dropdownLinks.map((link, index) => (
             <StyledLink
