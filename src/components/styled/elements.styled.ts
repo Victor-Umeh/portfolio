@@ -9,7 +9,6 @@ interface Props {
   pos?: boolean;
   auto?: false;
   top?: string;
-  pad?: string;
   border?: string;
   fz?: string;
 }
@@ -19,21 +18,35 @@ interface MenuProps extends Props {
 }
 export const StyledWrapper = styled(ToolsWrapper)<Props>`
   max-width: 850px;
-  /* margin-block: 3rem; */
-  margin-bottom: 0;
-  /* padding: ${({ pad }) => pad}; */
+  padding-bottom: 22rem;
 
-  .resume {
+  .resume__header {
+    font-size: 2rem;
+    margin-bottom: 1.6rem;
+  }
+  .resume__context {
     width: 100%;
     border-radius: 8px;
-    background-color: white;
-    border: 1px solid ${({ theme }) => theme.colors.text};
+    background-color: ${({ theme }) => theme.colors.container};
+    /* border: 1px solid ${({ theme }) => theme.colors.text}; */
+    box-shadow: 0 0 5px -3px ${({ theme }) => theme.colors.shadow};
     padding: 2rem;
-    margin-bottom: 3rem;
+    font-size: 1.4rem;
+
+    @media (min-width: 768px) {
+      font-size: 1.6rem;
+    }
 
     p {
       text-align: left;
       width: 100%;
+    }
+
+    .download span {
+      color: ${({ theme }) => theme.colors.text};
+    }
+    .link {
+      color: tomato;
     }
   }
 `;
@@ -383,23 +396,31 @@ export const StyledForm = styled(motion.form)`
   display: flex;
   justify-content: center;
   flex-direction: column;
-  gap: 4rem;
+  gap: 2rem;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 80%;
-  max-width: 550px;
-  padding: 4rem;
+  width: 90%;
+  max-width: 700px;
+  padding: 2rem;
   background: ${({ theme }) => theme.colors.body};
   outline: 1px solid ${({ theme }) => theme.colors.accent};
-  border-radius: 14px;
-  z-index: 888;
+  border-radius: 8px;
+  z-index: 100;
   font-family: "poppins";
   backdrop-filter: blur(3px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0px 12px rgba(0, 0, 0, 0.9);
+
+  @media (min-width: 768px) {
+    gap: 4rem;
+    padding: 4rem;
+  }
+
   & label {
-    margin-bottom: 2rem;
+    @media (min-width: 768px) {
+      margin-bottom: 2rem;
+    }
   }
   & h2,
   p {
@@ -409,7 +430,7 @@ export const StyledForm = styled(motion.form)`
 
   & p {
     font-size: 1.5rem;
-    max-width: 42ch;
+    max-width: 50ch;
     margin-inline: auto;
   }
 `;

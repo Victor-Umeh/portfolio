@@ -26,15 +26,33 @@ import lightThemeIcon from "../assets/light-theme.svg";
 import logo from "/logo.svg";
 import LanguageSelector from "./LanguageSelector";
 import "../i18n";
+import PreviewImage from "./PreviewImage";
+import about from "/images/about.jpg";
+import home from "/images/home.jpg";
+import resume from "/images/resume.jpg";
+import space from "/images/space.jpg";
+import work from "/images/work.jpg";
 
 interface Props {
   toggleTheme: (initialTheme: boolean) => any;
   initialTheme: boolean;
 }
 
+const images: string[] = [home, resume, work, about, space];
+const dropdownLinks = [
+  { to: "/", text: "nav.home" },
+  { to: "/resume", text: "nav.resume" },
+  { to: "/work", text: "nav.works" },
+  { to: "/about", text: "nav.about" },
+  { to: "/uses", text: "nav.tools" },
+] as const;
+
 const MainNav = ({ toggleTheme, initialTheme }: Props) => {
   const { t } = useTranslation();
-  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(true);
+  const [currentImage, setCurrentImage] = useState<string | undefined>(
+    images[0]
+  );
   const theme = useTheme();
 
   const lightTheme = theme.name === "light-theme";
@@ -73,21 +91,15 @@ const MainNav = ({ toggleTheme, initialTheme }: Props) => {
 
       <Menu open={isMenuOpen}>
         <StyledList onClick={handleToggle}>
-          <StyledLink>
-            <Link to={"/"}>{t("nav.home")}</Link>
-          </StyledLink>
-          <StyledLink>
-            <Link to={"/resume"}>{t("nav.resume")}</Link>
-          </StyledLink>
-          <StyledLink>
-            <Link to={"/work"}>{t("nav.works")}</Link>
-          </StyledLink>
-          <StyledLink>
-            <Link to={"/about"}>{t("nav.about")}</Link>
-          </StyledLink>
-          <StyledLink>
-            <Link to={"/uses"}>{t("nav.tools")}</Link>
-          </StyledLink>
+          {dropdownLinks.map((link, index) => (
+            <StyledLink
+              key={link.text}
+              onMouseOver={() => setCurrentImage(images[index])}
+              onMouseLeave={() => setCurrentImage(undefined)}
+            >
+              <Link to={link.to}>{t(link.text)}</Link>
+            </StyledLink>
+          ))}
         </StyledList>
 
         <SocialBlock as="div">
@@ -104,7 +116,8 @@ const MainNav = ({ toggleTheme, initialTheme }: Props) => {
             <BiLogoGmail style={{ color: theme.colors.text }} />
           </SocialLink>
         </SocialBlock>
-        <img src={""} alt="" />
+
+        <PreviewImage image={currentImage} alt={""} currState={currentImage} />
       </Menu>
     </StyledNav>
   );

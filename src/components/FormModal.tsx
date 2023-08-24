@@ -1,4 +1,5 @@
 import { useContactFormContext } from "../context/formModalContext";
+import { useEffect } from "react";
 import { AnimatePresence } from "framer-motion";
 import {
   StyledForm,
@@ -7,7 +8,6 @@ import {
   StyledButton,
   Overlay,
 } from "./styled/elements.styled";
-import { useEffect } from "react";
 
 const overlayVariants = {
   hidden: { opacity: 0 },

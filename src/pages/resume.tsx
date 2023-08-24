@@ -1,10 +1,12 @@
-import { StyledBtn, StyledWrapper } from "../components/styled/elements.styled";
+import soccer from "/images/soccer.jpg";
+import { StyledWrapper } from "../components/styled/elements.styled";
 import { HiOutlineFolderDownload } from "react-icons/hi";
 
 const Styled = () => {
   return (
-    <StyledWrapper border="1px solid grey">
-      <div className="resume">
+    <StyledWrapper style={{ paddingBottom: "6rem" }}>
+      <h2 className="resume__header">RESUME</h2>
+      <div className="resume__context">
         <div style={{ display: "flex", flexDirection: "column", gap: "4rem" }}>
           <header style={{ display: "flex", justifyContent: "space-between" }}>
             <div
@@ -22,15 +24,21 @@ const Styled = () => {
               <address>Your Email Address </address>
               <address>LinkedIn Profile URL</address>
             </div>
-            <StyledBtn
+            <a
+              className="download"
+              href={soccer}
+              download={soccer}
               style={{
                 width: "50px",
                 height: "50px",
                 fontSize: "3.5rem",
+                color: "black",
               }}
             >
-              <HiOutlineFolderDownload />
-            </StyledBtn>
+              <span>
+                <HiOutlineFolderDownload />
+              </span>
+            </a>
           </header>
           <article>
             <h3>Objective: </h3>
@@ -82,7 +90,10 @@ const Styled = () => {
           </article>
 
           <span>
-            Projects: <a href="#">Link to Your Portfolio Website]</a>
+            Projects:{" "}
+            <a className="link" href="#">
+              Link to Your Portfolio Website
+            </a>
           </span>
         </div>
       </div>
