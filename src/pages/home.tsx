@@ -1,6 +1,7 @@
 //@ts-ignore
 import Typed from "typed.js";
 import { useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import {
   HeroSection,
@@ -12,11 +13,19 @@ import {
 } from "../components/styled/home.styled";
 import { ExploreBtn } from "../components/styled/ExploreBtn.styled";
 import { NameTag } from "../components/styled/elements.styled";
+// import i18next from "i18next";
 
 const IntroCard = () => {
   const { t } = useTranslation();
+
   // Create reference to store the DOM element containing the animation
   const el = useRef(null);
+  // const paths = ["t1", "t2", "t3", "t4", "t5"];
+  // const typedItems = paths.map((path) => {
+  //   const items = i18next.t("typed", path);
+  //   return items;
+  // });
+  // console.log(typedItems);
 
   useEffect(() => {
     const typed = new Typed(el.current, {
@@ -34,7 +43,7 @@ const IntroCard = () => {
       bindInputFocusEvents: true,
       backDelay: 1000,
       loop: true,
-      loopCount: 2,
+      loopCount: 1,
     });
 
     return () => {
@@ -83,19 +92,7 @@ const Home = () => {
       </HeroSection>
 
       <AboutSect>
-        <AboutContent
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={
-            {
-              // delay: 1,
-              // duration: 0.5,
-              // type: "spring",
-              // damping: 20,
-              // stiffness: 100,
-            }
-          }
-        >
+        <AboutContent initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
           <NameTag>Victor Onyeka Umeh.</NameTag>
           <SubText as="h2" $fontz="2.7rem" $marginTop="5rem" $fontw="bold">
             {t("homePage.aboutText")}
@@ -109,7 +106,10 @@ const Home = () => {
           >
             {t("homePage.heroText")}
           </SubText>
-          <ExploreBtn>{t("homePage.exploreBtn")}</ExploreBtn>
+
+          <Link to="/work">
+            <ExploreBtn>{t("homePage.exploreBtn")}</ExploreBtn>
+          </Link>
         </AboutContent>
       </AboutSect>
     </>

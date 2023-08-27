@@ -1,5 +1,4 @@
 import { AnimatePresence, motion } from "framer-motion";
-import { useEffect} from "react";
 
 type TProps = {
   image: string | undefined;
@@ -14,13 +13,9 @@ const hoveredImageVariants = {
     x: 0,
     transition: { duration: 0.5 },
   },
-  exit: { opacity: 0, transition: { duration: 0 } },
+  exit: { display: "none" },
 };
 const PreviewImage = ({ image, alt, currState }: TProps) => {
-  useEffect(() => {
-    console.log(currState);
-  }, [currState]);
-
   return (
     <AnimatePresence>
       {currState && (
@@ -36,6 +31,7 @@ const PreviewImage = ({ image, alt, currState }: TProps) => {
             marginTop: "auto",
             marginBottom: "3rem",
           }}
+          className="nav__preview-image"
         >
           <img
             src={image}

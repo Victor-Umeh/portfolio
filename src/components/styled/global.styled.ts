@@ -29,6 +29,14 @@ body {
 // font-family: 'Poppins', sans-serif;
 /* #171B20 */
 }
+
+.nav__preview-image{
+  display: none;
+
+  @media(min-width: 768px){
+    display: block;
+  }
+}
 `;
 
 export default GlobalStyles;

@@ -1,4 +1,11 @@
 {
+  "typed": {
+    "t1": "Adventurer.",
+    "t2": "Tech Enthusiast.",
+    "t3": "Aspiring Blockchain Dev.",
+    "t4": "Open to learning new technologies.",
+    "t5": "Frontend Dev."
+  },
   "homePage": {
     "greet": "Hi, I am ",
     "aboutText": "About",
