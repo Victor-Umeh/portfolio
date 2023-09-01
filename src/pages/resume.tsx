@@ -1,4 +1,4 @@
-import soccer from "/images/soccer.jpg";
+import resume from "/resume.pdf"
 import { StyledWrapper } from "../components/styled/elements.styled";
 import { HiOutlineFolderDownload } from "react-icons/hi";
 
@@ -26,8 +26,8 @@ const Styled = () => {
             </div>
             <a
               className="download"
-              href={soccer}
-              download={soccer}
+              href={resume}
+              download={resume}
               style={{
                 width: "50px",
                 height: "50px",

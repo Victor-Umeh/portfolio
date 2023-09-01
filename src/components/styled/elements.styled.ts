@@ -258,7 +258,7 @@ export const Menu = styled.div<MenuProps>`
   position: fixed;
   left: 0;
   right: 0;
-  bottom: 0;
+  bottom: 3px;
   transform: scaleY(${({ open }) => (open ? 1 : 0)});
   transform-origin: top;
   transition: transform 0.8s cubic-bezier(0.785, 0.135, 0.15, 0.86);

@@ -107,7 +107,7 @@ const MainNav = ({ toggleTheme, initialTheme }: Props) => {
           <SocialLink href="">
             <BiLogoLinkedinSquare style={{ color: theme.colors.text }} />
           </SocialLink>
-          <SocialLink href="">
+          <SocialLink href=""> 
             <IoLogoWhatsapp style={{ color: theme.colors.text }} />
           </SocialLink>
           <SocialLink href="">
