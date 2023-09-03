@@ -96,37 +96,37 @@ const Resume = () => {
           <article>
             <h3>Hard Skills:</h3>
             <ul>
-              <li>HTMl,</li>
+              <li>HTMl</li>
               <Divider />
-              <li>CSS,</li>
+              <li>CSS</li>
               <Divider />
-              <li>Responsive Design,</li>
+              <li>Responsive Design</li>
               <Divider />
-              <li>Tailwindcss,</li>
+              <li>Tailwindcss</li>
               <Divider />
-              <li>SASS,</li>
+              <li>SASS</li>
               <Divider />
-              <li>MUI,</li>
+              <li>MUI</li>
               <Divider />
-              <li>Styled Components,</li>
+              <li>Styled Components</li>
               <Divider />
-              <li>Javascript,</li>
+              <li>Javascript</li>
               <Divider />
-              <li>Typescript,</li>
+              <li>Typescript</li>
               <Divider />
-              <li>React,</li>
+              <li>React</li>
               <Divider />
-              <li>Redux-Toolkit,</li>
+              <li>Redux-Toolkit</li>
               <Divider />
-              <li>Context API,</li>
+              <li>Context API</li>
               <Divider />
-              <li>Figma,</li>
+              <li>Figma</li>
               <Divider />
-              <li>Adobe XD,</li>
+              <li>Adobe XD</li>
               <Divider />
-              <li>Git,</li>
+              <li>Git</li>
               <Divider />
-              <li>Github,</li>
+              <li>Github</li>
               <Divider />
               <li>Adobe Photoshop.</li>
             </ul>
