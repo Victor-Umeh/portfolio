@@ -1,7 +1,6 @@
-import React from "react";
+import React, { Suspense } from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
-import { Suspense } from "react";
 import App from "./App.tsx";
 import Loader from "./components/Loader.tsx";
 import "./i18n.ts";

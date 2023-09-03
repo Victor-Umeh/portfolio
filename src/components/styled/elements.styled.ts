@@ -18,37 +18,6 @@ interface MenuProps extends Props {
 }
 export const StyledWrapper = styled(ToolsWrapper)<Props>`
   max-width: 850px;
-  padding-bottom: 22rem;
-
-  .resume__header {
-    font-size: 2rem;
-    margin-bottom: 1.6rem;
-  }
-  .resume__context {
-    width: 100%;
-    border-radius: 8px;
-    background-color: ${({ theme }) => theme.colors.container};
-    /* border: 1px solid ${({ theme }) => theme.colors.text}; */
-    box-shadow: 0 0 5px -3px ${({ theme }) => theme.colors.shadow};
-    padding: 2rem;
-    font-size: 1.4rem;
-
-    @media (min-width: 768px) {
-      font-size: 1.6rem;
-    }
-
-    p {
-      text-align: left;
-      width: 100%;
-    }
-
-    .download span {
-      color: ${({ theme }) => theme.colors.text};
-    }
-    .link {
-      color: tomato;
-    }
-  }
 `;
 
 export const ProjectWrapper = styled(StyledWrapper)`

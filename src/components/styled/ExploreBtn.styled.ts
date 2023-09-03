@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Button } from "./Button.styled";
+import { Button } from "./button.styled";
 
 export const ExploreBtn = styled(Button)`
   position: relative;

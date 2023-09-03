@@ -1,4 +1,4 @@
-import { Contact } from "./styled/ContactBtn.styled";
+import { Contact } from "./styled/contactBtn.styled";
 import { useContactFormContext } from "../context/formModalContext";
 import { AiFillMessage, AiFillCloseCircle } from "react-icons/ai";
 import { useEffect } from "react";

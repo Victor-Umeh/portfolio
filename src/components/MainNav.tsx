@@ -107,7 +107,7 @@ const MainNav = ({ toggleTheme, initialTheme }: Props) => {
           <SocialLink href="">
             <BiLogoLinkedinSquare style={{ color: theme.colors.text }} />
           </SocialLink>
-          <SocialLink href=""> 
+          <SocialLink href="">
             <IoLogoWhatsapp style={{ color: theme.colors.text }} />
           </SocialLink>
           <SocialLink href="">
@@ -118,7 +118,12 @@ const MainNav = ({ toggleTheme, initialTheme }: Props) => {
           </SocialLink>
         </SocialBlock>
 
-        <PreviewImage image={currentImage} alt={""} currState={currentImage} />
+        <PreviewImage
+          image={currentImage}
+          alt={""}
+          currState={currentImage}
+          setCurrentImage={setCurrentImage}
+        />
       </Menu>
     </StyledNav>
   );

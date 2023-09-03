@@ -1,9 +1,11 @@
 import { AnimatePresence, motion } from "framer-motion";
+import { useEffect } from "react";
 
 type TProps = {
   image: string | undefined;
   alt: string | undefined;
   currState: string | undefined;
+  setCurrentImage: any;
 };
 
 const hoveredImageVariants = {
@@ -15,7 +17,11 @@ const hoveredImageVariants = {
   },
   exit: { display: "none" },
 };
-const PreviewImage = ({ image, alt, currState }: TProps) => {
+const PreviewImage = ({ image, alt, currState, setCurrentImage }: TProps) => {
+  useEffect(() => {
+    setCurrentImage(null);
+  }, []);
+
   return (
     <AnimatePresence>
       {currState && (
