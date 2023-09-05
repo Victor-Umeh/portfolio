@@ -45,6 +45,40 @@ export const Tool = styled.div`
   min-height: 20rem;
   border: 1px solid grey;
   cursor: pointer;
+  position: relative;
+  overflow: hidden;
+
+  a {
+    width: 100%;
+    height: 100%;
+
+    p {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: ${({ theme }) => theme.colors.text};
+    }
+    img {
+      position: absolute;
+      top: 0;
+      left: -100vw;
+      width: 100%;
+      transition: left 800ms cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+  }
+
+  img {
+    position: absolute;
+    top: 0;
+    left: -100vw;
+    width: 100%;
+    transition: left 800ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+
+  &:hover img {
+    left: 0;
+  }
 
   @media (min-width: 600px) {
     min-width: auto;
@@ -54,7 +88,58 @@ export const Tool = styled.div`
     min-height: auto;
   }
 `;
+
 export const StyledHeader = styled.h2`
   font-size: 1.8rem;
   padding-bottom: 1rem;
+`;
+
+export const ToolWrapper = styled.section`
+  max-width: 500px;
+  margin: 4rem auto;
+  border-radius: 8px;
+  background-color: ${({ theme }) => theme.colors.container};
+  box-shadow: 0 0 5px -3px ${({ theme }) => theme.colors.shadow};
+  overflow: hidden;
+  position: relative;
+
+  figcaption {
+    padding: 1.3rem;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.6rem;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 1.6rem;
+
+    figcaption {
+      padding: 2rem;
+    }
+  }
+`;
+
+export const ToolDescription = styled.p`
+  font-size: 1.4rem;
+  padding: 0 0 6rem 0 !important;
+
+  @media (min-width: 768px) {
+    min-width: 500px;
+  }
+`;
+
+export const PreviousPage = styled.button`
+  border: 0;
+  outline: none;
+  background-color: transparent;
+  position: absolute;
+  color: white;
+  font-size: 3rem;
+  left: 2rem;
+  top: 2rem;
+  cursor: pointer;
 `;

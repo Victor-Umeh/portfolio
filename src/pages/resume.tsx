@@ -1,4 +1,4 @@
-import resume from "/resume.pdf";
+import resume from "/umeokoli-victor-onyeka.pdf";
 import { StyledWrapper } from "../components/styled/elements.styled";
 import { HiOutlineFolderDownload } from "react-icons/hi";
 import {
@@ -10,6 +10,7 @@ import {
   DownloadBtn,
   Divider,
 } from "../components/styled/resume.styled";
+import { hardSkills, softSkills } from "../libs/skills.data";
 
 const Resume = () => {
   return (
@@ -33,12 +34,12 @@ const Resume = () => {
           <article>
             <h3>Objective: </h3>
             <p>
-              Dedicated and innovative Frontend Developer with over 10 years of
-              experience creating engaging and user-centric web applications.
-              Adept at translating UI/UX designs into functional and responsive
+              Dedicated and innovative frontend developer, creating engaging,
+              interactive and user-centric web applications. Adept at
+              translating UI/UX designs into functional and responsive
               interfaces while staying up-to-date with the latest web
-              development trends and technologies. Seeking a challenging
-              Frontend Development role at a forward-thinking tech company.
+              development trends and technologies. Seeking a junior level
+              frontend development role at a forward-thinking tech company.
             </p>
           </article>
 
@@ -71,64 +72,33 @@ const Resume = () => {
           <article>
             <h3>Education:</h3>
             <p>
-              Bachelor of Science in Computer Science University Name] | City,
-              State] | Year of Graduation] Relevant Coursework: - Advanced Web
-              Development - User Interface Design - Software Engineering
-              Principles - Data Structures and Algorithms
+              Trinity Model Secondary School - Anambra - Jan 2012 - Dec 2013
+            </p>
+            <p>St Stephen Secondary School - Anambra - Jan 2014 - Dec 2015 </p>
+            <p>
+              New Dominion Comprehensive School - Plateau - Jun 2015 - Dec 2017
             </p>
           </article>
           <article>
             <h3>Soft Skills:</h3>
             <ul>
-              <li>Interpersonal Skills</li>
-              <Divider />
-              <li>Attention to Detail</li>
-              <Divider />
-              <li> Problem Solving</li>
-              <Divider />
-              <li>Communication</li>
-              <Divider />
-              <li>Team Work</li>
-              <Divider />
-              <li>Adaptability</li>
+              {softSkills.map((skill, index) => (
+                <>
+                  <li key={skill}>{skill}</li>
+                  {softSkills.length - 1 === index ? null : <Divider />}
+                </>
+              ))}
             </ul>
           </article>
           <article>
             <h3>Hard Skills:</h3>
             <ul>
-              <li>HTMl</li>
-              <Divider />
-              <li>CSS</li>
-              <Divider />
-              <li>Responsive Design</li>
-              <Divider />
-              <li>Tailwindcss</li>
-              <Divider />
-              <li>SASS</li>
-              <Divider />
-              <li>MUI</li>
-              <Divider />
-              <li>Styled Components</li>
-              <Divider />
-              <li>Javascript</li>
-              <Divider />
-              <li>Typescript</li>
-              <Divider />
-              <li>React</li>
-              <Divider />
-              <li>Redux-Toolkit</li>
-              <Divider />
-              <li>Context API</li>
-              <Divider />
-              <li>Figma</li>
-              <Divider />
-              <li>Adobe XD</li>
-              <Divider />
-              <li>Git</li>
-              <Divider />
-              <li>Github</li>
-              <Divider />
-              <li>Adobe Photoshop.</li>
+              {hardSkills.map((skill, index) => (
+                <>
+                  <li key={skill}>{skill}</li>
+                  {hardSkills.length - 1 === index ? null : <Divider />}
+                </>
+              ))}
             </ul>
           </article>
         </InnerWrap>

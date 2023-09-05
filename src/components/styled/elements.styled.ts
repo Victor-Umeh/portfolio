@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import { Button } from "./Button.styled";
-import { ToolsWrapper } from "./Tools.styled";
-import { ExploreBtn } from "./ExploreBtn.styled";
+import { Button } from "./button.styled";
+import { ToolsWrapper } from "./tools.styled";
+import { ExploreBtn } from "./exploreBtn.styled";
 import { motion } from "framer-motion";
 
 interface Props {
