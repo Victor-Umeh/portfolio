@@ -69,10 +69,13 @@ export const Tool = styled.div`
   }
 
   img {
+    height: 100%;
+    object-fit: cover;
     position: absolute;
     top: 0;
     left: -100vw;
     width: 100%;
+    background-color: ${({ theme }) => theme.colors.body};
     transition: left 800ms cubic-bezier(0.075, 0.82, 0.165, 1);
   }
 
@@ -108,6 +111,7 @@ export const ToolWrapper = styled.section`
     text-align: center;
     font-weight: bold;
     font-size: 1.6rem;
+    text-transform: uppercase;
   }
 
   img {
