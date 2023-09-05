@@ -76,7 +76,7 @@ export const Tool = styled.div`
     left: -100vw;
     width: 100%;
     background-color: ${({ theme }) => theme.colors.body};
-    transition: left 800ms cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: left;
   }
 
   &:hover img {
@@ -132,7 +132,8 @@ export const ToolDescription = styled.p`
   padding: 0 0 6rem 0 !important;
 
   @media (min-width: 768px) {
-    min-width: 500px;
+    min-width: 360px;
+    max-width: 480px;
   }
 `;
 
@@ -144,6 +145,10 @@ export const PreviousPage = styled.button`
   color: white;
   font-size: 3rem;
   left: 2rem;
-  top: 2rem;
+  bottom: 0.5rem;
   cursor: pointer;
+
+  @media (min-width: 768px) {
+    bottom: 1rem;
+  }
 `;

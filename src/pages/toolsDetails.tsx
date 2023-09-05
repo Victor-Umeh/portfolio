@@ -10,18 +10,13 @@ import { StyledWrapper } from "../components/styled/elements.styled";
 
 const ToolsDetails = () => {
   const { name } = useParams();
+  let navigate = useNavigate();
   const [frontendData] = frontendTools.filter((tool) => tool.name === name);
   const [workFlowData] = workFlowTools.filter((tool) => tool.name === name);
   const selected = frontendData || workFlowData;
-  let navigate = useNavigate();
 
   return (
-    <StyledWrapper
-      style={{
-        maxWidth: "500px",
-        height: "auto",
-      }}
-    >
+    <StyledWrapper style={{}}>
       <ToolWrapper>
         <figure>
           <PreviousPage onClick={() => navigate(-1)}>

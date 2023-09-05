@@ -444,3 +444,29 @@ export const StyledButton = styled(ExploreBtn)`
     color: white;
   }
 `;
+
+export const Spinner = styled.div`
+  border: 6px solid lightgrey;
+  border-top: 6px grey solid;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  animation: spin 2s linear infinite;
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+`;
+
+export const LoaderWrapper = styled.div`
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;

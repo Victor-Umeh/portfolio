@@ -1,6 +1,11 @@
+import { Spinner, LoaderWrapper } from "./styled/elements.styled";
 
 const Loader = () => {
-  return <div>Loader</div>;
+  return (
+    <LoaderWrapper>
+      <Spinner />
+    </LoaderWrapper>
+  );
 };
 
 export default Loader;
