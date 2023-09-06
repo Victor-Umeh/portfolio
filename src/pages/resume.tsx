@@ -34,7 +34,7 @@ const Resume = () => {
           <article>
             <h3>Objective: </h3>
             <p>
-              Dedicated and innovative frontend developer, creating engaging,
+              Dedicated and passionate frontend developer, creating engaging,
               interactive and user-centric web applications. Adept at
               translating UI/UX designs into functional and responsive
               interfaces while staying up-to-date with the latest web

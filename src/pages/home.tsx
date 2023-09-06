@@ -3,6 +3,7 @@ import Typed from "typed.js";
 import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { motion } from "framer-motion";
 import {
   HeroSection,
   HeroCard,
@@ -11,12 +12,18 @@ import {
   SubText,
   AboutContent,
 } from "../components/styled/home.styled";
-import { ExploreBtn } from "../components/styled/ExploreBtn.styled";
+import { ExploreBtn } from "../components/styled/exploreBtn.styled";
 import { NameTag } from "../components/styled/elements.styled";
+import {
+  HeroTextsVariants,
+  HeroCardVariants,
+  nameTagVariants,
+} from "../libs/animationVariants.data";
 // import i18next from "i18next";
 
 const IntroCard = () => {
   const { t } = useTranslation();
+  // console.log(HeroTextVariants);
 
   // Create reference to store the DOM element containing the animation
   const el = useRef(null);
@@ -38,7 +45,7 @@ const IntroCard = () => {
         "Frontend Dev.",
       ],
       typeSpeed: 120,
-      startDelay: 4,
+      // startDelay: 0,
       showCursor: false,
       bindInputFocusEvents: true,
       backDelay: 1000,
@@ -73,42 +80,66 @@ const IntroCard = () => {
 
 const Home = () => {
   const { t } = useTranslation();
+  const aboutHeaderVariants = HeroTextsVariants();
+  const aboutTextVariants = HeroTextsVariants(1.8);
+  const buttonVariants = HeroTextsVariants(2.3);
+
   return (
     <>
       <HeroSection>
         <HeroCard
-          initial={{ scaleY: 0 }}
-          animate={{ scaleY: 1, originY: "top" }}
-          transition={{
-            delay: 1,
-            duration: 1,
-            type: "spring",
-            damping: 20,
-            stiffness: 150,
-          }}
+          as={motion.section}
+          variants={HeroCardVariants}
+          initial="initial"
+          animate="animate"
         >
           <IntroCard />
         </HeroCard>
       </HeroSection>
 
       <AboutSect>
-        <AboutContent initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-          <NameTag>Victor Onyeka Umeh.</NameTag>
-          <SubText as="h2" $fontz="2.7rem" $marginTop="5rem" $fontw="bold">
+        <AboutContent>
+          <NameTag
+            as={motion.span}
+            variants={nameTagVariants}
+            initial="initial"
+            animate="animate"
+          >
+            Victor Onyeka Umeh.
+          </NameTag>
+          <SubText
+            as={motion.h2}
+            $fontz="2.7rem"
+            $marginTop="5rem"
+            $fontw="bold"
+            variants={aboutHeaderVariants}
+            initial="initial"
+            animate="animate"
+          >
             {t("homePage.aboutText")}
           </SubText>
           <SubText
-            as="p"
+            as={motion.p}
             $fontz="1.4rem"
             $minWidth="20ch"
             $marginTop="1.1rem"
             color="000000"
+            variants={aboutTextVariants}
+            initial="initial"
+            animate="animate"
           >
             {t("homePage.heroText")}
           </SubText>
 
           <Link to="/work">
-            <ExploreBtn>{t("homePage.exploreBtn")}</ExploreBtn>
+            <ExploreBtn
+              as={motion.button}
+              variants={buttonVariants}
+              initial="initial"
+              animate="animate"
+            >
+              {t("homePage.exploreBtn")}
+            </ExploreBtn>
           </Link>
         </AboutContent>
       </AboutSect>
