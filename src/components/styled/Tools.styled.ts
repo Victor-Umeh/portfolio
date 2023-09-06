@@ -144,7 +144,7 @@ export const PreviousPage = styled.button`
   outline: none;
   background-color: transparent;
   position: absolute;
-  color: white;
+  color: ${({ theme }) => theme.colors.text};
   font-size: 3rem;
   left: 2rem;
   bottom: 0.5rem;

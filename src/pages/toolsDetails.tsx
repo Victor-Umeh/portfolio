@@ -7,6 +7,7 @@ import {
   ToolWrapper,
 } from "../components/styled/tools.styled";
 import { StyledWrapper } from "../components/styled/elements.styled";
+import { m } from "framer-motion";
 
 const ToolsDetails = () => {
   const { name } = useParams();
@@ -19,7 +20,12 @@ const ToolsDetails = () => {
     <StyledWrapper style={{}}>
       <ToolWrapper>
         <figure>
-          <PreviousPage onClick={() => navigate(-1)}>
+          <PreviousPage
+            as={m.button}
+            whileHover={{ scale: 1.1 }}
+            transition={{ duration: 0.3 }}
+            onClick={() => navigate(-1)}
+          >
             <FaArrowCircleLeft />
           </PreviousPage>
           <img src={selected.img} alt={selected.name} />
