@@ -2,6 +2,7 @@ import { ThemeProvider } from "styled-components";
 import { useState, useEffect } from "react";
 import { light, dark } from "./components/styled/theme.styled";
 import { Routes, Route } from "react-router-dom";
+import { LazyMotion, domAnimation } from "framer-motion";
 import ContactFormProvider from "./context/formModalContext";
 import GlobalStyles from "./components/styled/global.styled";
 import MainNav from "./components/MainNav";
@@ -33,19 +34,21 @@ const App = (): React.ReactNode => {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
-      <MainNav toggleTheme={toggleTheme} initialTheme={initialTheme} />
-      <ContactFormProvider>
-        <Container>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/work" element={<Works />}></Route>
-            <Route path="/resume" element={<Resume />}></Route>
-            <Route path="/uses" element={<Tools />}></Route>
-            <Route path="/uses/:name" element={<ToolsDetails />}></Route>
-          </Routes>
-        </Container>
-      </ContactFormProvider>
+      <LazyMotion features={domAnimation}>
+        <MainNav toggleTheme={toggleTheme} initialTheme={initialTheme} />
+        <ContactFormProvider>
+          <Container>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/work" element={<Works />}></Route>
+              <Route path="/resume" element={<Resume />}></Route>
+              <Route path="/uses" element={<Tools />}></Route>
+              <Route path="/uses/:name" element={<ToolsDetails />}></Route>
+            </Routes>
+          </Container>
+        </ContactFormProvider>
+      </LazyMotion>
     </ThemeProvider>
   );
 };

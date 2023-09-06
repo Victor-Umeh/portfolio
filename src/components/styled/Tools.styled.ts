@@ -79,7 +79,8 @@ export const Tool = styled.div`
     transition: left;
   }
 
-  &:hover img {
+  &:hover img,
+  &:focus img {
     left: 0;
   }
 
@@ -95,6 +96,7 @@ export const Tool = styled.div`
 export const StyledHeader = styled.h2`
   font-size: 1.8rem;
   padding-bottom: 1rem;
+  margin-top: 9rem;
 `;
 
 export const ToolWrapper = styled.section`

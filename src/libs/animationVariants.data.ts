@@ -1,5 +1,3 @@
-import { easeIn, easeInOut } from "framer-motion";
-
 export const HeroTextsVariants = (value: number = 1.3) => {
   return {
     initial: {
@@ -48,4 +46,15 @@ export const HeroCardVariants = {
       stiffness: 150,
     },
   },
+};
+
+export const toolCardVariants = {
+  initial: { opacity: 0, x: -70 },
+  animate: (index: number) => ({
+    opacity: 1,
+    x: 0,
+    transition: {
+      delay: 0.08 * index,
+    },
+  }),
 };

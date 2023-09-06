@@ -3,7 +3,7 @@ import Typed from "typed.js";
 import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import {
   HeroSection,
   HeroCard,
@@ -88,7 +88,7 @@ const Home = () => {
     <>
       <HeroSection>
         <HeroCard
-          as={motion.section}
+          as={m.section}
           variants={HeroCardVariants}
           initial="initial"
           animate="animate"
@@ -100,7 +100,7 @@ const Home = () => {
       <AboutSect>
         <AboutContent>
           <NameTag
-            as={motion.span}
+            as={m.span}
             variants={nameTagVariants}
             initial="initial"
             animate="animate"
@@ -108,7 +108,7 @@ const Home = () => {
             Victor Onyeka Umeh.
           </NameTag>
           <SubText
-            as={motion.h2}
+            as={m.h2}
             $fontz="2.7rem"
             $marginTop="5rem"
             $fontw="bold"
@@ -119,7 +119,7 @@ const Home = () => {
             {t("homePage.aboutText")}
           </SubText>
           <SubText
-            as={motion.p}
+            as={m.p}
             $fontz="1.4rem"
             $minWidth="20ch"
             $marginTop="1.1rem"
@@ -133,7 +133,7 @@ const Home = () => {
 
           <Link to="/work">
             <ExploreBtn
-              as={motion.button}
+              as={m.button}
               variants={buttonVariants}
               initial="initial"
               animate="animate"
