@@ -53,7 +53,7 @@ export const Wrapper = styled.div`
 export const InnerWrap = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  gap: 5.5rem;
 `;
 
 export const Header = styled.header`

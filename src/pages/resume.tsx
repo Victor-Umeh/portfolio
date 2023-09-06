@@ -1,6 +1,7 @@
 import resume from "/umeokoli-victor-onyeka.pdf";
 import { StyledWrapper } from "../components/styled/elements.styled";
 import { HiOutlineFolderDownload } from "react-icons/hi";
+import { m } from "framer-motion";
 import {
   H1,
   Wrapper,
@@ -11,6 +12,7 @@ import {
   Divider,
 } from "../components/styled/resume.styled";
 import { hardSkills, softSkills } from "../libs/skills.data";
+import { resumeAnimationVariants } from "../libs/animationVariants.data";
 
 const Resume = () => {
   return (
@@ -18,7 +20,13 @@ const Resume = () => {
       <H1>RESUME</H1>
       <Wrapper>
         <InnerWrap>
-          <Header>
+          <Header
+            as={m.header}
+            variants={resumeAnimationVariants}
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+          >
             <Address>
               <address>Victor Onyeka Umeokoli</address>
               <address>Jos, plateau state. Nigeria</address>
@@ -31,7 +39,13 @@ const Resume = () => {
               </span>
             </DownloadBtn>
           </Header>
-          <article>
+          <m.article
+            variants={resumeAnimationVariants}
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+            custom={1}
+          >
             <h3>Objective: </h3>
             <p>
               Dedicated and passionate frontend developer, creating engaging,
@@ -41,12 +55,19 @@ const Resume = () => {
               development trends and technologies. Seeking a junior level
               frontend development role at a forward-thinking tech company.
             </p>
-          </article>
+          </m.article>
 
           {/* Experience */}
           <article>
             <h3>Professional Experience:</h3>
-            <div className="experience">
+            <m.div
+              className="experience"
+              variants={resumeAnimationVariants}
+              initial="initial"
+              whileInView="animate"
+              viewport={{ once: true }}
+              custom={2}
+            >
               <h4>Amono Digital Studios</h4>
               <span className="company">Photo Editor and Printer</span>
               <p>
@@ -54,9 +75,16 @@ const Resume = () => {
                 and printing services for photographers and individuals in jos,
                 plateau state Nigeria. Jun 2018 - Dec 2020
               </p>
-            </div>
+            </m.div>
 
-            <div className="experience">
+            <m.div
+              className="experience"
+              variants={resumeAnimationVariants}
+              initial="initial"
+              whileInView="animate"
+              viewport={{ once: true }}
+              custom={2.5}
+            >
               <h4>Photo World</h4>
               <span className="company">Senior Photo Editor and Printer</span>
               <p>
@@ -65,11 +93,17 @@ const Resume = () => {
                 printing services for photographers and individuals in jos,
                 plateau state Nigeria.
               </p>
-            </div>
+            </m.div>
           </article>
 
           {/* Education */}
-          <article>
+          <m.article
+            variants={resumeAnimationVariants}
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+            custom={3}
+          >
             <h3>Education:</h3>
             <p>
               Trinity Model Secondary School - Anambra - Jan 2012 - Dec 2013
@@ -78,8 +112,14 @@ const Resume = () => {
             <p>
               New Dominion Comprehensive School - Plateau - Jun 2015 - Dec 2017
             </p>
-          </article>
-          <article>
+          </m.article>
+          <m.article
+            variants={resumeAnimationVariants}
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+            custom={3.5}
+          >
             <h3>Soft Skills:</h3>
             <ul>
               {softSkills.map((skill, index) => (
@@ -89,8 +129,14 @@ const Resume = () => {
                 </>
               ))}
             </ul>
-          </article>
-          <article>
+          </m.article>
+          <m.article
+            variants={resumeAnimationVariants}
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+            custom={4}
+          >
             <h3>Hard Skills:</h3>
             <ul>
               {hardSkills.map((skill, index) => (
@@ -100,7 +146,7 @@ const Resume = () => {
                 </>
               ))}
             </ul>
-          </article>
+          </m.article>
         </InnerWrap>
       </Wrapper>
     </StyledWrapper>

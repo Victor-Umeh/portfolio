@@ -63,3 +63,27 @@ export const sliderAnimationVariants = {
   initial: { opacity: 0, x: 200 },
   animate: { opacity: 1, x: 0, transition: { delay: 1, duration: 1.8 } },
 };
+
+export const aboutPageTextAnimationVariants = {
+  initial: { opacity: 0, y: -50 },
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: 0.5,
+      duration: 1,
+    },
+  },
+};
+
+export const resumeAnimationVariants = {
+  initial: { opacity: 0, y: -20 },
+  animate: (custom: number = 0.3) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: 0.2 * custom,
+      type: "tween",
+    },
+  }),
+};
