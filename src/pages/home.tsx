@@ -11,14 +11,14 @@ import {
   AboutSect,
   SubText,
   AboutContent,
-} from "../components/styled/home.styled";
-import { ExploreBtn } from "../components/styled/exploreBtn.styled";
-import { NameTag } from "../components/styled/elements.styled";
+} from "../components/styled/home.styled.ts";
+import { ExploreBtn } from "../components/styled/exploreBtn.styled.ts";
+import { NameTag } from "../components/styled/elements.styled.ts";
 import {
   HeroTextsVariants,
   HeroCardVariants,
   nameTagVariants,
-} from "../libs/animationVariants.data";
+} from "../libs/animationVariants.data.ts";
 // import i18next from "i18next";
 
 const IntroCard = () => {

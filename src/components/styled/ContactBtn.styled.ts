@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { ExploreBtn } from "./ExploreBtn.styled";
+import { ExploreBtn } from "./exploreBtn.styled";
 
 interface Props {
   bottom?: string;

@@ -1,8 +1,11 @@
-import { StyledCanvas, AboutWrapper } from "../components/styled/about.styled";
+import {
+  StyledCanvas,
+  AboutWrapper,
+} from "../components/styled/about.styled.ts";
 import { useTranslation } from "react-i18next";
 import { m } from "framer-motion";
 import Slider from "../components/slider";
-import { aboutPageTextAnimationVariants as variants } from "../libs/animationVariants.data";
+import { aboutPageTextAnimationVariants as variants } from "../libs/animationVariants.data.ts";
 
 const About = () => {
   const { t } = useTranslation();

@@ -5,8 +5,8 @@ import {
   PreviousPage,
   ToolDescription,
   ToolWrapper,
-} from "../components/styled/tools.styled";
-import { StyledWrapper } from "../components/styled/elements.styled";
+} from "../components/styled/tools.styled.ts";
+import { StyledWrapper } from "../components/styled/elements.styled.ts";
 import { m } from "framer-motion";
 
 const ToolsDetails = () => {

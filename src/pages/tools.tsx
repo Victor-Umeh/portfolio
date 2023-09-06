@@ -3,11 +3,11 @@ import {
   ToolsWrapper,
   StyledSection,
   StyledHeader,
-} from "../components/styled/tools.styled";
-import { frontendTools, workFlowTools } from "../libs/tools.data";
+} from "../components/styled/tools.styled.ts";
+import { frontendTools, workFlowTools } from "../libs/tools.data.ts";
 import { Link } from "react-router-dom";
 import { m } from "framer-motion";
-import { toolCardVariants } from "../libs/animationVariants.data";
+import { toolCardVariants } from "../libs/animationVariants.data.ts";
 
 const Tools = () => {
   return (
