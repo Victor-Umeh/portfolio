@@ -1,11 +1,13 @@
-import { StyledCanvas } from "./styled/About.styled";
+import { StyledCanvas } from "./styled/about.styled";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { A11y, Autoplay, EffectFade } from "swiper/modules";
+import { m } from "framer-motion";
 import "swiper/swiper-bundle.css";
 import hiking from "/images/hiker.jpg";
 import soccer from "/images/soccer.jpg";
 import coding from "/images/coding.jpg";
 import learn from "/images/learn.jpg";
+import { sliderAnimationVariants } from "../libs/animationVariants.data";
 
 const Hobbies = [
   {
@@ -24,11 +26,18 @@ const Hobbies = [
     text: "Learning",
     img: learn,
   },
-] as const;
+];
 
 const Slider = () => {
   return (
-    <StyledCanvas width="33%" dis="none">
+    <StyledCanvas
+      width="33%"
+      dis="none"
+      as={m.section}
+      variants={sliderAnimationVariants}
+      initial="initial"
+      animate="animate"
+    >
       <Swiper
         modules={[A11y, Autoplay, EffectFade]}
         spaceBetween={0}

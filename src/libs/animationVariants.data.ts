@@ -58,3 +58,8 @@ export const toolCardVariants = {
     },
   }),
 };
+
+export const sliderAnimationVariants = {
+  initial: { opacity: 0, x: 200 },
+  animate: { opacity: 1, x: 0, transition: { delay: 1, duration: 1.8 } },
+};

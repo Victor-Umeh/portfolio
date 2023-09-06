@@ -1,5 +1,6 @@
-import { StyledCanvas, AboutWrapper } from "../components/styled/About.styled";
+import { StyledCanvas, AboutWrapper } from "../components/styled/about.styled";
 import { useTranslation } from "react-i18next";
+import { m } from "framer-motion";
 import Slider from "../components/slider";
 
 const about = () => {
