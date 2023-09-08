@@ -124,7 +124,7 @@ const Resume = () => {
             <ul>
               {softSkills.map((skill, index) => (
                 <>
-                  <li key={skill}>{skill}</li>
+                  <li>{skill}</li>
                   {softSkills.length - 1 === index ? null : <Divider />}
                 </>
               ))}

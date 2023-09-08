@@ -13,6 +13,13 @@ export const HeroTextsVariants = (value: number = 1.3) => {
         type: "tween",
       },
     },
+    while: {
+      scaleX: 1.05,
+      transition: {
+        duration: 0.2,
+        // type: "tween",
+      },
+    },
   };
 };
 
@@ -48,6 +55,16 @@ export const HeroCardVariants = {
   },
 };
 
+export const toolHeaderVariants = {
+  initial: { opacity: 0, y: -50 },
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: 1.6,
+    },
+  },
+};
 export const toolCardVariants = {
   initial: { opacity: 0, x: -70 },
   animate: (index: number) => ({
@@ -57,6 +74,37 @@ export const toolCardVariants = {
       delay: 0.08 * index,
     },
   }),
+};
+
+export const navLinksVariants = {
+  initial: { opacity: 0, y: -50 },
+  exit: { opacity: 0 },
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: 1.8,
+    },
+  },
+};
+
+export const overlayVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+  },
+};
+
+export const formVariants = {
+  hidden: { left: "-100vw" },
+  visible: {
+    left: "50%",
+    transition: {
+      type: "spring",
+      stiffness: 200,
+      damping: 19,
+    },
+  },
 };
 
 export const sliderAnimationVariants = {

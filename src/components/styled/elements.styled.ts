@@ -2,18 +2,18 @@ import styled from "styled-components";
 import { Button } from "./button.styled.ts";
 import { ToolsWrapper } from "./tools.styled.ts";
 import { ExploreBtn } from "./exploreBtn.styled.ts";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 
 interface Props {
   theme: {};
   pos?: boolean;
-  auto?: false;
+  auto?: "true" | "false";
   top?: string;
   border?: string;
   fz?: string;
 }
 interface MenuProps extends Props {
-  open: boolean;
+  open?: boolean;
   istop?: string;
 }
 export const StyledWrapper = styled(ToolsWrapper)<Props>`
@@ -105,10 +105,8 @@ export const StyledBtn = styled(Button)`
   font-size: 1.5rem;
   font-weight: 300;
   color: ${({ theme }) => theme.colors.accent};
-  margin-left: ${({ auto }) => auto && "auto"};
   margin-right: 2.5rem;
   padding: 0.4rem;
-  /* border: 1px solid ${({ theme }) => theme.colors.accent}; */
   border-radius: 50%;
   transition: transform 300ms;
   cursor: pointer;
@@ -227,7 +225,8 @@ export const Menu = styled.div<MenuProps>`
   position: fixed;
   left: 0;
   right: 0;
-  bottom: 3px;
+  bottom: 0.5px;
+
   transform: scaleY(${({ open }) => (open ? 1 : 0)});
   transform-origin: top;
   transition: transform 0.8s cubic-bezier(0.785, 0.135, 0.15, 0.86);
@@ -252,9 +251,10 @@ export const StyledList = styled.ul<Props>`
   }
 `;
 
-export const StyledLink = styled.li<Props>`
+export const StyledLink = styled(m.li)<Props>`
   font-family: "Poppins", sans-serif;
-  font-size: ${({ fz }) => fz || "3rem"};
+  /* font-size: ${({ fz }) => fz || "3rem"}; */
+  font-size: 3rem;
   padding: 0.5rem;
   list-style: none;
   transform-origin: center;
@@ -264,6 +264,10 @@ export const StyledLink = styled.li<Props>`
   & a {
     color: ${({ theme }) => theme.colors.accent};
     text-decoration: none;
+  }
+
+  @media (min-width) {
+    font-size: 6rem;
   }
 `;
 export const StyledText = styled(StyledLink)`
@@ -350,7 +354,7 @@ export const NameTag = styled.span`
     right: 0;
   }
 `;
-export const Overlay = styled(motion.div)`
+export const Overlay = styled(m.div)`
   position: fixed;
   top: 50%;
   left: 50%;
@@ -361,7 +365,7 @@ export const Overlay = styled(motion.div)`
   backdrop-filter: blur(1.5px);
   z-index: 20;
 `;
-export const StyledForm = styled(motion.form)`
+export const StyledForm = styled(m.form)`
   display: flex;
   justify-content: center;
   flex-direction: column;

@@ -1,6 +1,4 @@
 import { useContactFormContext } from "../context/formModalContext";
-import { useEffect } from "react";
-import { AnimatePresence } from "framer-motion";
 import {
   StyledForm,
   StyledInput,
@@ -8,32 +6,15 @@ import {
   StyledButton,
   Overlay,
 } from "./styled/elements.styled";
-
-const overlayVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-  },
-};
-
-const formVariants = {
-  hidden: { left: "-100vw" },
-  visible: {
-    left: "50%",
-    transition: {
-      type: "spring",
-      stiffness: 200,
-      damping: 19,
-    },
-  },
-};
+import { overlayVariants, formVariants } from "../libs/animationVariants.data";
 
 const FormModal = () => {
   const { showFormModal, setShowFormModal } = useContactFormContext();
-  useEffect(() => {});
+  // useEffect(() => {});
+
   return (
     showFormModal && (
-      <AnimatePresence>
+      <>
         <Overlay
           variants={overlayVariants}
           initial="hidden"
@@ -61,7 +42,7 @@ const FormModal = () => {
           <StyledTextArea placeholder="Your Message" />
           <StyledButton>Send</StyledButton>
         </StyledForm>
-      </AnimatePresence>
+      </>
     )
   );
 };

@@ -1,4 +1,4 @@
-import { StyledCanvas } from "./styled/about.styled.ts";
+import { StyledCanvas } from "./styled/about.styled";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { A11y, Autoplay, EffectFade } from "swiper/modules";
 import { m } from "framer-motion";

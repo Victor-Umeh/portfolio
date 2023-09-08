@@ -1,7 +1,4 @@
 import styled from "styled-components";
-interface Props {
-  mb?: string;
-}
 
 export const ToolsWrapper = styled.section`
   font-family: "Poppins", sans-serif;
@@ -29,12 +26,11 @@ export const ToolsWrapper = styled.section`
   }
 `;
 
-export const StyledSection = styled.section<Props>`
+export const StyledSection = styled.section`
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 2.3vw;
-  padding-bottom: ${({ mb }) => mb};
 `;
 export const Tool = styled.div`
   display: flex;

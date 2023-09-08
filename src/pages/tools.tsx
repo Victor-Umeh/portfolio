@@ -3,23 +3,26 @@ import {
   ToolsWrapper,
   StyledSection,
   StyledHeader,
-} from "../components/styled/tools.styled.ts";
-import { frontendTools, workFlowTools } from "../libs/tools.data.ts";
+} from "../components/styled/tools.styled";
+import { frontendTools, workFlowTools } from "../libs/tools.data";
 import { Link } from "react-router-dom";
 import { m } from "framer-motion";
-import { toolCardVariants } from "../libs/animationVariants.data.ts";
+import {
+  toolCardVariants,
+  toolHeaderVariants,
+} from "../libs/animationVariants.data";
 
 const Tools = () => {
   return (
     <>
       <ToolsWrapper>
-        <p>
+        <m.p variants={toolHeaderVariants} initial="initial" animate="animate">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia quae
           sed quaerat alias! Quo earum totam neque vel non odio magni officia,
           excepturi sint, quasi vero saepe libero,facilis quas.
-        </p>
+        </m.p>
         <StyledHeader>Frontend</StyledHeader>
-        <StyledSection mb="7rem">
+        <StyledSection style={{ paddingBottom: "7rem" }}>
           {frontendTools.map((tool, index) => (
             <Tool
               key={tool.name}
@@ -40,7 +43,7 @@ const Tools = () => {
         </StyledSection>
 
         <StyledHeader>Work Flow</StyledHeader>
-        <StyledSection mb="7rem">
+        <StyledSection style={{ paddingBottom: "7rem" }}>
           {workFlowTools.map((tool, index) => (
             <Tool
               key={tool.name}

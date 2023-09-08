@@ -21,17 +21,20 @@ const lngs: TLngs = {
   yo: { nativeName: "Yoruba" },
 };
 
-type TDropdown = "close" | "open";
+type TDropdown = {
+  isMenuOpen: boolean;
+};
 
-const LanguageSelector = () => {
+const LanguageSelector = ({ isMenuOpen }: TDropdown) => {
   //i18next translation hook
   const { i18n } = useTranslation();
+  const [showDropdown, setShowDropdown] = React.useState("close");
+  const openDropDown = showDropdown === "open" && !isMenuOpen;
 
-  const [showDropdown, setShowDropdown] = React.useState<TDropdown>("close");
   return (
     <StyledBtn
       as={"div"}
-      auto={true}
+      style={{ marginLeft: "auto" }}
       onClick={() =>
         setShowDropdown((prev) => (prev === "close" ? "open" : "close"))
       }
@@ -45,8 +48,8 @@ const LanguageSelector = () => {
         }}
         animate={{
           originY: "top",
-          scaleY: showDropdown === "open" ? 1 : 0,
-          y: showDropdown === "open" ? 0 : -200,
+          scaleY: openDropDown ? 1 : 0,
+          y: openDropDown ? 0 : -200,
         }}
         transition={{
           duration: 0.3,

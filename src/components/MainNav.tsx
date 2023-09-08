@@ -2,12 +2,15 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useTheme } from "styled-components";
 import { Link } from "react-router-dom";
+// import { m } from "framer-motion";
+import useNavMenuAnimation from "../libs/useNavMenuAnimation";
 import {
   BiLogoGmail,
   BiLogoTwitter,
   BiLogoLinkedinSquare,
 } from "react-icons/bi";
 import { IoLogoWhatsapp } from "react-icons/io";
+
 import { FaArrowRight } from "react-icons/fa";
 import {
   StyledNav,
@@ -38,7 +41,7 @@ interface Props {
   initialTheme: boolean;
 }
 
-const images: string[] = [home, resume, work, about, space];
+const images = [home, resume, work, about, space];
 const dropdownLinks = [
   { to: "/", text: "nav.home" },
   { to: "/resume", text: "nav.resume" },
@@ -50,6 +53,8 @@ const dropdownLinks = [
 const MainNav = ({ toggleTheme, initialTheme }: Props) => {
   const { t } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+
+  const scope = useNavMenuAnimation(isMenuOpen);
   const [currentImage, setCurrentImage] = useState<string | undefined>(
     images[0]
   );
@@ -68,17 +73,19 @@ const MainNav = ({ toggleTheme, initialTheme }: Props) => {
         <img src={logo} alt="" />
       </Link>
 
-      <LanguageSelector />
+      <LanguageSelector isMenuOpen={isMenuOpen} />
 
-      <StyledBtn onClick={() => toggleTheme(!initialTheme)} auto={false}>
+      <StyledBtn onClick={() => toggleTheme(!initialTheme)}>
         <img
           src={lightTheme ? darkThemeIcon : lightThemeIcon}
           alt="color theme switcher"
         />
       </StyledBtn>
 
-      <StyledText fz="1.6rem">
-        <Link to={"/work"}>{t("nav.works")}</Link>
+      <StyledText>
+        <Link to={"/work"} style={{ fontSize: "initial" }}>
+          {t("nav.works")}
+        </Link>
         <span>
           <FaArrowRight />
         </span>
@@ -89,11 +96,12 @@ const MainNav = ({ toggleTheme, initialTheme }: Props) => {
         <Line istop={"bottom"} open={isMenuOpen} />
       </Hamburger>
 
-      <Menu open={isMenuOpen}>
+      <Menu open={isMenuOpen} ref={scope}>
         {/* Nav Links */}
-        <StyledList onClick={handleToggle}>
+        <StyledList onClick={handleToggle} as="ul">
           {dropdownLinks.map((link, index) => (
             <StyledLink
+              as="li"
               key={link.text}
               onMouseOver={() => setCurrentImage(images[index])}
               onMouseLeave={() => setCurrentImage(undefined)}

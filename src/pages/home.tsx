@@ -137,6 +137,8 @@ const Home = () => {
               variants={buttonVariants}
               initial="initial"
               animate="animate"
+              whileHover="while"
+              whileTap="while"
             >
               {t("homePage.exploreBtn")}
             </ExploreBtn>
