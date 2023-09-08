@@ -10,7 +10,7 @@ export default function useNavMenuAnimation(isOpen: boolean) {
     animate(
       "ul",
       {
-        scaleY: isOpen ? 1 : 0,
+        opacity: isOpen ? 1 : 0,
       },
       {
         type: "spring",
@@ -24,8 +24,10 @@ export default function useNavMenuAnimation(isOpen: boolean) {
       delay: isOpen ? staggerMenuItems : 0,
     });
 
-    animate("div", isOpen ? { opacity: 1, y: 0 } : { opacity: 0, y: -30 }, {
-      duration: 0.6,
+    animate("div", isOpen ? { opacity: 1 } : { opacity: 0 }, {
+      type: "spring",
+      delay: isOpen ? 0.6 : 0,
+      duration: 0.5,
     });
   }, [isOpen]);
 

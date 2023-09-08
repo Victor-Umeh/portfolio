@@ -88,7 +88,7 @@ export const ProjectCard = styled.div`
 export const Main = styled.main<Props>`
   background-color: ${({ theme }) => theme.colors.body};
   position: relative;
-  height: 88vh;
+  height: 89vh;
   overflow-x: hidden;
   @media (min-width: 768px) {
     display: flex;

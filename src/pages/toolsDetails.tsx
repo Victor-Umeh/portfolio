@@ -8,6 +8,10 @@ import {
 } from "../components/styled/tools.styled.ts";
 import { StyledWrapper } from "../components/styled/elements.styled";
 import { m } from "framer-motion";
+import {
+  toolDetailAnimationVariants,
+  toolDetailTextAnimationVariants,
+} from "../libs/animationVariants.data.ts";
 
 const ToolsDetails = () => {
   const { name } = useParams();
@@ -17,8 +21,13 @@ const ToolsDetails = () => {
   const selected = frontendData || workFlowData;
 
   return (
-    <StyledWrapper style={{}}>
-      <ToolWrapper>
+    <StyledWrapper style={{ overflowY: "hidden" }}>
+      <ToolWrapper
+        as={m.section}
+        variants={toolDetailAnimationVariants}
+        initial="initial"
+        animate="animate"
+      >
         <figure>
           <PreviousPage
             as={m.button}
@@ -38,7 +47,14 @@ const ToolsDetails = () => {
         </figure>
       </ToolWrapper>
 
-      <ToolDescription>{selected.description}</ToolDescription>
+      <ToolDescription
+        as={m.p}
+        variants={toolDetailTextAnimationVariants}
+        initial="initial"
+        animate="animate"
+      >
+        {selected.description}
+      </ToolDescription>
     </StyledWrapper>
   );
 };

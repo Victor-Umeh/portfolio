@@ -46,7 +46,7 @@ export const HeroCard = styled(motion.section)`
   flex-direction: column;
   padding-inline: 4.6rem;
   width: min(90%, 450px);
-  height: 245px;
+  height: 248px;
   min-height: 275px;
   border: 0.5px solid ${({ theme }) => theme.colors.text};
   background: linear-gradient(
