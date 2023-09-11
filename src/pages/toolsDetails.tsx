@@ -40,7 +40,11 @@ const ToolsDetails = () => {
           <m.img
             src={selected.img}
             alt={selected.name}
-            whileHover={{ opacity: 0.88, origin: "bottom" }}
+            whileHover={{
+              opacity: 0.88,
+              scale: 1.01,
+              rotate: 0.2,
+            }}
             transition={{ duration: 0.3 }}
           />
           <figcaption>{selected.name}</figcaption>

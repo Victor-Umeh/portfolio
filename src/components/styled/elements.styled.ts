@@ -369,7 +369,7 @@ export const StyledForm = styled(m.form)`
   display: flex;
   justify-content: center;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.5rem;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -379,47 +379,55 @@ export const StyledForm = styled(m.form)`
   padding: 2rem;
   background: ${({ theme }) => theme.colors.body};
   outline: 1px solid ${({ theme }) => theme.colors.accent};
-  border-radius: 8px;
+  /* border-radius: 6px; */
   z-index: 100;
   font-family: "poppins";
   backdrop-filter: blur(3px);
   box-shadow: 0 0px 12px rgba(0, 0, 0, 0.9);
 
   @media (min-width: 768px) {
-    gap: 4rem;
-    padding: 4rem;
+    padding: 2rem 3rem;
   }
-
-  & label {
-    @media (min-width: 768px) {
-      margin-bottom: 2rem;
-    }
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
   }
-  & h2,
+  h2,
   p {
     color: ${({ theme }) => theme.colors.text};
     text-align: center;
   }
 
-  & p {
+  p {
     font-size: 1.5rem;
     max-width: 50ch;
     margin-inline: auto;
+  }
+
+  label {
+    margin-bottom: 2rem;
   }
 `;
 export const StyledTextArea = styled.textarea`
   display: block;
   resize: none;
-  padding: 0 1rem;
-  background-color: transparent;
+  padding: 1.5rem;
   color: ${({ theme }) => theme.colors.text};
   border: 0;
   outline: 0;
-  border-bottom: 1.5px solid ${({ theme }) => theme.colors.text};
+  background-color: ${({ theme }) =>
+    theme.name === "dark-theme" ? "#0F172A" : "#F1F5F9"};
   font-size: 1.6rem;
+  transition: filter 300ms;
 
   &::placeholder {
     font-size: 1.6rem;
+  }
+  &:hover,
+  &:focus {
+    filter: brightness(
+      ${({ theme }) => (theme.name === "dark-theme" ? "88%" : "96%")}
+    );
   }
 `;
 export const StyledInput = styled.input`
@@ -427,14 +435,21 @@ export const StyledInput = styled.input`
   font-size: 1.6rem;
   color: ${({ theme }) => theme.colors.text};
   width: 100%;
-  background-color: transparent;
+  background-color: ${({ theme }) =>
+    theme.name === "dark-theme" ? "#0F172A" : "#F1F5F9"};
   border: 0;
   outline: 0;
-  padding: 1rem;
-  border-bottom: 1.5px solid ${({ theme }) => theme.colors.text};
+  padding:1.5rem 2rem;
+  transition: filter 300ms;
 
   &::placeholder {
     font-size: 1.4rem;
+  }
+  &:hover,
+  &:focus {
+    filter: brightness(
+      ${({ theme }) => (theme.name === "dark-theme" ? "88%" : "96%")}
+    );
   }
 `;
 export const StyledButton = styled(ExploreBtn)`
@@ -442,7 +457,7 @@ export const StyledButton = styled(ExploreBtn)`
   color: white;
   background-color: indianred;
   border: none;
-  padding: 1.5rem 5rem;
+  padding: 1.8rem 5rem;
 
   &:hover {
     color: white;
@@ -455,6 +470,25 @@ export const Spinner = styled.div`
   border-radius: 50%;
   height: 40px;
   width: 40px;
+  animation: spin 2s linear infinite;
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+`;
+
+export const ButtonSpinner = styled.div`
+  border: 3px solid lightgrey;
+  border-top: 3px grey solid;
+  border-radius: 50%;
+  height: 23px;
+  width: 23px;
   animation: spin 2s linear infinite;
 
   @keyframes spin {

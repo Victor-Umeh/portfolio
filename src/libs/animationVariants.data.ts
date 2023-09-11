@@ -143,8 +143,8 @@ export const toolDetailAnimationVariants = {
     y: 0,
 
     transition: {
-      delay: 0.3,
-      duration: 1.2,
+      delay: 0.4,
+      duration: 0.6,
     },
   },
 };
@@ -156,8 +156,8 @@ export const toolDetailTextAnimationVariants = {
     y: 0,
 
     transition: {
-      delay: 1,
-      duration: 1.2,
+      delay: 0.6,
+      duration: 0.8,
     },
   },
 };

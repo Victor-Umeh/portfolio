@@ -130,8 +130,9 @@ export const ToolDescription = styled.p`
   padding: 0 0 6rem 0 !important;
 
   @media (min-width: 768px) {
+  font-size: 1.6rem;
     min-width: 360px;
-    max-width: 480px;
+    max-width: 600px;
   }
 `;
 
