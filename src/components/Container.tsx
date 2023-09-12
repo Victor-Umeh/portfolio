@@ -11,7 +11,6 @@ const Container = ({ children }: Props) => {
   return (
     <Main>
       {children}
-      <ContactBtn />
       <FormModal />
     </Main>
   );

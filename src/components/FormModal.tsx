@@ -16,10 +16,12 @@ import { AnimatePresence } from "framer-motion";
 const FormModal = () => {
   const { showFormModal, setShowFormModal } = useContactFormContext();
   const [message, setMessage] = useState<unknown>(null);
+  const [loading, setLoading] = useState(false);
   const form = useRef<string | (HTMLFormElement & any)>(null);
 
   const sendEmail = (e: any) => {
     e.preventDefault();
+    setLoading(true);
 
     emailjs
       .sendForm(
@@ -32,6 +34,7 @@ const FormModal = () => {
         (result) => {
           console.log(result.text);
           setShowFormModal(false);
+          setLoading(false);
         },
         (error) => {
           console.log(error.text);
@@ -72,13 +75,13 @@ const FormModal = () => {
               type="text"
               placeholder="Your Name"
               name="sender_name"
-              required
+              // required
             />
             <StyledInput
               type="email"
               placeholder="Your Email"
               name="sender_email"
-              required
+              // required
             />
             {/* <StyledInput type="text" placeholder="Subject" name="subject" /> */}
             <StyledTextArea
@@ -86,11 +89,10 @@ const FormModal = () => {
               rows={7}
               cols={50}
               name="message"
-              required
+              // required
             />
-            <StyledButton type="submit" value="Send">
-              Send Message
-              {/* <ButtonSpinner /> */}
+            <StyledButton type="submit" value="Send" disabled={loading}>
+              {loading ? <ButtonSpinner /> : "Send Message"}
             </StyledButton>
           </StyledForm>
         </>

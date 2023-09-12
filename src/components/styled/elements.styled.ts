@@ -439,7 +439,7 @@ export const StyledInput = styled.input`
     theme.name === "dark-theme" ? "#0F172A" : "#F1F5F9"};
   border: 0;
   outline: 0;
-  padding:1.5rem 2rem;
+  padding: 1.5rem 2rem;
   transition: filter 300ms;
 
   &::placeholder {
@@ -453,14 +453,26 @@ export const StyledInput = styled.input`
   }
 `;
 export const StyledButton = styled(ExploreBtn)`
+  display: flex;
+  justify-content: center;
   font-weight: bold;
   color: white;
   background-color: indianred;
   border: none;
   padding: 1.8rem 5rem;
+  max-height: 5.3rem;
+  min-width: 20rem;
 
   &:hover {
     color: white;
+  }
+
+  &:disabled {
+    opacity: 0.8;
+    pointer-events: none;
+    &:hover:before {
+      transform: scaleX(0);
+    }
   }
 `;
 

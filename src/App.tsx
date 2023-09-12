@@ -6,13 +6,9 @@ import { LazyMotion, domAnimation } from "framer-motion";
 import ContactFormProvider from "./context/formModalContext";
 import GlobalStyles from "./components/styled/global.styled";
 import MainNav from "./components/MainNav";
-import Home from "./pages/home";
-import About from "./pages/about";
-import Tools from "./pages/tools";
-import Works from "./pages/Works";
-import Resume from "./pages/resume";
 import Container from "./components/Container";
-import ToolsDetails from "./pages/toolsDetails";
+import { Home, About, Tools, Works, Resume, ToolDetails } from "./pages";
+import ContactBtn from "./components/ContactBtn";
 
 const App = (): React.ReactNode => {
   const [initialTheme, setInitilaTheme] = useState<boolean>(true);
@@ -44,9 +40,10 @@ const App = (): React.ReactNode => {
               <Route path="/work" element={<Works />}></Route>
               <Route path="/resume" element={<Resume />}></Route>
               <Route path="/uses" element={<Tools />}></Route>
-              <Route path="/uses/:name" element={<ToolsDetails />}></Route>
+              <Route path="/uses/:name" element={<ToolDetails />}></Route>
             </Routes>
           </Container>
+          <ContactBtn />
         </ContactFormProvider>
       </LazyMotion>
     </ThemeProvider>

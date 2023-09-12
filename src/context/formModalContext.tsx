@@ -10,7 +10,7 @@ type TContext = {
 const ContactFormContext = createContext<TContext | null>(null);
 
 const ContactFormProvider = ({ children }: Prop) => {
-  const [showFormModal, setShowFormModal] = useState(false);
+  const [showFormModal, setShowFormModal] = useState(true);
 
   return (
     <ContactFormContext.Provider value={{ showFormModal, setShowFormModal }}>
