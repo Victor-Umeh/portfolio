@@ -11,8 +11,19 @@ import {
   toolCardVariants,
   toolHeaderVariants,
 } from "../libs/animationVariants.data";
+// import { useTranslation } from "react-i18next";
 
 const Tools = () => {
+  // const { t, ready } = useTranslation();
+  // if (!ready) return "Loading translations....";
+
+  // const { frontend, workflow } = t("toolsPage", {
+  //   returnObjects: true,
+  // });
+
+  // console.log(frontend);
+  // console.log(workflow);
+
   return (
     <>
       <ToolsWrapper>

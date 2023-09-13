@@ -14,63 +14,111 @@ import sass from "/images/sass.png";
 import styled from "/images/styled-component.png";
 import tailwindcss from "/images/tailwindcss.png";
 import typescript from "/images/typescript.png";
+import i18next from "i18next";
+// import i18n from "../i18n";
 
-export const frontendTools = [
-  {
-    name: "HTML",
-    img: html,
-    description:
-      "HTML is my cornerstone as a frontend developer. With it, I craft captivating web experiences, structure content, and ensure accessibility. It's my canvas for digital artistry.",
-  },
-  {
-    name: "Css",
-    img: css,
-    description:
-      "CSS!!, my design companion, empowers my frontend journey. As a budding developer, I harness its magic to breathe life into HTML, crafting visually stunning websites. It's my creative canvas, shaping layouts, styles, and ensuring responsiveness. With CSS, I transform code into captivating user experiences, one pixel at a time.",
-  },
-  {
-    name: "SASS",
-    img: sass,
-    description:
-      "Sass, modularizes CSS or atleast that's how I see it. As a frontend developer, I use Sass to streamline CSS, making it more efficient and maintainable. It's my toolkit for nesting, variables, and mixins. With Sass, I code smarter and style bolder.",
-  },
-  {
-    name: "Tailwindcss",
-    img: tailwindcss,
-    description:
-      "Tailwind CSS, my productivity ally, revolutionizes frontend work. As a budding developer, I rely on Tailwind's utility-first approach for rapid prototyping and clean code. It simplifies styling and boosts efficiency, allowing me to build websites with ease. My preferred option for styling.",
-  },
-  {
-    name: "Styled Components",
-    img: styled,
-    description:
-      "This site was built using styled component. As a junior developer, I embrace its power to style React components with tagged template literals. It's my pathway to encapsulated styles, reusability, and a more organized codebase.",
-  },
-  {
-    name: "MUI",
-    img: mui,
-    description:
-      "Material-UI (MUI), my design accelerator, amplifies my frontend capabilities. As a budding developer, I harness MUI's components and theming for intuitive, aesthetically pleasing React applications. It simplifies UI development, enhances consistency, and empowers me to create stunning user interfaces effortlessly. Material-UI: where functionality meets elegance in web design.",
-  },
-  {
-    name: "Javascript",
-    img: javascript,
-    description:
-      "JavaScript, my learning challenge, fuels my frontend aspirations. As a junior developer, I grapple with its intricacies to create interactive web experiences. It's my scripting language for DOM manipulation, adding functionality, and improving user interactions. With patience and practice, I'm growing into a more confident and capable coder in the world of JavaScript.",
-  },
-  {
-    name: "Typescript",
-    img: typescript,
-    description:
-      "TypeScript, my coding mentor, guides my frontend journey. As a junior developer, I embrace its strong typing and static analysis to write safer and more maintainable JavaScript. It's my shield against runtime errors, helping me build robust and scalable applications. TypeScript is my bridge to becoming a more confident and efficient coder.",
-  },
-  {
-    name: "React",
-    img: react,
-    description:
-      "React.js, my development muse, powers my frontend ambitions. As a junior developer, I leverage React's component-based architecture to craft interactive and responsive user interfaces. It's my toolkit for building dynamic web applications, simplifying state management, and enhancing UI performance. With React.js, frontend development become intuitive.",
-  },
+const frontendImages = [
+  html,
+  css,
+  sass,
+  tailwindcss,
+  styled,
+  mui,
+  javascript,
+  typescript,
+  react,
 ];
+
+const workflowImages = [
+  figma,
+  xd,
+  photoshop,
+  illustrator,
+  git,
+  github,
+  lightroom,
+];
+
+function trans() {
+  if (!i18next.isInitialized) return "translation pending";
+
+  return i18next.t("toolsPage", {
+    returnObjects: true,
+  });
+}
+
+const _18n_tools = trans();
+
+const { frontend, workflow }: any = _18n_tools;
+// console.log(frontend);
+// console.log(workflow);
+frontend?.forEach((tool: any, index: any) => {
+  //at each index, create a new property: "img"
+  // pass the value from frontendimages base on the index
+  console.log(tool);
+
+  tool.img = frontendImages[index];
+});
+console.log(frontend);
+
+export const frontendTools = frontend;
+
+// export const frontendTools = [
+//   {
+//     name: "HTML",
+//     img: html,
+//     description:
+//       "HTML is my cornerstone as a frontend developer. With it, I craft captivating web experiences, structure content, and ensure accessibility. It's my canvas for digital artistry.",
+//   },
+//   {
+//     name: "Css",
+//     img: css,
+//     description:
+//       "CSS!!, my design companion, empowers my frontend journey. As a budding developer, I harness its magic to breathe life into HTML, crafting visually stunning websites. It's my creative canvas, shaping layouts, styles, and ensuring responsiveness. With CSS, I transform code into captivating user experiences, one pixel at a time.",
+//   },
+//   {
+//     name: "SASS",
+//     img: sass,
+//     description:
+//       "Sass, modularizes CSS or atleast that's how I see it. As a frontend developer, I use Sass to streamline CSS, making it more efficient and maintainable. It's my toolkit for nesting, variables, and mixins. With Sass, I code smarter and style bolder.",
+//   },
+//   {
+//     name: "Tailwindcss",
+//     img: tailwindcss,
+//     description:
+//       "Tailwind CSS, my productivity ally, revolutionizes frontend work. As a budding developer, I rely on Tailwind's utility-first approach for rapid prototyping and clean code. It simplifies styling and boosts efficiency, allowing me to build websites with ease. My preferred option for styling.",
+//   },
+//   {
+//     name: "Styled Components",
+//     img: styled,
+//     description:
+//       "This site was built using styled component. As a junior developer, I embrace its power to style React components with tagged template literals. It's my pathway to encapsulated styles, reusability, and a more organized codebase.",
+//   },
+//   {
+//     name: "MUI",
+//     img: mui,
+//     description:
+//       "Material-UI (MUI), my design accelerator, amplifies my frontend capabilities. As a budding developer, I harness MUI's components and theming for intuitive, aesthetically pleasing React applications. It simplifies UI development, enhances consistency, and empowers me to create stunning user interfaces effortlessly. Material-UI: where functionality meets elegance in web design.",
+//   },
+//   {
+//     name: "Javascript",
+//     img: javascript,
+//     description:
+//       "JavaScript, my learning challenge, fuels my frontend aspirations. As a junior developer, I grapple with its intricacies to create interactive web experiences. It's my scripting language for DOM manipulation, adding functionality, and improving user interactions. With patience and practice, I'm growing into a more confident and capable coder in the world of JavaScript.",
+//   },
+//   {
+//     name: "Typescript",
+//     img: typescript,
+//     description:
+//       "TypeScript, my coding mentor, guides my frontend journey. As a junior developer, I embrace its strong typing and static analysis to write safer and more maintainable JavaScript. It's my shield against runtime errors, helping me build robust and scalable applications. TypeScript is my bridge to becoming a more confident and efficient coder.",
+//   },
+//   {
+//     name: "React",
+//     img: react,
+//     description:
+//       "React.js, my development muse, powers my frontend ambitions. As a junior developer, I leverage React's component-based architecture to craft interactive and responsive user interfaces. It's my toolkit for building dynamic web applications, simplifying state management, and enhancing UI performance. With React.js, frontend development become intuitive.",
+//   },
+// ];
 
 export const workFlowTools = [
   {

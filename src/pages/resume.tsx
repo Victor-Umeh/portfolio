@@ -36,8 +36,6 @@ const Resume = () => {
   const _18n_hardSkills = hardSkills.skills;
   const _18n_softSkills = softSkills.skills;
 
-  // console.log("Translation comp");
-
   return (
     <StyledWrapper style={{ marginBottom: "8rem" }}>
       <H1>{t("resumePage.header")}</H1>

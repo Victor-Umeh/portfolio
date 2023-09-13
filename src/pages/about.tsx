@@ -4,7 +4,7 @@ import {
 } from "../components/styled/about.styled.ts";
 import { useTranslation } from "react-i18next";
 import { m } from "framer-motion";
-import Slider from "../components/slider";
+import Slider from "../components/Slider.tsx";
 import { aboutPageTextAnimationVariants as variants } from "../libs/animationVariants.data.ts";
 
 const About = () => {
