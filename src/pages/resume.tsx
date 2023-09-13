@@ -1,5 +1,7 @@
 import resume from "/umeokoli-victor-onyeka.pdf";
+import { Fragment } from "react";
 import { StyledWrapper } from "../components/styled/elements.styled";
+import { useTranslation } from "react-i18next";
 import { HiOutlineFolderDownload } from "react-icons/hi";
 import { m } from "framer-motion";
 import {
@@ -11,13 +13,34 @@ import {
   DownloadBtn,
   Divider,
 } from "../components/styled/resume.styled";
-import { hardSkills, softSkills } from "../libs/skills.data";
+// import { hardSkills, softSkills } from "../libs/skills.data";
 import { resumeAnimationVariants } from "../libs/animationVariants.data";
 
+type Tskills = {
+  softSkills: any;
+  hardSkills: any;
+};
 const Resume = () => {
+  //https://stackoverflow.com/questions/71449362/how-to-iterate-i18n-array-of-objects-in-react-app
+  //reading from language json files
+  const { t, ready } = useTranslation();
+
+  //Creates a suspense or lazy loads translations from i8next
+  if (!ready) return "Loading translations....";
+
+  //destructuring returned obj from i8next, unable to access deeply nested objects
+  const { softSkills, hardSkills }: Tskills = t("resumePage.skills", {
+    returnObjects: true,
+  });
+  //accessing array of from translation json file
+  const _18n_hardSkills = hardSkills.skills;
+  const _18n_softSkills = softSkills.skills;
+
+  // console.log("Translation comp");
+
   return (
     <StyledWrapper style={{ marginBottom: "8rem" }}>
-      <H1>RESUME</H1>
+      <H1>{t("resumePage.header")}</H1>
       <Wrapper>
         <InnerWrap>
           <Header
@@ -28,10 +51,10 @@ const Resume = () => {
             viewport={{ once: true }}
           >
             <Address>
-              <address>Victor Onyeka Umeokoli</address>
-              <address>Jos, plateau state. Nigeria</address>
-              <address>victorumeh196@gmail.com</address>
-              <address>(+234) 8087411750</address>
+              <address>{t("resumePage.address.1")}</address>
+              <address>{t("resumePage.address.2")}</address>
+              <address>{t("resumePage.address.3")}</address>
+              <address>{t("resumePage.address.4")}</address>
             </Address>
             <DownloadBtn href={resume} download={resume}>
               <span>
@@ -46,20 +69,13 @@ const Resume = () => {
             viewport={{ once: true }}
             custom={1}
           >
-            <h3>Objective: </h3>
-            <p>
-              Dedicated and passionate frontend developer, creating engaging,
-              interactive and user-centric web applications. Adept at
-              translating UI/UX designs into functional and responsive
-              interfaces while staying up-to-date with the latest web
-              development trends and technologies. Seeking a junior level
-              frontend development role at a forward-thinking tech company.
-            </p>
+            <h3>{t("resumePage.objective.header")}: </h3>
+            <p>{t("resumePage.objective.body")}</p>
           </m.article>
 
           {/* Experience */}
           <article>
-            <h3>Professional Experience:</h3>
+            <h3>{t("resumePage.experience.header")}:</h3>
             <m.div
               className="experience"
               variants={resumeAnimationVariants}
@@ -68,13 +84,11 @@ const Resume = () => {
               viewport={{ once: true }}
               custom={2}
             >
-              <h4>Amono Digital Studios</h4>
-              <span className="company">Photo Editor and Printer</span>
-              <p>
-                A photo printing company providing digital, photo enargements
-                and printing services for photographers and individuals in jos,
-                plateau state Nigeria. Jun 2018 - Dec 2020
-              </p>
+              <h4>{t("resumePage.experience.section1.comp")}</h4>
+              <span className="company">
+                {t("resumePage.experience.section1.role")}
+              </span>
+              <p>{t("resumePage.experience.section1.text")}</p>
             </m.div>
 
             <m.div
@@ -85,14 +99,11 @@ const Resume = () => {
               viewport={{ once: true }}
               custom={2.5}
             >
-              <h4>Photo World</h4>
-              <span className="company">Senior Photo Editor and Printer</span>
-              <p>
-                Jan 2021 - Feb 2022 A photograghy studio and photo printing
-                company providing digital,photo shoot, photo enargements and
-                printing services for photographers and individuals in jos,
-                plateau state Nigeria.
-              </p>
+              <h4>{t("resumePage.experience.section2.comp")}</h4>
+              <span className="company">
+                {t("resumePage.experience.section2.role")}
+              </span>
+              <p>{t("resumePage.experience.section2.text")}</p>
             </m.div>
           </article>
 
@@ -104,14 +115,10 @@ const Resume = () => {
             viewport={{ once: true }}
             custom={3}
           >
-            <h3>Education:</h3>
-            <p>
-              Trinity Model Secondary School - Anambra - Jan 2012 - Dec 2013
-            </p>
-            <p>St Stephen Secondary School - Anambra - Jan 2014 - Dec 2015 </p>
-            <p>
-              New Dominion Comprehensive School - Plateau - Jun 2015 - Dec 2017
-            </p>
+            <h3>{t("resumePage.education.header")}:</h3>
+            <p>{t("resumePage.education.details.1")}</p>
+            <p>{t("resumePage.education.details.2")}</p>
+            <p>{t("resumePage.education.details.3")}</p>
           </m.article>
           <m.article
             variants={resumeAnimationVariants}
@@ -120,13 +127,13 @@ const Resume = () => {
             viewport={{ once: true }}
             custom={3.5}
           >
-            <h3>Soft Skills:</h3>
+            <h3>{t("resumePage.skills.softSkill.header")}:</h3>
             <ul>
-              {softSkills.map((skill, index) => (
-                <>
+              {_18n_softSkills.map((skill: string, index: number) => (
+                <Fragment key={skill}>
                   <li>{skill}</li>
                   {softSkills.length - 1 === index ? null : <Divider />}
-                </>
+                </Fragment>
               ))}
             </ul>
           </m.article>
@@ -137,13 +144,13 @@ const Resume = () => {
             viewport={{ once: true }}
             custom={4}
           >
-            <h3>Hard Skills:</h3>
+            <h3>{t("resumePage.skills.hardSkill.header")}:</h3>
             <ul>
-              {hardSkills.map((skill, index) => (
-                <>
+              {_18n_hardSkills.map((skill: string, index: number) => (
+                <Fragment key={skill}>
                   <li key={skill}>{skill}</li>
                   {hardSkills.length - 1 === index ? null : <Divider />}
-                </>
+                </Fragment>
               ))}
             </ul>
           </m.article>

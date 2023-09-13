@@ -27,5 +27,74 @@
     "hobby": "Hobbies",
     "hobbyDesc": "I love hiking, reading fictional and comic books learning new things that catches my interest or that is for job.On my leisure time I watch soccer or animes.",
     "skillsList": "My technical skills and tools I work with are HTML, CSS,tailwindcss, SASS, styled-components, git, Javascript, Typescript, Figma, Adobe XD, Photoshop, Illustrator, Lightroom and others ......."
+  },
+  "resumePage": {
+    "header": "RESUME",
+    "address": {
+      "1": "Victor Onyeka Umeokoli",
+      "2": "Jos, plateau state. Nigeria",
+      "3": "victorumeh196@gmail.com",
+      "4": "(+234) 8087411750"
+    },
+    "objective": {
+      "header": "Objective",
+      "body": "Dedicated and passionate frontend developer, creating engaging, interactive and user-centric web applications. Adept attranslating UI/UX designs into functional and responsiveinterfaces while staying up-to-date with the latest web development trends and technologies. Seeking a junior level frontend development role at a forward-thinking tech company."
+    },
+    "experience": {
+      "header": "Professional Experience",
+      "section1": {
+        "comp": "Amono Digital Studios",
+        "role": "Photo Editor and Printer",
+        "text": "A photo printing company providing digital, photo enargements and printing services for photographers and individuals in jos, plateau state Nigeria. Jun 2018 - Dec 2020"
+      },
+      "section2": {
+        "comp": "Photo World",
+        "role": "Senior Photo Editor and Printer",
+        "text": "Jan 2021 - Feb 2022 A photograghy studio and photo printing company providing digital,photo shoot, photo enargements and printing services for photographers and individuals in jos, plateau state Nigeria."
+      }
+    },
+    "education": {
+      "header": "Education",
+      "details": {
+        "1": "Trinity Model Secondary School - Anambra - Jan 2012 - Dec 2013",
+        "2": "St Stephen Secondary School - Anambra - Jan 2014 - Dec 2015",
+        "3": "New Dominion Comprehensive School - Plateau - Jun 2015 - Dec 2017"
+      }
+    },
+    "skills": {
+      "softSkills": {
+        "header": "Soft Skills",
+        "skills": [
+          "Interpersonal Skills",
+          "Attention to Detail",
+          "Problem Solving",
+          "Communication",
+          "Team Work",
+          "Adaptability"
+        ]
+      },
+      "hardSkills": {
+        "header": "hard Skills",
+        "skills": [
+          "HTML",
+          "CSS",
+          "Responsive Design",
+          "Tailwindcss",
+          "SASS",
+          "MUI",
+          "Styled Component",
+          "Javascript",
+          "Typescript",
+          "React",
+          "Redux",
+          "Context API",
+          "FIgma",
+          "Adobe XD",
+          "Git",
+          "Github",
+          "Adobe Photoshop"
+        ]
+      }
+    }
   }
 }

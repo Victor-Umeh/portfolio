@@ -4,4 +4,3 @@ export { default as Resume } from "./resume";
 export { default as Tools } from "./tools";
 export { default as ToolDetails } from "./toolDetails";
 export { default as Works } from "./Works";
-
