@@ -47,7 +47,6 @@ const LanguageSelector = ({ isMenuOpen }: TDropdown) => {
           y: -200,
         }}
         animate={{
-          originY: "top",
           scaleY: openDropDown ? 1 : 0,
           y: openDropDown ? 0 : -200,
         }}

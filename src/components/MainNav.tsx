@@ -82,12 +82,12 @@ const MainNav = ({ toggleTheme, initialTheme }: Props) => {
         </span>
       </StyledText>
 
-      <Hamburger onClick={handleToggle} open={isMenuOpen}>
-        <Line istop={"top"} open={isMenuOpen} />
-        <Line istop={"bottom"} open={isMenuOpen} />
+      <Hamburger onClick={handleToggle} $open={isMenuOpen}>
+        <Line $istop={"top"} $open={isMenuOpen} />
+        <Line $istop={"bottom"} $open={isMenuOpen} />
       </Hamburger>
 
-      <Menu open={isMenuOpen} ref={scope}>
+      <Menu $open={isMenuOpen} ref={scope}>
         {/* Nav Links */}
         <StyledList onClick={handleToggle} as="ul">
           {dropdownLinks.map((link, index) => (

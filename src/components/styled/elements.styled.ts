@@ -6,15 +6,11 @@ import { m } from "framer-motion";
 
 interface Props {
   theme: {};
-  pos?: boolean;
-  auto?: "true" | "false";
-  top?: string;
-  border?: string;
-  fz?: string;
 }
+
 interface MenuProps extends Props {
-  open?: boolean;
-  istop?: string;
+  $open?: boolean;
+  $istop?: string;
 }
 export const StyledWrapper = styled(ToolsWrapper)<Props>`
   max-width: 850px;
@@ -190,7 +186,7 @@ export const Hamburger = styled(Button)<MenuProps>`
   align-items: center;
   gap: 1rem;
   cursor: pointer;
-  transform: rotate(${({ open }) => (open ? "180deg" : "0deg")});
+  transform: rotate(${({ $open }) => ($open ? "180deg" : "0deg")});
   transition: transform 0.8s cubic-bezier(0.785, 0.135, 0.15, 0.86);
   z-index: 1;
   & span {
@@ -204,14 +200,14 @@ export const Line = styled.span<MenuProps>`
   background-color: ${({ theme }) => theme.colors.accent};
   display: block;
   transform: translateY(
-      ${({ istop, open }) =>
-        (istop === "top" && open ? "5px" : null) ||
-        (istop === "bottom" && open ? "-7px" : null)}
+      ${({ $istop, $open }) =>
+        ($istop === "top" && $open ? "5px" : null) ||
+        ($istop === "bottom" && $open ? "-7px" : null)}
     )
     rotate(
-      ${({ istop, open }) =>
-        (istop === "top" && open ? "45deg" : null) ||
-        (istop === "bottom" && open ? "-45deg" : null)}
+      ${({ $istop, $open }) =>
+        ($istop === "top" && $open ? "45deg" : null) ||
+        ($istop === "bottom" && $open ? "-45deg" : null)}
     );
 `;
 
@@ -227,7 +223,7 @@ export const Menu = styled.div<MenuProps>`
   right: 0;
   bottom: 0.5px;
 
-  transform: scaleY(${({ open }) => (open ? 1 : 0)});
+  transform: scaleY(${({ $open }) => ($open ? 1 : 0)});
   transform-origin: top;
   transition: transform 0.8s cubic-bezier(0.785, 0.135, 0.15, 0.86);
   z-index: 999;
@@ -253,7 +249,6 @@ export const StyledList = styled.ul<Props>`
 
 export const StyledLink = styled(m.li)<Props>`
   font-family: "Poppins", sans-serif;
-  /* font-size: ${({ fz }) => fz || "3rem"}; */
   font-size: 3rem;
   padding: 0.5rem;
   list-style: none;
@@ -379,7 +374,6 @@ export const StyledForm = styled(m.form)`
   padding: 2rem;
   background: ${({ theme }) => theme.colors.body};
   outline: 1px solid ${({ theme }) => theme.colors.accent};
-  /* border-radius: 6px; */
   z-index: 100;
   font-family: "poppins";
   backdrop-filter: blur(3px);

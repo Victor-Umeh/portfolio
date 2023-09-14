@@ -13,7 +13,6 @@ import {
   DownloadBtn,
   Divider,
 } from "../components/styled/resume.styled";
-// import { hardSkills, softSkills } from "../libs/skills.data";
 import { resumeAnimationVariants } from "../libs/animationVariants.data";
 
 type Tskills = {
