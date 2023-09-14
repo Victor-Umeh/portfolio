@@ -78,16 +78,16 @@
         "skills": [
           "HTML",
           "CSS",
-          "Responsive Design",
+          "Zane Mai Amsa",
           "Tailwindcss",
           "SASS",
           "MUI",
-          "Styled Component",
+          "Salon Salo",
           "Javascript",
           "Typescript",
           "React",
           "Redux",
-          "Context API",
+          "API ɗin Context",
           "FIgma",
           "Adobe XD",
           "Git",
@@ -98,65 +98,65 @@
     }
   },
   "toolsPage": {
-    "header": "These are some of the tools I use, for designing, optimizing images and developing. Am always open to learn new technologies needed for the job.",
+    "header": "Waɗannan su ne wasu kayan aikin da nake amfani da su, don ƙira, inganta hotuna da haɓakawa. A koyaushe ina buɗe don koyon sabbin fasahohin da ake buƙata don aikin.",
     "frontend": [
       {
         "name": "HTML",
-        "description": "HTML is my cornerstone as a frontend developer. With it, I craft captivating web experiences, structure content, and ensure accessibility. It's my canvas for digital artistry."
+        "description": "HTML shine ginshiƙi na a matsayin mai haɓaka gaba. Tare da shi, Ina ƙera abubuwan da ke jan hankalin gidan yanar gizo, tsara abun ciki, da tabbatar da samun dama. Canvas na ne don fasahar dijital."
       },
       {
         "name": "Css",
-        "description": "CSS!!, my design companion, empowers my frontend journey. As a budding developer, I harness its magic to breathe life into HTML, crafting visually stunning websites. It's my creative canvas, shaping layouts, styles, and ensuring responsiveness. With CSS, I transform code into captivating user experiences, one pixel at a time."
+        "description": "CSS!!, Abokin ƙira na, yana ƙarfafa tafiya ta gaba. A matsayina na mai haɓakawa, Ina amfani da sihirinsa don hura rayuwa cikin HTML, ƙirƙirar gidajen yanar gizo masu ban sha'awa na gani. Yana da zane mai ƙirƙira, tsara shimfidu, salo, da kuma tabbatar da amsawa. Tare da CSS, Ina canza lamba zuwa gogewar mai amfani, pixel ɗaya a lokaci guda."
       },
       {
         "name": "SASS",
-        "description": "Sass, modularizes CSS or atleast that's how I see it. As a frontend developer, I use Sass to streamline CSS, making it more efficient and maintainable. It's my toolkit for nesting, variables, and mixins. With Sass, I code smarter and style bolder."
+        "description": "Sass, yana daidaita CSS ko aƙalla haka nake gani. A matsayina na mai haɓakawa na gaba, Ina amfani da Sass don daidaita CSS, yana mai da shi mafi inganci da kiyayewa. Kayan aikina ne na gida, masu canji, da mixins. Tare da Sass, Na ƙididdige wayo da salo mai ƙarfi."
       },
       {
         "name": "Tailwindcss",
-        "description": "Tailwind CSS, my productivity ally, revolutionizes frontend work. As a budding developer, I rely on Tailwind's utility-first approach for rapid prototyping and clean code. It simplifies styling and boosts efficiency, allowing me to build websites with ease. My preferred option for styling."
+        "description": "Tailwind CSS, abokin aikina, yana canza aikin gaba. A matsayina na mai haɓakawa, na dogara da tsarin amfani na Tailwind-farko don saurin samfuri da tsaftataccen lamba. Yana sauƙaƙa salo da haɓaka inganci, yana ba ni damar gina gidajen yanar gizo cikin sauƙi. Zaɓin da na fi so don salo."
       },
       {
-        "name": "Styled Components",
-        "description": "This site was built using styled component. As a junior developer, I embrace its power to style React components with tagged template literals. It's my pathway to encapsulated styles, reusability, and a more organized codebase."
+        "name": "Abubuwan Salo",
+        "description": "An gina wannan rukunin yanar gizon ta amfani da sassa masu salo. A matsayina na ƙarami mai haɓakawa, Na rungumi ikon sa don salon abubuwan gyara React tare da alamar ainihin samfuri. Hanyata ce zuwa salon da aka tattara, sake amfani da ita, da ingantaccen tsarin codebase."
       },
       {
         "name": "MUI",
-        "description": "Material-UI (MUI), my design accelerator, amplifies my frontend capabilities. As a budding developer, I harness MUI's components and theming for intuitive, aesthetically pleasing React applications. It simplifies UI development, enhances consistency, and empowers me to create stunning user interfaces effortlessly. Material-UI: where functionality meets elegance in web design."
+        "description": "Material-UI (MUI), mai saurin ƙira na, yana haɓaka iyawar gabana. A matsayina na mai haɓaka haɓakawa, Ina amfani da abubuwan MUI da jigo don aikace-aikacen React masu daɗaɗɗa da fahimta. Yana sauƙaƙa ci gaban UI, yana haɓaka daidaito, kuma yana ba ni iko don ƙirƙirar mu'amala mai ban sha'awa ba tare da wahala ba. Material-UI: inda ayyuka suka hadu da kyan gani a ƙirar gidan yanar gizo."
       },
       {
         "name": "Javascript",
-        "description": "JavaScript, my learning challenge, fuels my frontend aspirations. As a junior developer, I grapple with its intricacies to create interactive web experiences. It's my scripting language for DOM manipulation, adding functionality, and improving user interactions. With patience and practice, I'm growing into a more confident and capable coder in the world of JavaScript."
+        "description": "JavaScript, ƙalubalen koyo na, yana ƙara rura wutar buri na na gaba. A matsayina na ƙarami mai haɓakawa, na yi gwagwarmaya tare da ƙaƙƙarfan sa don ƙirƙirar ƙwarewar yanar gizo mai ma'amala. Yaren rubutuna ne don sarrafa DOM, ƙara ayyuka, da haɓaka hulɗar mai amfani. Tare da haƙuri da aiki, Ina girma zuwa mafi kwarin gwiwa da iya coder a duniyar JavaScript."
       },
       {
         "name": "Typescript",
-        "description": "TypeScript, my coding mentor, guides my frontend journey. As a junior developer, I embrace its strong typing and static analysis to write safer and more maintainable JavaScript. It's my shield against runtime errors, helping me build robust and scalable applications. TypeScript is my bridge to becoming a more confident and efficient coder."
+        "description": "TypeScript, mai ba da shawara na lamba, yana jagorantar tafiya ta gaba. A matsayina na ƙarami mai haɓakawa, na rungumi ƙaƙƙarfan bugunsa da bincike a tsaye don rubuta JavaScript mafi aminci da kiyayewa. Garkuwata ce daga kurakuran lokacin aiki, yana taimaka mini gina ƙaƙƙarfan aikace-aikace masu ƙarfi. TypeScript shine gada na don zama mafi ƙarfin gwiwa da ingantaccen coder."
       },
       {
         "name": "React",
-        "description": "React.js, my development muse, powers my frontend ambitions. As a junior developer, I leverage React's component-based architecture to craft interactive and responsive user interfaces. It's my toolkit for building dynamic web applications, simplifying state management, and enhancing UI performance. With React.js, frontend development become intuitive."
+        "description": "React.js, kayan tarihi na ci gaba, yana ba da ikon buri na na gaba. A matsayina na ƙarami mai haɓakawa, Ina yin amfani da tsarin gine-gine na tushen React don ƙera mu'amalar mu'amala da mu'amalar mai amfani. Kayan aikina ne don gina aikace-aikacen gidan yanar gizo masu ƙarfi, sauƙaƙe gudanarwar jiha, da haɓaka aikin UI. Tare da React.js, ci gaban gaba ya zama mai hankali."
       }
     ],
     "workflow": [
       {
         "name": "Figma",
-        "description": "Figma, my design-to-code bridge, revolutionizes my frontend journey. As a developer figma's collaborative features help me seamlessly translate designers' visions into code. It's my canvas for inspecting layouts, exporting assets, and ensuring pixel-perfect implementations. With Figma, I bridge the design-developer gap with precision and efficiency."
+        "description": "Figma, gada na ƙira-zuwa-ladi, yana canza tafiya ta gaba. A matsayina na haɗin gwiwar mai haɓaka figma yana taimaka mani fassara hangen nesa na masu ƙira zuwa lamba. Yana da zane na don bincika shimfidu, fitar da kadarori, da tabbatar da ingantaccen aiwatarwa. Tare da Figma, Na haɗu da gibin ƙira-mai haɓaka tare da daidaito da inganci."
       },
       {
         "name": "Adobe xd",
-        "description": "Adobe XD, my design-to-code catalyst, revolutionizes my frontend collaboration. Though not a designer, I use XD to dissect designs and translate them into functional code. It fosters teamwork, streamlines handoffs, and ensures design fidelity in the development process. Adobe XD: bridging design and code seamlessly for a harmonious workflow."
+        "description": "Adobe XD, ƙirar ƙira-zuwa-ladi na, yana kawo sauyi na haɗin gwiwa na gaba. Ko da yake ba mai zane ba ne, Ina amfani da XD don rarraba ƙira da fassara su zuwa lambar aiki. Yana haɓaka aikin haɗin gwiwa, daidaita ayyukan hannu, kuma yana tabbatar da amincin ƙira a cikin tsarin ci gaba. Adobe XD: haɓaka ƙira da lamba ba tare da matsala ba don tafiyar aiki mai jituwa."
       },
       {
         "name": "Photoshop",
-        "description": "Photoshop, my digital canvas, empowers my creative prowess. With it, I seamlessly repair photos, craft collages, and retouch images to perfection. It's my toolbox for transforming ideas into visual masterpieces, unleashing my artistic potential. Photoshop: where imagination meets precision, enabling me to bring visions to life."
+        "description": "Photoshop, zane na dijital, yana ba da ƙarfin ƙirƙira ta. Da shi, Ina gyara hotuna ba tare da wata matsala ba, ƙwararrun ƙwararrun sana'a, da sake kunna hotuna zuwa kamala. Akwatin kayan aiki na ne don canza ra'ayoyi zuwa ƙwararrun gani, tare da buɗe damar fasaha ta. Photoshop: inda tunanin ya hadu da daidaito, yana ba ni damar kawo hangen nesa zuwa rayuwa."
       },
       {
         "name": "Illustrator",
-        "description": "Adobe Illustrator, my creative playground, fuels my passion for logo design and cartooning. It's the ultimate tool for crafting intricate logos with precision and bringing characters to life with expressive lines and colors. Illustrator is where my artistic vision flourishes, turning concepts into iconic visuals."
+        "description": "Adobe Illustrator, filin wasa na mai ƙirƙira, yana ƙara rura wutar sha'awar ƙirar tambari da zane mai ban dariya. Kayan aiki ne na ƙarshe don ƙirƙira tambura masu rikitarwa tare da madaidaici da kawo haruffa zuwa rayuwa tare da layukan bayyanawa da launuka. Mai zane shine inda hangen nesa na fasaha ya bunƙasa, yana mai da ra'ayoyi zuwa abubuwan gani."
       },
       {
         "name": "Git",
-        "description": "Git, my version control maestro, shapes my coding journey. As a developer, I embrace Git's power to track changes, collaborate seamlessly, and maintain code integrity. It's my safeguard against chaos, ensuring project stability and enabling team harmony in the world of coding. Git: where code history meets collaboration, making software development a breeze."
+        "description": "Git, nau'ina mai sarrafa maestro, yana tsara tafiya ta coding. A matsayina na mai haɓakawa, na rungumi ikon Git don bin diddigin canje-canje, yin haɗin gwiwa ba tare da wata matsala ba, da kiyaye amincin lambar. Yana da kariyata daga hargitsi, tabbatar da kwanciyar hankali na aiki da ba da damar jituwa ta ƙungiyar a duniyar coding. Git: inda tarihin lambar ya hadu da haɗin gwiwa, yana sa haɓaka software ya zama iska."
       },
       {
         "name": "Github",
@@ -164,7 +164,7 @@
       },
       {
         "name": "Lightroom",
-        "description": "Lightroom, my photographic haven, transforms my images into visual masterpieces. Whether I'm editing, enhancing, or organizing, it's my toolkit for bringing photos to life. Lightroom's intuitive features and presets simplify the process, allowing me to unlock the full potential of my photography effortlessly."
+        "description": "Lightroom, wurin daukar hoto na, yana canza hotuna na zuwa manyan abubuwan gani. Ko ina gyarawa, haɓakawa, ko tsarawa, kayan aikina ne don kawo hotuna zuwa rayuwa. Siffofin ilhama na Lightroom da saitattun saiti suna sauƙaƙe aikin, suna ba ni damar buɗe cikakkiyar damar ɗaukar hoto na ba tare da wahala ba."
       }
     ]
   }
