@@ -23,12 +23,6 @@ export default function useNavMenuAnimation(isOpen: boolean) {
       // duration: 0.4,
       delay: isOpen ? staggerMenuItems : 0,
     });
-
-    animate("div", isOpen ? { opacity: 1 } : { opacity: 0 }, {
-      type: "spring",
-      delay: isOpen ? 0.6 : 0,
-      duration: 0.5,
-    });
   }, [isOpen]);
 
   return scope;

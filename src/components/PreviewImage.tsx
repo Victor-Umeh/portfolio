@@ -13,7 +13,7 @@ const hoveredImageVariants = {
   visible: {
     opacity: 0.7,
     x: 0,
-    transition: { duration: 0.5 },
+    transition: { duration: 1 },
   },
   exit: { display: "none" },
 };

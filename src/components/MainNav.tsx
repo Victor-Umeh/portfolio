@@ -2,15 +2,7 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useTheme } from "styled-components";
 import { Link } from "react-router-dom";
-// import { m } from "framer-motion";
 import useNavMenuAnimation from "../libs/useNavMenuAnimation";
-import {
-  BiLogoGmail,
-  BiLogoTwitter,
-  BiLogoLinkedinSquare,
-} from "react-icons/bi";
-import { IoLogoWhatsapp } from "react-icons/io";
-
 import { FaArrowRight } from "react-icons/fa";
 import {
   StyledNav,
@@ -19,11 +11,10 @@ import {
   Menu,
   StyledList,
   StyledLink,
-  SocialLink,
-  SocialBlock,
   StyledText,
   StyledBtn,
 } from "./styled/elements.styled";
+import { m } from "framer-motion";
 import darkThemeIcon from "../assets/dark-theme.svg";
 import lightThemeIcon from "../assets/light-theme.svg";
 import logo from "/logo.svg";
@@ -101,30 +92,17 @@ const MainNav = ({ toggleTheme, initialTheme }: Props) => {
         <StyledList onClick={handleToggle} as="ul">
           {dropdownLinks.map((link, index) => (
             <StyledLink
-              as="li"
+              as={m.li}
               key={link.text}
               onMouseOver={() => setCurrentImage(images[index])}
               onMouseLeave={() => setCurrentImage(undefined)}
+              whileHover={{ scale: 1.15 }}
+              transition={{ ease: "easeInOut", duration: 0.3 }}
             >
               <Link to={link.to}>{t(link.text)}</Link>
             </StyledLink>
           ))}
         </StyledList>
-
-        <SocialBlock as="div">
-          <SocialLink href="">
-            <BiLogoLinkedinSquare style={{ color: theme.colors.text }} />
-          </SocialLink>
-          <SocialLink href="">
-            <IoLogoWhatsapp style={{ color: theme.colors.text }} />
-          </SocialLink>
-          <SocialLink href="">
-            <BiLogoTwitter style={{ color: theme.colors.text }} />
-          </SocialLink>
-          <SocialLink href="">
-            <BiLogoGmail style={{ color: theme.colors.text }} />
-          </SocialLink>
-        </SocialBlock>
 
         <PreviewImage
           image={currentImage}

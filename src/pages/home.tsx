@@ -1,6 +1,6 @@
 //@ts-ignore
 import Typed from "typed.js";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { m } from "framer-motion";
@@ -22,30 +22,34 @@ import {
 // import i18next from "i18next";
 
 const IntroCard = () => {
-  const { t } = useTranslation();
-  // console.log(HeroTextVariants);
+  const [lang, setLang] = useState(false);
+  const { t, ready, i18n } = useTranslation();
 
-  // Create reference to store the DOM element containing the animation
+  /*
+  An i18next method, changing language has not effect, unless the browser is refreshed,
+   the useState(lang) changes when i18n detects a language change, 
+   rerendering the useEffect hook and typedJs library
+   */
+  i18n.on("languageChanged", () => {
+    setLang(!lang);
+  });
+
+  function getTranslation() {
+    if (!ready) return "Loading getTranslationlations....";
+
+    return t("typed", {
+      returnObjects: true,
+    });
+  }
+  const typedData = Object.values(getTranslation());
+  typedData.unshift("💖");
+
   const el = useRef(null);
-  // const paths = ["t1", "t2", "t3", "t4", "t5"];
-  // const typedItems = paths.map((path) => {
-  //   const items = i18next.t("typed", path);
-  //   return items;
-  // });
-  // console.log(typedItems);
 
   useEffect(() => {
     const typed = new Typed(el.current, {
-      strings: [
-        "💖",
-        "Adventurer.",
-        "Tech Enthusiast.",
-        "Aspiring Blockchain Dev.",
-        "Open to learning new technologies.",
-        "Frontend Dev.",
-      ],
+      strings: typedData,
       typeSpeed: 120,
-      // startDelay: 0,
       showCursor: false,
       bindInputFocusEvents: true,
       backDelay: 1000,
@@ -57,7 +61,7 @@ const IntroCard = () => {
       // Destroy Typed instance during cleanup to stop animation
       typed.destroy();
     };
-  }, []);
+  }, [lang]);
 
   return (
     <>

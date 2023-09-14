@@ -169,11 +169,11 @@
     ]
   },
   "formModal": {
-    "header": "Kpọtụrụ m",
+    "header": "Kpọtụrụ M",
     "text": "Ị chọrọ ịmalite ọrụ. Nye m oku +2348087411750, ọ ga-amasị m ịnụ gị.",
-    "btn": "Ziga ozi",
-    "name-placeholder": "Aha gị",
-    "email-placeholder": "Email gị",
-    "message-placeholder": "Ozi gị"
+    "btn": "Ziga Ozi",
+    "name-placeholder": "Aha Gị",
+    "email-placeholder": "Email Gị",
+    "message-placeholder": "Ozi Gị"
   }
 }

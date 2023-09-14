@@ -1,4 +1,11 @@
 {
+  "typed": {
+    "t1": "Aventurier.",
+    "t2": "Passionné de technologie.",
+    "t3": "Aspirant développeur blockchain.",
+    "t4": "Ouvert à l'apprentissage de nouvelles technologies.",
+    "t5": "Développeur front-end."
+  },
   "homePage": {
     "greet": "Salut je suis ",
     "aboutText": "À propos",
@@ -166,9 +173,9 @@
   "formModal": {
     "header": "CONTACTEZ MOI",
     "text": "Voulez-vous démarrer un projet. Appelez-moi au +2348087411750, j'aimerais avoir de vos nouvelles.",
-    "btn": "Envoyer le message",
-    "name-placeholder": "votre nom",
-    "email-placeholder": "Votre e-mail",
-    "message-placeholder": "Votre message"
+    "btn": "Envoyer Le Message",
+    "name-placeholder": "Votre Nom",
+    "email-placeholder": "Votre E-mail",
+    "message-placeholder": "Votre Message"
   }
 }
