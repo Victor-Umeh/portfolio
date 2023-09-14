@@ -13,7 +13,8 @@ import {
   toolDetailTextAnimationVariants,
 } from "../libs/animationVariants.data.ts";
 import { useTranslation } from "react-i18next";
-import { frontendImages, workflowImages } from "../libs/tools.data";
+import { frontendImages, workflowImages } from "../libs/tools.images.ts";
+import { includeImagesInArray } from "../libs/mutateArray.ts";
 
 const ToolDetails = () => {
   const { name } = useParams();
@@ -21,16 +22,11 @@ const ToolDetails = () => {
 
   const { t, ready } = useTranslation();
 
-  function includeImagesInArray(objArray: any, imgArray: string[]) {
-    objArray?.forEach((tool: any, index: any) => {
-      //at each index, create a new property: "img"
-      // pass the value from frontendimages base on the index
-
-      tool.img = imgArray[index];
-    });
-  }
-
-  function trans() {
+  /*
+  destructuring necessary data directly tends to throw an error, hence I called the func
+  on a variable and destructured the variable from then.
+  */
+  function getTranslation() {
     if (!ready) return "Loading translations....";
 
     return t("toolsPage", {
@@ -38,8 +34,11 @@ const ToolDetails = () => {
     });
   }
 
-  const _18n_tools = trans();
-  const { frontend, workflow }: any = _18n_tools;
+  //get toolsData object from i18next
+  const _18n_translated_tools_data = getTranslation();
+  const { frontend, workflow }: any = _18n_translated_tools_data;
+
+  //side effect, inserting image props to frontend and workflow object
   includeImagesInArray(frontend, frontendImages);
   includeImagesInArray(workflow, workflowImages);
 

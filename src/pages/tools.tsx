@@ -12,43 +12,43 @@ import {
   toolHeaderVariants,
 } from "../libs/animationVariants.data";
 import { useTranslation } from "react-i18next";
-import { frontendImages, workflowImages } from "../libs/tools.data";
+import { frontendImages, workflowImages } from "../libs/tools.images";
+import { includeImagesInArray } from "../libs/mutateArray";
 
 const Tools = () => {
   const { t, ready } = useTranslation();
 
-  function includeImagesInArray(objArray: any, imgArray: string[]) {
-    objArray?.forEach((tool: any, index: any) => {
-      //at each index, create a new property: "img"
-      // pass the value from frontendimages base on the index
-
-      tool.img = imgArray[index];
-    });
-  }
-
-  function trans() {
-    if (!ready) return "Loading translations....";
+  function getTranslation() {
+    if (!ready) return "Loading getTranslationlations....";
 
     return t("toolsPage", {
       returnObjects: true,
     });
   }
 
-  const _18n_tools = trans();
-  const { frontend, workflow }: any = _18n_tools;
+  /*
+  destructuring necessary data directly tends to throw an error, hence I called the func
+  on a variable and destructured the variable from then.
+  */
+
+  const _18n_translated_tools_data = getTranslation();
+  const { frontend, workflow }: any = _18n_translated_tools_data;
   includeImagesInArray(frontend, frontendImages);
   includeImagesInArray(workflow, workflowImages);
 
   return (
     <>
       <ToolsWrapper>
-        <m.p variants={toolHeaderVariants} initial="initial" animate="animate">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia quae
-          sed quaerat alias! Quo earum totam neque vel non odio magni officia,
-          excepturi sint, quasi vero saepe libero,facilis quas.
-        </m.p>
+        <m.h3
+          className="tool__header"
+          variants={toolHeaderVariants}
+          initial="initial"
+          animate="animate"
+        >
+          {t("toolsPage.header")}
+        </m.h3>
         <StyledHeader>Frontend</StyledHeader>
-        <StyledSection style={{ paddingBottom: "7rem" }}>
+        <StyledSection style={{ paddingBottom: "7rem", marginInline: "auto" }}>
           {frontend.map((tool: any, index: number) => (
             <Tool
               key={tool.name}

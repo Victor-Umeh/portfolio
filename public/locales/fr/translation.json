@@ -23,7 +23,77 @@
     "skillsList": "Mes compétences techniques et les outils avec lesquels je travaille sont HTML, CSS, tailwindcss, SASS, styled-components, git, Javascript, Typescript, Figma, Adobe XD, Photoshop, Illustrator, Lightroom et autres ......."
   },
 
+  "resumePage": {
+    "header": "CV",
+    "address": {
+      "1": "Victor Onyeka Umeokoli",
+      "2": "Jos, plateau state. Nigeria",
+      "3": "victorumeh196@gmail.com",
+      "4": "(+234) 8087411750"
+    },
+    "objective": {
+      "header": "Objectif",
+      "body": "Développeur frontend dévoué et passionné, créant des applications Web attrayantes, interactives et centrées sur l'utilisateur. Adepte de la traduction de conceptions UI/UX en interfaces fonctionnelles et réactives tout en restant à jour avec les dernières tendances et technologies de développement Web. À la recherche d'un rôle de développement front-end de niveau junior dans une entreprise technologique avant-gardiste."
+    },
+    "experience": {
+      "header": "Expérience professionnelle",
+      "section1": {
+        "comp": "Studios numériques Amono",
+        "role": "Éditeur de photos et imprimante",
+        "text": "Une entreprise d'impression photo fournissant des services d'impression numérique, d'agrandissement et d'impression de photos aux photographes et aux particuliers à Jos, dans l'État du plateau du Nigeria. Juin 2018 - décembre 2020"
+      },
+      "section2": {
+        "comp": "Monde de la photo",
+        "role": "Éditeur de photos et imprimeur senior",
+        "text": "Janvier 2021 - février 2022 Un studio de photographie et une entreprise d'impression photo fournissant des services numériques, de séance photo, d'agrandissement de photos et d'impression pour les photographes et les particuliers à Jos, dans l'État du plateau du Nigeria."
+      }
+    },
+    "education": {
+      "header": "Éducation",
+      "details": {
+        "1": "École secondaire modèle Trinity - Anambra - janvier 2012 - décembre 2013",
+        "2": "École secondaire St Stephen - Anambra - janvier 2014 - décembre 2015",
+        "3": "Nouvelle école polyvalente Dominion - Plateau - juin 2015 - décembre 2017"
+      }
+    },
+    "skills": {
+      "softSkills": {
+        "header": "Compétences générales",
+        "skills": [
+          "Compétences personnelles",
+          "Attention au détail",
+          "Résolution de problème",
+          "Communication",
+          "Travail en équipe",
+          "Adaptabilité"
+        ]
+      },
+      "hardSkills": {
+        "header": "Compétences difficiles",
+        "skills": [
+          "HTML",
+          "CSS",
+          "Conception réactive",
+          "Tailwindcss",
+          "SASS",
+          "MUI",
+          "Composant stylisé",
+          "Javascript",
+          "Typescript",
+          "React",
+          "Redux",
+          "API de contexte",
+          "FIgma",
+          "Adobe XD",
+          "Git",
+          "Github",
+          "Adobe Photoshop"
+        ]
+      }
+    }
+  },
   "toolsPage": {
+    "header": "Ce sont quelques-uns des outils que j'utilise pour concevoir, optimiser des images et développer. Je suis toujours ouvert à apprendre les nouvelles technologies nécessaires au travail.",
     "frontend": [
       {
         "name": "HTML",
@@ -31,65 +101,65 @@
       },
       {
         "name": "Css",
-        "description": "CSS!!, my design companion, empowers my frontend journey. As a budding developer, I harness its magic to breathe life into HTML, crafting visually stunning websites. It's my creative canvas, shaping layouts, styles, and ensuring responsiveness. With CSS, I transform code into captivating user experiences, one pixel at a time."
+        "description": "CSS !!, mon compagnon de conception, renforce mon parcours frontend. En tant que développeur en herbe, j'exploite sa magie pour donner vie au HTML et créer des sites Web visuellement époustouflants. C'est ma toile de création, qui façonne les mises en page, les styles et assure la réactivité. Avec CSS, je transforme le code en expériences utilisateur captivantes, un pixel à la fois."
       },
       {
         "name": "SASS",
-        "description": "Sass, modularizes CSS or atleast that's how I see it. As a frontend developer, I use Sass to streamline CSS, making it more efficient and maintainable. It's my toolkit for nesting, variables, and mixins. With Sass, I code smarter and style bolder."
+        "description": "Sass, modularise le CSS ou du moins c'est comme ça que je le vois. En tant que développeur frontend, j'utilise Sass pour rationaliser le CSS, le rendant plus efficace et maintenable. C'est ma boîte à outils pour l'imbrication, les variables et les mixins. Avec Sass, je code plus intelligemment et je style plus audacieux."
       },
       {
         "name": "Tailwindcss",
-        "description": "Tailwind CSS, my productivity ally, revolutionizes frontend work. As a budding developer, I rely on Tailwind's utility-first approach for rapid prototyping and clean code. It simplifies styling and boosts efficiency, allowing me to build websites with ease. My preferred option for styling."
+        "description": "Tailwind CSS, mon allié de productivité, révolutionne le travail frontend. En tant que développeur en herbe, je m'appuie sur l'approche utilitaire de Tailwind pour un prototypage rapide et un code propre. Cela simplifie le style et augmente l'efficacité, me permettant de créer facilement des sites Web. Mon option préférée pour le style."
       },
       {
-        "name": "Styled Components",
-        "description": "This site was built using styled component. As a junior developer, I embrace its power to style React components with tagged template literals. It's my pathway to encapsulated styles, reusability, and a more organized codebase."
+        "name": "Composants stylisés",
+        "description": "Ce site a été construit à l'aide d'un composant stylisé. En tant que développeur junior, j'apprécie son pouvoir de styliser les composants React avec des littéraux de modèles balisés. C'est ma voie vers les styles encapsulés, la réutilisabilité et une base de code plus organisée."
       },
       {
         "name": "MUI",
-        "description": "Material-UI (MUI), my design accelerator, amplifies my frontend capabilities. As a budding developer, I harness MUI's components and theming for intuitive, aesthetically pleasing React applications. It simplifies UI development, enhances consistency, and empowers me to create stunning user interfaces effortlessly. Material-UI: where functionality meets elegance in web design."
+        "description": "Material-UI (MUI), mon accélérateur de conception, amplifie mes capacités frontend. En tant que développeur en herbe, j'exploite les composants et les thèmes de MUI pour créer des applications React intuitives et esthétiques. Il simplifie le développement de l'interface utilisateur, améliore la cohérence et me permet de créer sans effort des interfaces utilisateur époustouflantes. Material-UI : où la fonctionnalité rencontre l'élégance dans la conception Web."
       },
       {
         "name": "Javascript",
-        "description": "JavaScript, my learning challenge, fuels my frontend aspirations. As a junior developer, I grapple with its intricacies to create interactive web experiences. It's my scripting language for DOM manipulation, adding functionality, and improving user interactions. With patience and practice, I'm growing into a more confident and capable coder in the world of JavaScript."
+        "description": "JavaScript, mon défi d'apprentissage, alimente mes aspirations frontend. En tant que développeur junior, je m'attaque à ses subtilités pour créer des expériences Web interactives. C'est mon langage de script pour la manipulation du DOM, l'ajout de fonctionnalités et l'amélioration des interactions utilisateur. Avec de la patience et de la pratique, je deviens un codeur plus confiant et plus compétent dans le monde de JavaScript."
       },
       {
         "name": "Typescript",
-        "description": "TypeScript, my coding mentor, guides my frontend journey. As a junior developer, I embrace its strong typing and static analysis to write safer and more maintainable JavaScript. It's my shield against runtime errors, helping me build robust and scalable applications. TypeScript is my bridge to becoming a more confident and efficient coder."
+        "description": "TypeScript, mon mentor en codage, guide mon parcours frontend. En tant que développeur junior, j'utilise son typage puissant et son analyse statique pour écrire du JavaScript plus sûr et plus maintenable. C'est mon bouclier contre les erreurs d'exécution, m'aidant à créer des applications robustes et évolutives. TypeScript est mon pont pour devenir un codeur plus confiant et plus efficace."
       },
       {
         "name": "React",
-        "description": "React.js, my development muse, powers my frontend ambitions. As a junior developer, I leverage React's component-based architecture to craft interactive and responsive user interfaces. It's my toolkit for building dynamic web applications, simplifying state management, and enhancing UI performance. With React.js, frontend development become intuitive."
+        "description": "React.js, ma muse du développement, alimente mes ambitions frontend. En tant que développeur junior, j'exploite l'architecture basée sur les composants de React pour créer des interfaces utilisateur interactives et réactives. C'est ma boîte à outils pour créer des applications Web dynamiques, simplifier la gestion des états et améliorer les performances de l'interface utilisateur. Avec React.js, le développement frontend devient intuitif."
       }
     ],
     "workflow": [
       {
         "name": "Figma",
-        "description": "Figma, my design-to-code bridge, revolutionizes my frontend journey. As a developer figma's collaborative features help me seamlessly translate designers' visions into code. It's my canvas for inspecting layouts, exporting assets, and ensuring pixel-perfect implementations. With Figma, I bridge the design-developer gap with precision and efficiency."
+        "description": "Figma, mon pont conception-code, révolutionne mon parcours frontend. En tant que développeur, les fonctionnalités collaboratives de Figma m'aident à traduire de manière transparente les visions des concepteurs en code. C'est mon canevas pour inspecter les mises en page, exporter les ressources et garantir des implémentations parfaites au pixel près. Avec Figma, je comble le fossé entre concepteur et développeur avec précision et efficacité."
       },
       {
         "name": "Adobe xd",
-        "description": "Adobe XD, my design-to-code catalyst, revolutionizes my frontend collaboration. Though not a designer, I use XD to dissect designs and translate them into functional code. It fosters teamwork, streamlines handoffs, and ensures design fidelity in the development process. Adobe XD: bridging design and code seamlessly for a harmonious workflow."
+        "description": "Adobe XD, mon catalyseur de conception à code, révolutionne ma collaboration front-end. Bien que je ne sois pas concepteur, j'utilise XD pour décortiquer les conceptions et les traduire en code fonctionnel. Il favorise le travail d'équipe, rationalise les transferts et garantit la fidélité de la conception dans le processus de développement. Adobe XD : reliez facilement la conception et le code pour un flux de travail harmonieux."
       },
       {
         "name": "Photoshop",
-        "description": "Photoshop, my digital canvas, empowers my creative prowess. With it, I seamlessly repair photos, craft collages, and retouch images to perfection. It's my toolbox for transforming ideas into visual masterpieces, unleashing my artistic potential. Photoshop: where imagination meets precision, enabling me to bring visions to life."
+        "description": "Photoshop, ma toile numérique, renforce mes prouesses créatives. Avec lui, je répare en toute transparence des photos, crée des collages et retouche les images à la perfection. C'est ma boîte à outils pour transformer des idées en chefs-d'œuvre visuels, libérant ainsi mon potentiel artistique. Photoshop : là où l'imagination rencontre la précision, me permettant de donner vie aux visions."
       },
       {
         "name": "Illustrator",
-        "description": "Adobe Illustrator, my creative playground, fuels my passion for logo design and cartooning. It's the ultimate tool for crafting intricate logos with precision and bringing characters to life with expressive lines and colors. Illustrator is where my artistic vision flourishes, turning concepts into iconic visuals."
+        "description": "Adobe Illustrator, mon terrain de jeu créatif, alimente ma passion pour la création de logos et le dessin animé. C'est l'outil ultime pour créer des logos complexes avec précision et donner vie aux personnages avec des lignes et des couleurs expressives. Illustrator est l’endroit où ma vision artistique s’épanouit, transformant les concepts en visuels emblématiques."
       },
       {
         "name": "Git",
-        "description": "Git, my version control maestro, shapes my coding journey. As a developer, I embrace Git's power to track changes, collaborate seamlessly, and maintain code integrity. It's my safeguard against chaos, ensuring project stability and enabling team harmony in the world of coding. Git: where code history meets collaboration, making software development a breeze."
+        "description": "Git, mon maestro du contrôle de version, façonne mon parcours de codage. En tant que développeur, j'apprécie la puissance de Git pour suivre les modifications, collaborer de manière transparente et maintenir l'intégrité du code. C'est ma protection contre le chaos, garantissant la stabilité du projet et permettant l'harmonie des équipes dans le monde du codage. Git : là où l'historique du code rencontre la collaboration, faisant du développement logiciel un jeu d'enfant."
       },
       {
         "name": "Github",
-        "description": "GitHub, my coding community hub, enhances my development endeavors. As a developer, I utilize GitHub to host, collaborate, and share code with a global community. It's my platform for open-source contributions, showcasing projects, and fostering collaboration. GitHub: where code meets collaboration, elevating my coding journey."
+        "description": "GitHub, mon hub communautaire de codage, améliore mes efforts de développement. En tant que développeur, j'utilise GitHub pour héberger, collaborer et partager du code avec une communauté mondiale. C'est ma plateforme pour les contributions open source, la présentation de projets et la promotion de la collaboration. GitHub : là où le code rencontre la collaboration, élevant mon parcours de codage."
       },
       {
         "name": "Lightroom",
-        "description": "Lightroom, my photographic haven, transforms my images into visual masterpieces. Whether I'm editing, enhancing, or organizing, it's my toolkit for bringing photos to life. Lightroom's intuitive features and presets simplify the process, allowing me to unlock the full potential of my photography effortlessly."
+        "description": "Lightroom, mon paradis photographique, transforme mes images en chefs-d'œuvre visuels. Que je modifie, améliore ou organise, c'est ma boîte à outils pour donner vie à mes photos. Les fonctionnalités intuitives et les préréglages de Lightroom simplifient le processus, me permettant de libérer tout le potentiel de ma photographie sans effort."
       }
     ]
   }

@@ -86,21 +86,20 @@ const FormModal = () => {
                 type="text"
                 placeholder="Your Name"
                 name="sender_name"
-                // required
+                required
               />
               <StyledInput
                 type="email"
                 placeholder="Your Email"
                 name="sender_email"
-                // required
+                required
               />
-              {/* <StyledInput type="text" placeholder="Subject" name="subject" /> */}
               <StyledTextArea
                 placeholder="Your Message"
                 rows={7}
                 cols={50}
                 name="message"
-                // required
+                required
               />
               <StyledButton type="submit" value="Send" disabled={loading}>
                 {loading ? <ButtonSpinner /> : "Send Message"}

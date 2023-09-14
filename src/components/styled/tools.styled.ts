@@ -8,6 +8,13 @@ export const ToolsWrapper = styled.section`
   padding-top: 1rem;
   color: ${({ theme }) => theme.colors.text};
 
+  .tool__header {
+    font-size: 1.6rem;
+    font-weight: 500;
+    /* width: 70%; */
+    text-align: center;
+    margin-inline: auto;
+  }
   & p {
     padding: 2rem 2.5rem;
     text-align: center;
@@ -22,6 +29,10 @@ export const ToolsWrapper = styled.section`
   }
 
   @media (min-width: 768px) {
+    .tool__header {
+      font-size: 1.8rem;
+      width: 70%;
+    }
     padding-top: 3.5rem;
   }
 `;
@@ -130,7 +141,7 @@ export const ToolDescription = styled.p`
   padding: 0 0 6rem 0 !important;
 
   @media (min-width: 768px) {
-  font-size: 1.6rem;
+    font-size: 1.6rem;
     min-width: 360px;
     max-width: 600px;
   }

@@ -8,8 +8,6 @@ i18next.use(initReactI18next).use(LanguageDetector).use(Backend).init({
   fallbackLng: "en",
   returnObjects: true,
   saveMissing: true,
-  // preload: true
-  // postProcess: true,
 });
 
 export default i18next;

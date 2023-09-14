@@ -125,7 +125,7 @@ const Resume = () => {
             viewport={{ once: true }}
             custom={3.5}
           >
-            <h3>{t("resumePage.skills.softSkill.header")}:</h3>
+            <h3>{t("resumePage.skills.softSkills.header")}:</h3>
             <ul>
               {_18n_softSkills.map((skill: string, index: number) => (
                 <Fragment key={skill}>
@@ -142,7 +142,7 @@ const Resume = () => {
             viewport={{ once: true }}
             custom={4}
           >
-            <h3>{t("resumePage.skills.hardSkill.header")}:</h3>
+            <h3>{t("resumePage.skills.hardSkills.header")}:</h3>
             <ul>
               {_18n_hardSkills.map((skill: string, index: number) => (
                 <Fragment key={skill}>
