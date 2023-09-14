@@ -1,6 +1,5 @@
 // import ContactBtn from "./ContactBtn";
 import { Main } from "./styled/elements.styled";
-import ContactBtn from "./ContactBtn";
 import FormModal from "./FormModal";
 
 interface Props {
