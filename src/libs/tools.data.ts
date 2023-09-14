@@ -14,10 +14,8 @@ import sass from "/images/sass.png";
 import styled from "/images/styled-component.png";
 import tailwindcss from "/images/tailwindcss.png";
 import typescript from "/images/typescript.png";
-import i18next from "i18next";
-// import i18n from "../i18n";
 
-const frontendImages = [
+export const frontendImages = [
   html,
   css,
   sass,
@@ -29,7 +27,7 @@ const frontendImages = [
   react,
 ];
 
-const workflowImages = [
+export const workflowImages = [
   figma,
   xd,
   photoshop,
@@ -39,29 +37,30 @@ const workflowImages = [
   lightroom,
 ];
 
-function trans() {
-  if (!i18next.isInitialized) return "translation pending";
+// function trans() {
+//   if (!i18next.isInitialized) return "Loading translations";
 
-  return i18next.t("toolsPage", {
-    returnObjects: true,
-  });
-}
+//   return i18next.t("toolsPage", {
+//     returnObjects: true,
+//   });
+// }
 
-const _18n_tools = trans();
+// function includeImagesInArray(objArray: any, imgArray: string[]) {
+//   objArray?.forEach((tool: any, index: any) => {
+//     //at each index, create a new property: "img"
+//     // pass the value from frontendimages base on the index
+//     console.log(tool);
+//     tool.img = imgArray[index];
+//   });
+// }
+// const _18n_tools = trans();
 
-const { frontend, workflow }: any = _18n_tools;
-// console.log(frontend);
-// console.log(workflow);
-frontend?.forEach((tool: any, index: any) => {
-  //at each index, create a new property: "img"
-  // pass the value from frontendimages base on the index
-  console.log(tool);
+// const { frontend, workflow }: any = _18n_tools;
+// includeImagesInArray(frontend, frontendImages);
+// includeImagesInArray(workflow, workflowImages);
 
-  tool.img = frontendImages[index];
-});
-console.log(frontend);
-
-export const frontendTools = frontend;
+// export const frontendTools = frontend;
+// export const workFlowTools = workflow;
 
 // export const frontendTools = [
 //   {
@@ -120,47 +119,47 @@ export const frontendTools = frontend;
 //   },
 // ];
 
-export const workFlowTools = [
-  {
-    name: "Figma",
-    img: figma,
-    description:
-      "Figma, my design-to-code bridge, revolutionizes my frontend journey. As a developer figma's collaborative features help me seamlessly translate designers' visions into code. It's my canvas for inspecting layouts, exporting assets, and ensuring pixel-perfect implementations. With Figma, I bridge the design-developer gap with precision and efficiency.",
-  },
-  {
-    name: "Adobe xd",
-    img: xd,
-    description:
-      "Adobe XD, my design-to-code catalyst, revolutionizes my frontend collaboration. Though not a designer, I use XD to dissect designs and translate them into functional code. It fosters teamwork, streamlines handoffs, and ensures design fidelity in the development process. Adobe XD: bridging design and code seamlessly for a harmonious workflow.",
-  },
-  {
-    name: "Photoshop",
-    img: photoshop,
-    description:
-      "Photoshop, my digital canvas, empowers my creative prowess. With it, I seamlessly repair photos, craft collages, and retouch images to perfection. It's my toolbox for transforming ideas into visual masterpieces, unleashing my artistic potential. Photoshop: where imagination meets precision, enabling me to bring visions to life.",
-  },
-  {
-    name: "Illustrator",
-    img: illustrator,
-    description:
-      "Adobe Illustrator, my creative playground, fuels my passion for logo design and cartooning. It's the ultimate tool for crafting intricate logos with precision and bringing characters to life with expressive lines and colors. Illustrator is where my artistic vision flourishes, turning concepts into iconic visuals.",
-  },
-  {
-    name: "Git",
-    img: git,
-    description:
-      "Git, my version control maestro, shapes my coding journey. As a developer, I embrace Git's power to track changes, collaborate seamlessly, and maintain code integrity. It's my safeguard against chaos, ensuring project stability and enabling team harmony in the world of coding. Git: where code history meets collaboration, making software development a breeze.",
-  },
-  {
-    name: "Github",
-    img: github,
-    description:
-      "GitHub, my coding community hub, enhances my development endeavors. As a developer, I utilize GitHub to host, collaborate, and share code with a global community. It's my platform for open-source contributions, showcasing projects, and fostering collaboration. GitHub: where code meets collaboration, elevating my coding journey.",
-  },
-  {
-    name: "Lightroom",
-    img: lightroom,
-    description:
-      "Lightroom, my photographic haven, transforms my images into visual masterpieces. Whether I'm editing, enhancing, or organizing, it's my toolkit for bringing photos to life. Lightroom's intuitive features and presets simplify the process, allowing me to unlock the full potential of my photography effortlessly.",
-  },
-];
+// export const workFlowTools = [
+//   {
+//     name: "Figma",
+//     img: figma,
+//     description:
+//       "Figma, my design-to-code bridge, revolutionizes my frontend journey. As a developer figma's collaborative features help me seamlessly translate designers' visions into code. It's my canvas for inspecting layouts, exporting assets, and ensuring pixel-perfect implementations. With Figma, I bridge the design-developer gap with precision and efficiency.",
+//   },
+//   {
+//     name: "Adobe xd",
+//     img: xd,
+//     description:
+//       "Adobe XD, my design-to-code catalyst, revolutionizes my frontend collaboration. Though not a designer, I use XD to dissect designs and translate them into functional code. It fosters teamwork, streamlines handoffs, and ensures design fidelity in the development process. Adobe XD: bridging design and code seamlessly for a harmonious workflow.",
+//   },
+//   {
+//     name: "Photoshop",
+//     img: photoshop,
+//     description:
+//       "Photoshop, my digital canvas, empowers my creative prowess. With it, I seamlessly repair photos, craft collages, and retouch images to perfection. It's my toolbox for transforming ideas into visual masterpieces, unleashing my artistic potential. Photoshop: where imagination meets precision, enabling me to bring visions to life.",
+//   },
+//   {
+//     name: "Illustrator",
+//     img: illustrator,
+//     description:
+//       "Adobe Illustrator, my creative playground, fuels my passion for logo design and cartooning. It's the ultimate tool for crafting intricate logos with precision and bringing characters to life with expressive lines and colors. Illustrator is where my artistic vision flourishes, turning concepts into iconic visuals.",
+//   },
+//   {
+//     name: "Git",
+//     img: git,
+//     description:
+//       "Git, my version control maestro, shapes my coding journey. As a developer, I embrace Git's power to track changes, collaborate seamlessly, and maintain code integrity. It's my safeguard against chaos, ensuring project stability and enabling team harmony in the world of coding. Git: where code history meets collaboration, making software development a breeze.",
+//   },
+//   {
+//     name: "Github",
+//     img: github,
+//     description:
+//       "GitHub, my coding community hub, enhances my development endeavors. As a developer, I utilize GitHub to host, collaborate, and share code with a global community. It's my platform for open-source contributions, showcasing projects, and fostering collaboration. GitHub: where code meets collaboration, elevating my coding journey.",
+//   },
+//   {
+//     name: "Lightroom",
+//     img: lightroom,
+//     description:
+//       "Lightroom, my photographic haven, transforms my images into visual masterpieces. Whether I'm editing, enhancing, or organizing, it's my toolkit for bringing photos to life. Lightroom's intuitive features and presets simplify the process, allowing me to unlock the full potential of my photography effortlessly.",
+//   },
+// ];

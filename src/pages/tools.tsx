@@ -4,25 +4,40 @@ import {
   StyledSection,
   StyledHeader,
 } from "../components/styled/tools.styled";
-import { frontendTools, workFlowTools } from "../libs/tools.data";
+// import { frontendTools, workFlowTools } from "../libs/tools.data";
 import { Link } from "react-router-dom";
 import { m } from "framer-motion";
 import {
   toolCardVariants,
   toolHeaderVariants,
 } from "../libs/animationVariants.data";
-// import { useTranslation } from "react-i18next";
+import { useTranslation } from "react-i18next";
+import { frontendImages, workflowImages } from "../libs/tools.data";
 
 const Tools = () => {
-  // const { t, ready } = useTranslation();
-  // if (!ready) return "Loading translations....";
+  const { t, ready } = useTranslation();
 
-  // const { frontend, workflow } = t("toolsPage", {
-  //   returnObjects: true,
-  // });
+  function includeImagesInArray(objArray: any, imgArray: string[]) {
+    objArray?.forEach((tool: any, index: any) => {
+      //at each index, create a new property: "img"
+      // pass the value from frontendimages base on the index
 
-  // console.log(frontend);
-  // console.log(workflow);
+      tool.img = imgArray[index];
+    });
+  }
+
+  function trans() {
+    if (!ready) return "Loading translations....";
+
+    return t("toolsPage", {
+      returnObjects: true,
+    });
+  }
+
+  const _18n_tools = trans();
+  const { frontend, workflow }: any = _18n_tools;
+  includeImagesInArray(frontend, frontendImages);
+  includeImagesInArray(workflow, workflowImages);
 
   return (
     <>
@@ -34,7 +49,7 @@ const Tools = () => {
         </m.p>
         <StyledHeader>Frontend</StyledHeader>
         <StyledSection style={{ paddingBottom: "7rem" }}>
-          {frontendTools.map((tool, index) => (
+          {frontend.map((tool: any, index: number) => (
             <Tool
               key={tool.name}
               tabIndex={0}
@@ -55,7 +70,7 @@ const Tools = () => {
 
         <StyledHeader>Work Flow</StyledHeader>
         <StyledSection style={{ paddingBottom: "7rem" }}>
-          {workFlowTools.map((tool, index) => (
+          {workflow.map((tool: any, index: number) => (
             <Tool
               key={tool.name}
               tabIndex={0}
@@ -78,4 +93,5 @@ const Tools = () => {
   );
 };
 
+// export { frontend, workflow };
 export default Tools;
