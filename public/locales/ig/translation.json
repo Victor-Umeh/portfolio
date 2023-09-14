@@ -1,3 +1,171 @@
 {
-  "key": "Hello world igbo"
+  "typed": {
+    "t1": "Onye na-eme njem.",
+    "t2": "Onye na-anụ ọkụ n'obi Tech.",
+    "t3": "Na-achọ Blockchain Dev.",
+    "t4": "Mepee ịmụ teknụzụ ọhụrụ.",
+    "t5": ""
+  },
+  "homePage": {
+    "greet": "Ndewo, a bụ m",
+    "aboutText": "Ihe gbasara",
+    "heroText": "Ndewo, abụ m onye nrụpụta n'ihu, onye nrụpụta akara na onye ndezi foto na Jos, Nigeria. Na-achọsi ike ịgbasa ihe ọmụma na nka",
+    "exploreBtn": "Nyochaa"
+  },
+
+  "nav": {
+    "home": "Ụlọ",
+    "resume": "Resume",
+    "works": "ọrụ",
+    "about": "Ihe gbasara",
+    "tools": "Ngwa"
+  },
+  "aboutPage": {
+    "description": "Lee anya,",
+    "brief": "Abụ m Victor Umeokoli ma ọ bụ Umeh maka ibi mkpirisi na Jos, plateau state Nigeria",
+    "skills": "Abụ m onye nrụpụta frontend, logo & vector onye nrụpụta ihe na-achọ blockchain nwere ahụmịhe afọ 3 dị ka onye nchịkọta akụkọ foto.",
+    "hobby": "Ihe omume ntụrụndụ",
+    "hobbyDesc": "Ọ na-amasị m ịga njem, ịgụ akwụkwọ akụkọ ifo na ihe ọchị na-amụta ihe ọhụrụ na-adọrọ mmasị m ma ọ bụ nke bụ maka ọrụ. N'oge ntụrụndụ m, m na-ekiri bọl ma ọ bụ anime.",
+    "skillsList": "Nkà nka na ngwa ọrụ m na-arụ ọrụ bụ HTML, CSS, tailwindcss, SASS, ihe ndị e ji eme ihe, git, Javascript, Typescript, Figma, Adobe XD, Photoshop, Illustrator, Lightroom na ndị ọzọ ......"
+  },
+  "resumePage": {
+    "header": "RESUME",
+    "address": {
+      "1": "Victor Onyeka Umeokoli",
+      "2": "Jos, plateau state. Nigeria",
+      "3": "victorumeh196@gmail.com",
+      "4": "(+234) 8087411750"
+    },
+    "objective": {
+      "header": "Ebumnuche",
+      "body": "Onye nrụpụta frontend raara onwe ya nye, na-emepụta ngwa weebụ na-etinye aka, na-emekọrịta ihe na nke na-emetụta onye ọrụ. Nwee obi ụtọ ịsụgharị atụmatụ UI/UX ka ọ bụrụ ihu na-arụ ọrụ yana nke na-anabata ya ka ị na-eji usoro mmepe weebụ kachasị ọhụrụ na teknụzụ. Na-achọ ọrụ mmepe frontend dị obere na ụlọ ọrụ teknụzụ na-eche n'ihu."
+    },
+    "experience": {
+      "header": "Ahụmahụ ọkachamara",
+      "section1": {
+        "comp": "Amono Digital Studios",
+        "role": "Onye nchịkọta akụkọ foto na ngwa nbipute",
+        "text": "Ụlọ ọrụ na-ebi akwụkwọ foto na-enye ọrụ dijitalụ, foto na ọrụ mbipụta maka ndị na-ese foto na ndị mmadụ n'otu n'otu na jos, Plateau steeti Nigeria. Junị 2018 - Disemba 2020"
+      },
+      "section2": {
+        "comp": "Photo World",
+        "role": "Senior Photo Editor na Printer",
+        "text": "Jenụwarị 2021 - Febụwarị 2022 Ụlọ ọrụ fotograghy ​​na ụlọ ọrụ na-ebipụta foto na-enye dijitalụ, ịse foto, ntinye foto na ọrụ mbipụta maka ndị na-ese foto na ndị mmadụ n'otu n'otu na jos, Plateau steeti Nigeria."
+      }
+    },
+    "education": {
+      "header": "Agụmakwụkwọ",
+      "details": {
+        "1": "Trinity Model Secondary School - Anambra - Jan 2012 - Dec 2013",
+        "2": "St Stephen Secondary School - Anambra - Jan 2014 - Dec 2015",
+        "3": "New Dominion Comprehensive School - Plateau - Jun 2015 - Dec 2017"
+      }
+    },
+    "skills": {
+      "softSkills": {
+        "header": "Nka dị nro",
+        "skills": [
+          "Nkà mmekọrịta mmadụ na ibe ya",
+          "Nlebara anya na nkọwa",
+          "Ndozi nsogbu",
+          "Nkwukọrịta",
+          "Ọrụ otu",
+          "Nkwekọrịta"
+        ]
+      },
+      "hardSkills": {
+        "header": "ike Nka",
+        "skills": [
+          "HTML",
+          "CSS",
+          "Nzaghachi Design",
+          "Tailwindcss",
+          "SASS",
+          "MUI",
+          "Styled Component",
+          "Javascript",
+          "Typescript",
+          "React",
+          "Redux",
+          "API ederede",
+          "FIgma",
+          "Adobe XD",
+          "Git",
+          "Github",
+          "Adobe Photoshop"
+        ]
+      }
+    }
+  },
+  "toolsPage": {
+    "header": "Ndị a bụ ụfọdụ ngwaọrụ m na-eji, maka imepụta, na-ebuli ihe onyonyo na mmepe. Ana m emeghe mgbe niile ịmụta teknụzụ ọhụrụ achọrọ maka ọrụ ahụ.",
+    "frontend": [
+      {
+        "name": "HTML",
+        "description": "HTML bụ isi nkuku m dị ka onye nrụpụta frontend. Site na ya, m na-emepụta ahụmịhe weebụ na-adọrọ adọrọ, na-ahazi ọdịnaya yana hụ na enwere ike ịnweta ya. Ọ bụ akwaaji m maka nka dijitalụ."
+      },
+      {
+        "name": "Css",
+        "description": "CSS!!, enyi m imewe, na-enye m ike njem n'ihu m. Dị ka onye mmepụta ihe na-eto eto, m na-eji anwansi ya mee ka ndụ dị ndụ na HTML, na-emepụta ebe nrụọrụ weebụ mara mma. Ọ bụ akwa akwa m na-emepụta, nhazi nhazi, ụdị, na n'ịhụ nzaghachi. Site na CSS , M na-agbanwe koodu ka ọ bụrụ ahụmịhe onye ọrụ na-adọrọ adọrọ, otu pikselụ n'otu oge."
+      },
+      {
+        "name": "SASS",
+        "description": "Sass, modularizes CSS ma ọ bụ opekata mpe otu ahụ ka m si ahụ ya. Dịka onye nrụpụta frontend, m na-eji Sass na-emegharị CSS, na-eme ka ọ na-arụ ọrụ nke ọma ma na-echekwa ya. Ọ bụ ngwa m maka akwụ akwụ, mgbanwe na mixins. Site na Sass, m na-edepụta amamihe karịa na ụdị obi ike. "
+      },
+      {
+        "name": "Tailwindcss",
+        "description": "Tailwind CSS, onye mmekọ m na-arụpụta ihe, na-agbanwe ọrụ n'ihu. Dịka onye nrụpụta na-eto eto, m na-adabere na ike Tailwind-mbụ ụzọ mbụ maka prototyping ngwa ngwa na koodu dị ọcha. Ọ na-eme ka nhazi dị mfe ma na-abawanye arụmọrụ, na-enye m ohere ịmepụta weebụsaịtị n'ụzọ dị mfe. Nhọrọ kacha amasị m maka ịke."
+      },
+      {
+        "name": "Styled Components",
+        "description": "Ewubere saịtị a site na iji akụrụngwa nwere ụdị. Dịka onye nrụpụta nke obere, ana m anabata ike ya ịkepụta ihe mejupụtara React nwere akara ederede ederede. Ọ bụ ụzọ m ga-esi nweta ụdị agbachitere, mweghachi, yana koodu ntọala ahaziri ahazi."
+      },
+      {
+        "name": "MUI",
+        "description": "Material-UI (MUI), ihe ngwa ngwa imewe m, na-ebuli ike ihu m. Dịka onye nrụpụta na-eto eto, m na-ejikọ ihe ndị MUI na isiokwu maka ngwa mmeghachi omume na-adọrọ adọrọ ma na-atọ ụtọ. Ọ na-eme ka mmepe UI dị mfe, na-eme ka nkwụsi ike, ma na-enye m ike ịmepụta ihu ndị ọrụ mara mma n'enweghị mgbalị ọ bụla. Ihe-UI: ebe ọrụ na-ezute ịma mma na imewe weebụ."
+      },
+      {
+        "name": "Javascript",
+        "description": "Javascript, ihe ịma aka mmụta m, na-eme ka ọchịchọ m dị n'ihu. Dịka onye nrụpụta obere, ana m agba mbọ na mgbagwoju anya ya iji mepụta ahụmịhe webụ mmekọrịta. Ọ bụ asụsụ edemede m maka njikwa DOM, na-agbakwunye ọrụ, yana melite mmekọrịta ndị ọrụ. Site na ndidi na omume, m na-eto eto ka ọ bụrụ onye nwere ntụkwasị obi na onye nwere ikike n'ime ụwa Javascript."
+      },
+      {
+        "name": "Typescript",
+        "description": "TypeScript, onye ndụmọdụ nzuzo m, na-eduzi njem m n'ihu. Dịka onye nrụpụta obere, ana m anabata mpịnye ya siri ike yana nyocha ya static iji dee Javascript dị nchebe yana nke enwere ike idobe ya. Ọ bụ ọta m megide njehie oge ọ na-agba ọsọ, na-enyere m aka iwulite ngwa siri ike ma nwee ike ịgbatị. TypeScript bụ àkwà mmiri m iji ghọ onye nwere obi ike na nke ọma."
+      },
+      {
+        "name": "React",
+        "description": "React.js, ihe ngosi mmepe m, na-eme ka ebumnuche m dị n'ihu. Dịka onye nrụpụta obere, m na-eji ihe owuwu dabere na akụrụngwa React iji rụọ ọrụ mmekọrịta yana ndị na-anabata ndị ọrụ. Ọ bụ ngwa ọrụ m maka iwulite ngwa weebụ dị ike, na-eme ka njikwa steeti dị mfe, yana ịkwalite arụmọrụ UI. Site na React.js, mmepe frontend na-aghọ nkọ."
+      }
+    ],
+    "workflow": [
+      {
+        "name": "Figma",
+        "description": "Figma, àkwà mmiri m na-emepụta-na-koodu, na-agbanwe njem m n'ihu. Dị ka njirimara mmekọ figma onye nrụpụta na-enyere m aka ịtụgharị uche n'ọhụụ ndị nrụpụta ka ọ bụrụ koodu. Ọ bụ akwaaji m maka inyocha nhazi nhazi, mbupụ akụ, yana hụ na mmejuputa pikselụ zuru oke. Site na Figma, ana m ejikọta ọdịiche nke onye nrụpụta na nkenke na arụmọrụ."
+      },
+      {
+        "name": "Adobe xd",
+        "description": "Adobe XD, ihe na-eme ka imewe-to-code m, na-agbanwe mmekorita m n'ihu. Agbanyeghị na abụghị onye nrụpụta, ana m eji XD kewapụta atụmatụ wee tụgharịa ha ka ọ bụrụ koodu arụ ọrụ. Ọ na-akwalite ịrụkọ ọrụ ọnụ, na-emezigharị aka aka, ma hụkwa na iguzosi ike n'ihe chepụta na usoro mmepe. Adobe XD: na-ejikọta imewe na koodu n'enweghị nsogbu maka usoro ọrụ kwekọrọ."
+      },
+      {
+        "name": "Photoshop",
+        "description": "Photoshop, kwaaji dijitalụ m, na-enye ike okike m ike. Site na ya, m na-arụzi foto n'enweghị nsogbu ọ bụla, kọlụm ọrụ nka, na megharịa onyonyo ka ọ zuo oke. Ọ bụ igbe ọrụ m maka ịgbanwe echiche ka ọ bụrụ ọmarịcha ihe ngosi, na-ewepụta ikike nka m. Photoshop: ebe echiche na-ezute nkenke, na-enyere m aka iweta ọhụụ na ndụ."
+      },
+      {
+        "name": "Illustrator",
+        "description": "Adobe Illustrator, ogige egwuregwu okike m, na-eme ka mmasị m nwere maka imepụta akara na eserese eserese. Ọ bụ ngwá ọrụ kacha mma maka iji nkenke nkenke wee were ahịrị na agba na-akọwapụta mkpụrụedemede dị mgbagwoju anya iji mepụta akara ngosi dị mgbagwoju anya. Onye na-ese ihe bụ ebe ọhụụ nka nka na-eto eto, na-atụgharị echiche ka ọ bụrụ ihe ngosi akara ngosi."
+      },
+      {
+        "name": "Git",
+        "description": "Git, maestro njikwa ụdị m, na-akpụzi njem koodu m. Dịka onye nrụpụta, ana m anabata ike Git iji soro mgbanwe, imekọ ihe ọnụ, ma jikwaa ikwado koodu. Ọ bụ ihe nchekwa m megide ọgbaghara, na-ahụ nkwụsi ike nke oru ngo yana na-eme ka otu nkwekọ n'ime ụwa nke nzuzo. Git: ebe akụkọ ihe mere eme koodu na-ezute mmekorita, na-eme ka mmepe ngwanrọ bụrụ ikuku."
+      },
+      {
+        "name": "Github",
+        "description": "GitHub, oghere ime obodo m, na-akwalite mbọ mmepe m. Dịka onye nrụpụta, ana m eji GitHub kwado, imekọ ọnụ na kesaa koodu n'etiti obodo zuru ụwa ọnụ. Ọ bụ ikpo okwu m maka ntinye aka mepere emepe, ngosi ọrụ, na ịkwalite mmekọ. GitHub: ebe koodu na-ezute mmekorita, na-ebuli njem nzuzo m."
+      },
+      {
+        "name": "Lightroom",
+        "description": "Lightroom, ebe nchekwa foto m, na-agbanwe onyonyo m ka ọ bụrụ ọmarịcha ihe ngosi. Ma m na-edezi, na-akwalite ma ọ bụ na-ahazi, ọ bụ ngwa ọrụ m maka iweta foto na ndụ. Ihe njiri mara nke Lightroom na presets na-eme ka usoro ahụ dị mfe, na-enye m ohere imeghe ikike ịse foto m n'enweghị mgbagha."
+      }
+    ]
+  }
 }

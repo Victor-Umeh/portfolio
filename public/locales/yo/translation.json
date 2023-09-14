@@ -1,3 +1,171 @@
 {
-  "key": "Hello world yoruba"
+  "typed": {
+    "t1": "Adventurer.",
+    "t2": "Tech iyaragaga.",
+    "t3": "Aspiring Blockchain Dev.",
+    "t4": "Ṣi si kikọ awọn imọ-ẹrọ tuntun.",
+    "t5": "Frontend Dev."
+  },
+  "homePage": {
+    "greet": "Hi, Emi ni ",
+    "aboutText": "Nipa",
+    "heroText": "Bawo, Emi jẹ olupilẹṣẹ iwaju, oluṣe apẹẹrẹ ati olootu fọto ni Jos, Nigeria. Ni itara lati faagun imọ ati awọn ọgbọn",
+    "exploreBtn": "Ye"
+  },
+
+  "nav": {
+    "home": "Ile",
+    "resume": "Tun bẹrẹ",
+    "works": "Awọn iṣẹ",
+    "about": "Nipa",
+    "tools": "Awọn irinṣẹ"
+  },
+  "aboutPage": {
+    "description": "Iwo ti o wa nibe yen,",
+    "brief": "Emi ni Victor Umeokoli tabi Umeh fun gbigbe kukuru ni Jos, Plateau state Nigeria",
+    "skills": "Mo jẹ olupilẹṣẹ iwaju, aami ati apẹẹrẹ vector ti o nireti idagbasoke blockchain pẹlu ọdun 3 ti iriri bi olootu fọtoyiya.",
+    "hobby": "Awọn iṣẹ aṣenọju",
+    "hobbyDesc": "Mo nifẹ irin-ajo, kika itan-akọọlẹ ati awọn iwe apanilerin kikọ awọn ohun tuntun ti o mu iwulo mi tabi ti o jẹ fun iṣẹ.Ni akoko isinmi mi Mo wo bọọlu afẹsẹgba tabi awọn ere idaraya.",
+    "skillsList": "Awọn ọgbọn imọ-ẹrọ mi ati awọn irinṣẹ ti Mo ṣiṣẹ pẹlu HTML, CSS, tailwindcss, SASS, awọn paati ara-ara, git, Javascript, Typescript, Figma, Adobe XD, Photoshop, Illustrator, Lightroom ati awọn miiran ......"
+  },
+  "resumePage": {
+    "header": "RESUME",
+    "address": {
+      "1": "Victor Onyeka Umeokoli",
+      "2": "Jos, plateau state. Nigeria",
+      "3": "victorumeh196@gmail.com",
+      "4": "(+234) 8087411750"
+    },
+    "objective": {
+      "header": "Idi",
+      "body": "Ifiṣootọ ati olupilẹṣẹ ti o ni itara iwaju, ṣiṣẹda ikopa, ibaraenisepo ati awọn ohun elo wẹẹbu-centric olumulo. Adept ni titumọ awọn aṣa UI/UX sinu iṣẹ-ṣiṣe ati awọn oju-ọna idahun lakoko ti o wa ni imudojuiwọn pẹlu awọn aṣa idagbasoke wẹẹbu tuntun ati imọ-ẹrọ. Wiwa ipa idagbasoke iwaju iwaju ipele junior ni ile-iṣẹ imọ-ẹrọ iwaju-ero."
+    },
+    "experience": {
+      "header": "Ọjọgbọn Iriri",
+      "section1": {
+        "comp": "Amono Digital Studios",
+        "role": "Olootu Fọto ati itẹwe",
+        "text": "Ile-iṣẹ titẹ fọto ti n pese oni-nọmba, awọn imudara fọto ati awọn iṣẹ titẹ sita fun awọn oluyaworan ati awọn eniyan kọọkan ni Jos, ipinlẹ Plateau Nigeria. Oṣu Kẹta ọdun 2018 - Oṣu kejila ọdun 2020"
+      },
+      "section2": {
+        "comp": "Photo World",
+        "role": "Olootu Fọto Agba ati itẹwe",
+        "text": "Jan 2021 - Oṣu kejila 2022 Ile-iṣere fọtograghy ​​kan ati ile-iṣẹ titẹjade fọto ti n pese oni nọmba, titu fọto, awọn imudara fọto ati awọn iṣẹ titẹ fun awọn oluyaworan ati awọn eniyan kọọkan ni Jos, ipinlẹ Plateau Nigeria."
+      }
+    },
+    "education": {
+      "header": "Ẹkọ",
+      "details": {
+        "1": "Trinity Model Secondary School - Anambra - Jan 2012 - Dec 2013",
+        "2": "St Stephen Secondary School - Anambra - Jan 2014 - Dec 2015",
+        "3": "New Dominion Comprehensive School - Plateau - Jun 2015 - Dec 2017"
+      }
+    },
+    "skills": {
+      "softSkills": {
+        "header": "Awọn Ogbon Asọ",
+        "skills": [
+          "Awọn ọgbọn ti ara ẹni",
+          "Ifojusi si Apejuwe",
+          "Yanju isoro",
+          "Ibaraẹnisọrọ",
+          "Ise Egbe",
+          "Imudaramu"
+        ]
+      },
+      "hardSkills": {
+        "header": "lile ogbon",
+        "skills": [
+          "HTML",
+          "CSS",
+          "",
+          "Tailwindcss",
+          "SASS",
+          "MUI",
+          "Styled Component",
+          "Javascript",
+          "Typescript",
+          "React",
+          "Redux",
+          "Context API",
+          "FIgma",
+          "Adobe XD",
+          "Git",
+          "Github",
+          "Adobe Photoshop"
+        ]
+      }
+    }
+  },
+  "toolsPage": {
+    "header": "These are some of the tools I use, for designing, optimizing images and developing. Am always open to learn new technologies needed for the job.",
+    "frontend": [
+      {
+        "name": "HTML",
+        "description": "HTML is my cornerstone as a frontend developer. With it, I craft captivating web experiences, structure content, and ensure accessibility. It's my canvas for digital artistry."
+      },
+      {
+        "name": "Css",
+        "description": "CSS!!, my design companion, empowers my frontend journey. As a budding developer, I harness its magic to breathe life into HTML, crafting visually stunning websites. It's my creative canvas, shaping layouts, styles, and ensuring responsiveness. With CSS, I transform code into captivating user experiences, one pixel at a time."
+      },
+      {
+        "name": "SASS",
+        "description": "Sass, modularizes CSS or atleast that's how I see it. As a frontend developer, I use Sass to streamline CSS, making it more efficient and maintainable. It's my toolkit for nesting, variables, and mixins. With Sass, I code smarter and style bolder."
+      },
+      {
+        "name": "Tailwindcss",
+        "description": "Tailwind CSS, my productivity ally, revolutionizes frontend work. As a budding developer, I rely on Tailwind's utility-first approach for rapid prototyping and clean code. It simplifies styling and boosts efficiency, allowing me to build websites with ease. My preferred option for styling."
+      },
+      {
+        "name": "Styled Components",
+        "description": "This site was built using styled component. As a junior developer, I embrace its power to style React components with tagged template literals. It's my pathway to encapsulated styles, reusability, and a more organized codebase."
+      },
+      {
+        "name": "MUI",
+        "description": "Material-UI (MUI), my design accelerator, amplifies my frontend capabilities. As a budding developer, I harness MUI's components and theming for intuitive, aesthetically pleasing React applications. It simplifies UI development, enhances consistency, and empowers me to create stunning user interfaces effortlessly. Material-UI: where functionality meets elegance in web design."
+      },
+      {
+        "name": "Javascript",
+        "description": "JavaScript, my learning challenge, fuels my frontend aspirations. As a junior developer, I grapple with its intricacies to create interactive web experiences. It's my scripting language for DOM manipulation, adding functionality, and improving user interactions. With patience and practice, I'm growing into a more confident and capable coder in the world of JavaScript."
+      },
+      {
+        "name": "Typescript",
+        "description": "TypeScript, my coding mentor, guides my frontend journey. As a junior developer, I embrace its strong typing and static analysis to write safer and more maintainable JavaScript. It's my shield against runtime errors, helping me build robust and scalable applications. TypeScript is my bridge to becoming a more confident and efficient coder."
+      },
+      {
+        "name": "React",
+        "description": "React.js, my development muse, powers my frontend ambitions. As a junior developer, I leverage React's component-based architecture to craft interactive and responsive user interfaces. It's my toolkit for building dynamic web applications, simplifying state management, and enhancing UI performance. With React.js, frontend development become intuitive."
+      }
+    ],
+    "workflow": [
+      {
+        "name": "Figma",
+        "description": "Figma, my design-to-code bridge, revolutionizes my frontend journey. As a developer figma's collaborative features help me seamlessly translate designers' visions into code. It's my canvas for inspecting layouts, exporting assets, and ensuring pixel-perfect implementations. With Figma, I bridge the design-developer gap with precision and efficiency."
+      },
+      {
+        "name": "Adobe xd",
+        "description": "Adobe XD, my design-to-code catalyst, revolutionizes my frontend collaboration. Though not a designer, I use XD to dissect designs and translate them into functional code. It fosters teamwork, streamlines handoffs, and ensures design fidelity in the development process. Adobe XD: bridging design and code seamlessly for a harmonious workflow."
+      },
+      {
+        "name": "Photoshop",
+        "description": "Photoshop, my digital canvas, empowers my creative prowess. With it, I seamlessly repair photos, craft collages, and retouch images to perfection. It's my toolbox for transforming ideas into visual masterpieces, unleashing my artistic potential. Photoshop: where imagination meets precision, enabling me to bring visions to life."
+      },
+      {
+        "name": "Illustrator",
+        "description": "Adobe Illustrator, my creative playground, fuels my passion for logo design and cartooning. It's the ultimate tool for crafting intricate logos with precision and bringing characters to life with expressive lines and colors. Illustrator is where my artistic vision flourishes, turning concepts into iconic visuals."
+      },
+      {
+        "name": "Git",
+        "description": "Git, my version control maestro, shapes my coding journey. As a developer, I embrace Git's power to track changes, collaborate seamlessly, and maintain code integrity. It's my safeguard against chaos, ensuring project stability and enabling team harmony in the world of coding. Git: where code history meets collaboration, making software development a breeze."
+      },
+      {
+        "name": "Github",
+        "description": "GitHub, my coding community hub, enhances my development endeavors. As a developer, I utilize GitHub to host, collaborate, and share code with a global community. It's my platform for open-source contributions, showcasing projects, and fostering collaboration. GitHub: where code meets collaboration, elevating my coding journey."
+      },
+      {
+        "name": "Lightroom",
+        "description": "Lightroom, my photographic haven, transforms my images into visual masterpieces. Whether I'm editing, enhancing, or organizing, it's my toolkit for bringing photos to life. Lightroom's intuitive features and presets simplify the process, allowing me to unlock the full potential of my photography effortlessly."
+      }
+    ]
+  }
 }
