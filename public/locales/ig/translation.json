@@ -167,5 +167,13 @@
         "description": "Lightroom, ebe nchekwa foto m, na-agbanwe onyonyo m ka ọ bụrụ ọmarịcha ihe ngosi. Ma m na-edezi, na-akwalite ma ọ bụ na-ahazi, ọ bụ ngwa ọrụ m maka iweta foto na ndụ. Ihe njiri mara nke Lightroom na presets na-eme ka usoro ahụ dị mfe, na-enye m ohere imeghe ikike ịse foto m n'enweghị mgbagha."
       }
     ]
+  },
+  "formModal": {
+    "header": "Kpọtụrụ m",
+    "text": "Ị chọrọ ịmalite ọrụ. Nye m oku +2348087411750, ọ ga-amasị m ịnụ gị.",
+    "btn": "Ziga ozi",
+    "name-placeholder": "Aha gị",
+    "email-placeholder": "Email gị",
+    "message-placeholder": "Ozi gị"
   }
 }

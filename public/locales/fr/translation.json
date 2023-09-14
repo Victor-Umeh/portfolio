@@ -77,7 +77,7 @@
           "Tailwindcss",
           "SASS",
           "MUI",
-          "Composant stylisé",
+          "Styled Components",
           "Javascript",
           "Typescript",
           "React",
@@ -112,7 +112,7 @@
         "description": "Tailwind CSS, mon allié de productivité, révolutionne le travail frontend. En tant que développeur en herbe, je m'appuie sur l'approche utilitaire de Tailwind pour un prototypage rapide et un code propre. Cela simplifie le style et augmente l'efficacité, me permettant de créer facilement des sites Web. Mon option préférée pour le style."
       },
       {
-        "name": "Composants stylisés",
+        "name": "Styled Components",
         "description": "Ce site a été construit à l'aide d'un composant stylisé. En tant que développeur junior, j'apprécie son pouvoir de styliser les composants React avec des littéraux de modèles balisés. C'est ma voie vers les styles encapsulés, la réutilisabilité et une base de code plus organisée."
       },
       {
@@ -162,5 +162,13 @@
         "description": "Lightroom, mon paradis photographique, transforme mes images en chefs-d'œuvre visuels. Que je modifie, améliore ou organise, c'est ma boîte à outils pour donner vie à mes photos. Les fonctionnalités intuitives et les préréglages de Lightroom simplifient le processus, me permettant de libérer tout le potentiel de ma photographie sans effort."
       }
     ]
+  },
+  "formModal": {
+    "header": "CONTACTEZ MOI",
+    "text": "Voulez-vous démarrer un projet. Appelez-moi au +2348087411750, j'aimerais avoir de vos nouvelles.",
+    "btn": "Envoyer le message",
+    "name-placeholder": "votre nom",
+    "email-placeholder": "Votre e-mail",
+    "message-placeholder": "Votre message"
   }
 }

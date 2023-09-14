@@ -82,7 +82,7 @@
           "Tailwindcss",
           "SASS",
           "MUI",
-          "Salon Salo",
+          "Styled Components",
           "Javascript",
           "Typescript",
           "React",
@@ -117,7 +117,7 @@
         "description": "Tailwind CSS, abokin aikina, yana canza aikin gaba. A matsayina na mai haɓakawa, na dogara da tsarin amfani na Tailwind-farko don saurin samfuri da tsaftataccen lamba. Yana sauƙaƙa salo da haɓaka inganci, yana ba ni damar gina gidajen yanar gizo cikin sauƙi. Zaɓin da na fi so don salo."
       },
       {
-        "name": "Abubuwan Salo",
+        "name": "Styled Components",
         "description": "An gina wannan rukunin yanar gizon ta amfani da sassa masu salo. A matsayina na ƙarami mai haɓakawa, Na rungumi ikon sa don salon abubuwan gyara React tare da alamar ainihin samfuri. Hanyata ce zuwa salon da aka tattara, sake amfani da ita, da ingantaccen tsarin codebase."
       },
       {
@@ -167,5 +167,13 @@
         "description": "Lightroom, wurin daukar hoto na, yana canza hotuna na zuwa manyan abubuwan gani. Ko ina gyarawa, haɓakawa, ko tsarawa, kayan aikina ne don kawo hotuna zuwa rayuwa. Siffofin ilhama na Lightroom da saitattun saiti suna sauƙaƙe aikin, suna ba ni damar buɗe cikakkiyar damar ɗaukar hoto na ba tare da wahala ba."
       }
     ]
+  },
+  "formModal": {
+    "header": "TUNTUBE NI",
+    "text": "Kuna so ku fara aiki. A ba ni kira +2348087411750, zan so in ji daga gare ku.",
+    "btn": "Aika Saƙo",
+    "name-placeholder": "Sunan ku",
+    "email-placeholder": "Imel ɗin ku",
+    "message-placeholder": "Sakon ku"
   }
 }

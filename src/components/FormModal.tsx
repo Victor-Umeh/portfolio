@@ -12,12 +12,14 @@ import {
 import StatusMessage from "./StatusMessage";
 import { overlayVariants, formVariants } from "../libs/animationVariants.data";
 import { AnimatePresence } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 const FormModal = () => {
   const { showFormModal, setShowFormModal } = useContactFormContext();
   const [emailStatus, setEmailStatus] = useState("");
   const [loading, setLoading] = useState(false);
   const form = useRef<string | (HTMLFormElement & any)>(null);
+  const { t } = useTranslation();
 
   const resetState = () => {
     setTimeout(() => setEmailStatus(""), 2000);
@@ -75,34 +77,31 @@ const FormModal = () => {
               onSubmit={(e) => sendEmail(e)}
             >
               <label>
-                <h2>CONTACT ME</h2>
-                <p>
-                  Do you want to start a project. Give me a call
-                  <b> +2348087411750</b>, I'd love to hear from you.
-                </p>
+                <h2>{t("formModal.header")}</h2>
+                <p>{t("formModal.text")}</p>
               </label>
 
               <StyledInput
                 type="text"
-                placeholder="Your Name"
+                placeholder={t("formModal.name-placeholder")}
                 name="sender_name"
                 required
               />
               <StyledInput
                 type="email"
-                placeholder="Your Email"
+                placeholder={t("formModal.email-placeholder")}
                 name="sender_email"
                 required
               />
               <StyledTextArea
-                placeholder="Your Message"
+                placeholder={t("formModal.message-placeholder")}
                 rows={7}
                 cols={50}
                 name="message"
                 required
               />
               <StyledButton type="submit" value="Send" disabled={loading}>
-                {loading ? <ButtonSpinner /> : "Send Message"}
+                {loading ? <ButtonSpinner /> : t("formModal.btn")}
               </StyledButton>
             </StyledForm>
           </>

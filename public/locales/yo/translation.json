@@ -78,7 +78,7 @@
         "skills": [
           "HTML",
           "CSS",
-          "",
+          "Oniru idahun",
           "Tailwindcss",
           "SASS",
           "MUI",
@@ -98,74 +98,83 @@
     }
   },
   "toolsPage": {
-    "header": "These are some of the tools I use, for designing, optimizing images and developing. Am always open to learn new technologies needed for the job.",
+    "header": "Iwọnyi jẹ diẹ ninu awọn irinṣẹ ti Mo lo, fun apẹrẹ, iṣapeye awọn aworan ati idagbasoke. Mo ṣii nigbagbogbo lati kọ ẹkọ awọn imọ-ẹrọ tuntun ti o nilo fun iṣẹ naa.",
     "frontend": [
       {
         "name": "HTML",
-        "description": "HTML is my cornerstone as a frontend developer. With it, I craft captivating web experiences, structure content, and ensure accessibility. It's my canvas for digital artistry."
+        "description": "HTML jẹ okuta igun mi bi olupilẹṣẹ iwaju. Pẹlu rẹ, Mo ṣiṣẹ awọn iriri oju opo wẹẹbu iyanilẹnu, akoonu igbekalẹ, ati rii daju iraye si. O jẹ kanfasi mi fun iṣẹ ọna oni-nọmba."
       },
       {
         "name": "Css",
-        "description": "CSS!!, my design companion, empowers my frontend journey. As a budding developer, I harness its magic to breathe life into HTML, crafting visually stunning websites. It's my creative canvas, shaping layouts, styles, and ensuring responsiveness. With CSS, I transform code into captivating user experiences, one pixel at a time."
+        "description": "CSS!!, ẹlẹgbẹ apẹrẹ mi, n fun irin-ajo iwaju mi ​​ni agbara. Gẹ́gẹ́ bí olùgbéejáde ìdàgbàsókè, Mo máa ń lo idan rẹ̀ láti mí ìgbésí-ayé sí HTML, ní ṣíṣe àwọn ojúlé wẹ́ẹ̀bù tí ó wúni lórí. O jẹ kanfasi iṣẹda mi, awọn apẹrẹ ti n ṣatunṣe, awọn aza, ati idaniloju idahun. Pẹlu CSS, Mo yi koodu pada si awọn iriri olumulo iyanilẹnu, ẹbun kan ni akoko kan."
       },
       {
         "name": "SASS",
-        "description": "Sass, modularizes CSS or atleast that's how I see it. As a frontend developer, I use Sass to streamline CSS, making it more efficient and maintainable. It's my toolkit for nesting, variables, and mixins. With Sass, I code smarter and style bolder."
+        "description": "Sass, modularizes CSS tabi o kere ju iyẹn ni MO ṣe rii. Gẹgẹbi olupilẹṣẹ iwaju, Mo lo Sass lati mu CSS ṣiṣẹ, ti o jẹ ki o munadoko diẹ sii ati ṣetọju. O jẹ ohun elo irinṣẹ mi fun itẹ-ẹiyẹ, awọn oniyipada, ati awọn apopọ. Pẹlu Sass, Mo koodu ijafafa ati igboya ara."
       },
       {
         "name": "Tailwindcss",
-        "description": "Tailwind CSS, my productivity ally, revolutionizes frontend work. As a budding developer, I rely on Tailwind's utility-first approach for rapid prototyping and clean code. It simplifies styling and boosts efficiency, allowing me to build websites with ease. My preferred option for styling."
+        "description": "Tailwind CSS, ọrẹ-iṣẹ iṣelọpọ mi, ṣe iyipada iṣẹ iwaju. Gẹgẹbi olupilẹṣẹ idagbasoke, Mo gbẹkẹle IwUlO Tailwind-ọna akọkọ fun ṣiṣe adaṣe iyara ati koodu mimọ. O simplifies iselona ati igbelaruge ṣiṣe, gbigba mi lati kọ awọn aaye ayelujara pẹlu Ease. Aṣayan ayanfẹ mi fun iselona."
       },
       {
         "name": "Styled Components",
-        "description": "This site was built using styled component. As a junior developer, I embrace its power to style React components with tagged template literals. It's my pathway to encapsulated styles, reusability, and a more organized codebase."
+        "description": "Yi ojula ti a še nipa lilo styled paati. Gẹgẹbi olupilẹṣẹ ọdọ, Mo gba agbara rẹ si ara awọn paati React pẹlu awọn awoṣe ti a samisi. O jẹ ipa-ọna mi si awọn aza ti a fi kun, atunlo, ati koodu koodu ti o ṣeto diẹ sii."
       },
       {
         "name": "MUI",
-        "description": "Material-UI (MUI), my design accelerator, amplifies my frontend capabilities. As a budding developer, I harness MUI's components and theming for intuitive, aesthetically pleasing React applications. It simplifies UI development, enhances consistency, and empowers me to create stunning user interfaces effortlessly. Material-UI: where functionality meets elegance in web design."
+        "description": "Material-UI (MUI), ohun imuyara apẹrẹ mi, nmu awọn agbara iwaju iwaju mi ​​pọ si. Gẹgẹbi olupilẹṣẹ ti o dagba, Mo nfi awọn ohun elo MUI ṣe ati akori fun awọn ohun elo ti o ni imọran, ti o dara julọ ti o ṣe itẹwọgbà React. O mu ki idagbasoke UI rọrun, mu aitasera, o si fun mi ni agbara lati ṣẹda ohun iyanu awọn atọkun olumulo lainidi ohun elo-UI: nibiti iṣẹ ṣiṣe pade didara ni apẹrẹ wẹẹbu."
       },
       {
         "name": "Javascript",
-        "description": "JavaScript, my learning challenge, fuels my frontend aspirations. As a junior developer, I grapple with its intricacies to create interactive web experiences. It's my scripting language for DOM manipulation, adding functionality, and improving user interactions. With patience and practice, I'm growing into a more confident and capable coder in the world of JavaScript."
+        "description": "JavaScript, ipenija ẹkọ mi, n ṣe awọn ireti iwaju iwaju mi. Gẹgẹbi olupilẹṣẹ ọdọ, Mo koju pẹlu awọn intricacies rẹ lati ṣẹda awọn iriri wẹẹbu ibaraenisepo. O jẹ ede iwe afọwọkọ mi fun ifọwọyi DOM, fifi iṣẹ ṣiṣe kun, ati imudara awọn ibaraẹnisọrọ olumulo. Pẹlu sũru ati adaṣe, Mo n dagba si igbẹkẹle diẹ sii ati coder ti o lagbara ni agbaye ti JavaScript."
       },
       {
         "name": "Typescript",
-        "description": "TypeScript, my coding mentor, guides my frontend journey. As a junior developer, I embrace its strong typing and static analysis to write safer and more maintainable JavaScript. It's my shield against runtime errors, helping me build robust and scalable applications. TypeScript is my bridge to becoming a more confident and efficient coder."
+        "description": "TypeScript, olutọran ifaminsi mi, ṣe itọsọna irin-ajo iwaju mi. Gẹgẹbi olupilẹṣẹ ọdọ, Mo gba titẹ agbara rẹ ati itupalẹ aimi lati kọ ailewu ati JavaScript ti o le ṣetọju diẹ sii. O jẹ apata mi lodi si awọn aṣiṣe akoko asiko, o ṣe iranlọwọ fun mi lati kọ awọn ohun elo to lagbara ati iwọn. TypeScript jẹ afara mi lati di igboya diẹ sii ati coder daradara."
       },
       {
         "name": "React",
-        "description": "React.js, my development muse, powers my frontend ambitions. As a junior developer, I leverage React's component-based architecture to craft interactive and responsive user interfaces. It's my toolkit for building dynamic web applications, simplifying state management, and enhancing UI performance. With React.js, frontend development become intuitive."
+        "description": "React.js, muse idagbasoke mi, ṣe agbara awọn ireti iwaju mi. Gẹ́gẹ́ bí olùgbéjáde kékeré kan, mo máa ń lo ìtumọ̀ ìpìlẹ̀ ìpìlẹ̀ àkópọ̀ èròjà React si iṣẹ́ ọnà ìbánisọ̀rọ̀ àti àwọn atọ́nà oníṣe ìdáhùn. O jẹ ohun elo irinṣẹ mi fun kikọ awọn ohun elo wẹẹbu ti o ni agbara, mimu iṣakoso ipinlẹ dirọ, ati imudara iṣẹ UI. Pẹlu React.js, idagbasoke iwaju di ogbon inu."
       }
     ],
     "workflow": [
       {
         "name": "Figma",
-        "description": "Figma, my design-to-code bridge, revolutionizes my frontend journey. As a developer figma's collaborative features help me seamlessly translate designers' visions into code. It's my canvas for inspecting layouts, exporting assets, and ensuring pixel-perfect implementations. With Figma, I bridge the design-developer gap with precision and efficiency."
+        "description": "Figma, Afara apẹrẹ-si-koodu, ṣe iyipada irin-ajo iwaju iwaju mi. Gẹgẹbi awọn ẹya ifọwọsowọpọ figma olupilẹṣẹ ṣe iranlọwọ fun mi lainidi lati tumọ awọn iran awọn apẹẹrẹ sinu koodu. O jẹ kanfasi mi fun iṣayẹwo awọn ipalemo, gbigbejade dukia, ati idaniloju awọn imuse pipe-pipe. Pẹlu Figma, Mo di aafo-apẹrẹ-apẹrẹ pẹlu konge ati ṣiṣe."
       },
       {
         "name": "Adobe xd",
-        "description": "Adobe XD, my design-to-code catalyst, revolutionizes my frontend collaboration. Though not a designer, I use XD to dissect designs and translate them into functional code. It fosters teamwork, streamlines handoffs, and ensures design fidelity in the development process. Adobe XD: bridging design and code seamlessly for a harmonious workflow."
+        "description": "Adobe XD, ayase oniru-si-koodu, ṣe iyipada ifowosowopo iwaju mi. Botilẹjẹpe kii ṣe apẹẹrẹ, Mo lo XD lati pin awọn apẹrẹ ati tumọ wọn sinu koodu iṣẹ. O ṣe atilẹyin iṣẹ-ṣiṣe ẹgbẹ, ṣe atunṣe awọn ọwọ, ati idaniloju iṣotitọ apẹrẹ ni ilana idagbasoke. Adobe XD: Asopọmọra apẹrẹ ati koodu lainidi fun iṣan-iṣẹ irẹpọ kan."
       },
       {
         "name": "Photoshop",
-        "description": "Photoshop, my digital canvas, empowers my creative prowess. With it, I seamlessly repair photos, craft collages, and retouch images to perfection. It's my toolbox for transforming ideas into visual masterpieces, unleashing my artistic potential. Photoshop: where imagination meets precision, enabling me to bring visions to life."
+        "description": "Photoshop, kanfasi oni-nọmba mi, n fun agbara iṣẹda mi lagbara. Pẹlu rẹ, Mo tun awọn fọto ṣe lainidi, awọn akojọpọ iṣẹ ọwọ, ati tun awọn aworan ṣe si pipe. O jẹ apoti irinṣẹ mi fun iyipada awọn imọran si awọn afọwọṣe wiwo, ṣiṣafihan agbara iṣẹ ọna mi. Photoshop: nibiti oju inu ba pade pipe, ti n fun mi laaye lati mu awọn iran wa si igbesi aye."
       },
       {
         "name": "Illustrator",
-        "description": "Adobe Illustrator, my creative playground, fuels my passion for logo design and cartooning. It's the ultimate tool for crafting intricate logos with precision and bringing characters to life with expressive lines and colors. Illustrator is where my artistic vision flourishes, turning concepts into iconic visuals."
+        "description": "Adobe Illustrator, ibi-iṣere iṣẹda ti o ṣẹda, nmu ifẹkufẹ mi fun apẹrẹ aami ati aworan ere. O jẹ ohun elo ti o ga julọ fun ṣiṣe awọn aami intricate pẹlu konge ati mimu awọn kikọ wa si igbesi aye pẹlu awọn laini asọye ati awọn awọ. Oluyaworan ni ibi ti iran iṣẹ ọna mi ti gbilẹ, titan awọn imọran sinu awọn iwo alakan."
       },
       {
         "name": "Git",
-        "description": "Git, my version control maestro, shapes my coding journey. As a developer, I embrace Git's power to track changes, collaborate seamlessly, and maintain code integrity. It's my safeguard against chaos, ensuring project stability and enabling team harmony in the world of coding. Git: where code history meets collaboration, making software development a breeze."
+        "description": "Git, maestro iṣakoso ẹya mi, ṣe apẹrẹ irin-ajo ifaminsi mi. Gẹgẹbi olupilẹṣẹ, Mo gba agbara Git lati tọpa awọn ayipada, ṣe ifowosowopo lainidi, ati ṣetọju iduroṣinṣin koodu. O jẹ aabo mi lodi si rudurudu, aridaju iduroṣinṣin iṣẹ akanṣe ati mimuuṣiṣẹpọ ẹgbẹ ni agbaye ti ifaminsi. Git: nibiti itan-akọọlẹ koodu pade ifowosowopo, ṣiṣe idagbasoke sọfitiwia jẹ afẹfẹ."
       },
       {
         "name": "Github",
-        "description": "GitHub, my coding community hub, enhances my development endeavors. As a developer, I utilize GitHub to host, collaborate, and share code with a global community. It's my platform for open-source contributions, showcasing projects, and fostering collaboration. GitHub: where code meets collaboration, elevating my coding journey."
+        "description": "GitHub, ibudo agbegbe ifaminsi mi, mu awọn igbiyanju idagbasoke mi pọ si. Gẹgẹbi olupilẹṣẹ, Mo lo GitHub lati gbalejo, ṣe ifowosowopo, ati pin koodu pẹlu agbegbe agbaye kan. O jẹ pẹpẹ mi fun awọn ilowosi orisun-ìmọ, iṣafihan awọn iṣẹ akanṣe, ati imudara ifowosowopo. GitHub: nibiti koodu ti pade ifowosowopo, igbega irin-ajo ifaminsi mi."
       },
       {
         "name": "Lightroom",
-        "description": "Lightroom, my photographic haven, transforms my images into visual masterpieces. Whether I'm editing, enhancing, or organizing, it's my toolkit for bringing photos to life. Lightroom's intuitive features and presets simplify the process, allowing me to unlock the full potential of my photography effortlessly."
+        "description": "Lightroom, ibi aabo aworan mi, yi awọn aworan mi pada si awọn afọwọṣe wiwo. Boya Mo n ṣatunkọ, imudara, tabi ṣeto, ohun elo irinṣẹ mi ni fun mimu awọn fọto wa si aye. Awọn ẹya ogbon inu Lightroom ati awọn tito tẹlẹ jẹ ki ilana naa rọrun, gbigba mi laaye lati ṣii agbara kikun ti fọtoyiya mi lainidi."
       }
     ]
+  },
+
+  "formModal": {
+    "header": "Kan si MI",
+    "text": "Ṣe o fẹ lati bẹrẹ ise agbese kan. Fun mi ni ipe +2348087411750, Emi yoo fẹ lati gbọ lati ọdọ rẹ.",
+    "btn": "Firanṣẹ Ifiranṣẹ",
+    "name-placeholder": "Orukọ rẹ",
+    "email-placeholder": "Imeeli rẹ",
+    "message-placeholder": "Ifiranṣẹ rẹ"
   }
 }

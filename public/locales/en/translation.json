@@ -167,5 +167,13 @@
         "description": "Lightroom, my photographic haven, transforms my images into visual masterpieces. Whether I'm editing, enhancing, or organizing, it's my toolkit for bringing photos to life. Lightroom's intuitive features and presets simplify the process, allowing me to unlock the full potential of my photography effortlessly."
       }
     ]
+  },
+  "formModal": {
+    "header": "CONTACT ME",
+    "text": "Do you want to start a project. Give me a call +2348087411750, I'd love to hear from you.",
+    "btn": "Send Message",
+    "name-placeholder": "Your Name",
+    "email-placeholder": "Your Name",
+    "message-placeholder": "Your Name"
   }
 }
