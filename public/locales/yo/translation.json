@@ -98,7 +98,7 @@
     }
   },
   "toolsPage": {
-    "header": "Iwọnyi jẹ diẹ ninu awọn irinṣẹ ti Mo lo, fun apẹrẹ, iṣapeye awọn aworan ati idagbasoke. Mo ṣii nigbagbogbo lati kọ ẹkọ awọn imọ-ẹrọ tuntun ti o nilo fun iṣẹ naa.",
+    "header": "Iwọnyi jẹ diẹ ninu awọn irinṣẹ ti Mo lo, fun apẹrẹ, iṣapeye awọn aworan ati idagbasoke",
     "frontend": [
       {
         "name": "HTML",

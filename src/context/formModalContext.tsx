@@ -23,6 +23,6 @@ export const useContactFormContext = () => {
   const context = useContext(ContactFormContext);
   if (!context) throw new Error("can't use context outside of provider");
 
-  return context;
+  return context; 
 };
 export default ContactFormProvider;

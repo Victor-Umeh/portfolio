@@ -98,7 +98,7 @@
     }
   },
   "toolsPage": {
-    "header": "These are some of the tools I use, for designing, optimizing images and developing. Am always open to learn new technologies needed for the job.",
+    "header": "These are some of the tools I use, for designing, optimizing images and developing.",
     "frontend": [
       {
         "name": "HTML",

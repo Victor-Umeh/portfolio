@@ -98,7 +98,7 @@
     }
   },
   "toolsPage": {
-    "header": "Waɗannan su ne wasu kayan aikin da nake amfani da su, don ƙira, inganta hotuna da haɓakawa. A koyaushe ina buɗe don koyon sabbin fasahohin da ake buƙata don aikin.",
+    "header": "Waɗannan su ne wasu kayan aikin da nake amfani da su, don ƙira, inganta hotuna da haɓakawa",
     "frontend": [
       {
         "name": "HTML",

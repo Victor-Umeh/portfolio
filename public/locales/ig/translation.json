@@ -98,7 +98,7 @@
     }
   },
   "toolsPage": {
-    "header": "Ndị a bụ ụfọdụ ngwaọrụ m na-eji, maka imepụta, na-ebuli ihe onyonyo na mmepe. Ana m emeghe mgbe niile ịmụta teknụzụ ọhụrụ achọrọ maka ọrụ ahụ.",
+    "header": "Ndị a bụ ụfọdụ ngwaọrụ m na-eji, maka imepụta, na-ebuli onyonyo na imepe emepe",
     "frontend": [
       {
         "name": "HTML",
@@ -170,7 +170,7 @@
   },
   "formModal": {
     "header": "Kpọtụrụ M",
-    "text": "Ị chọrọ ịmalite ọrụ. Nye m oku +2348087411750, ọ ga-amasị m ịnụ gị.",
+    "text": "Ị chọrọ ịmalite ọrụ. Nye m oku na +2348087411750, ọ ga-amasị m ịnụ gị.",
     "btn": "Ziga Ozi",
     "name-placeholder": "Aha Gị",
     "email-placeholder": "Email Gị",
