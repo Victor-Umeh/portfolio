@@ -7,15 +7,17 @@ interface Props {
 export const AboutWrapper = styled.section`
   display: flex;
   flex-direction: column;
-  width: 85%;
   margin-inline: auto;
+  font-size: 1.3rem;
 
   @media (min-width: 768px) {
+    width: 85%;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     width: 84%;
     gap: 1vw;
+    font-size: 1.6rem;
   }
 `;
 export const StyledCanvas = styled.section<Props>`
@@ -28,10 +30,9 @@ export const StyledCanvas = styled.section<Props>`
   & .article {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
     color: ${({ theme }) => theme.colors.text};
-    padding: 3rem;
-    min-height: 100%;
+    padding: 2rem;
     overflow-y: auto;
   }
   & h3 {
@@ -42,7 +43,7 @@ export const StyledCanvas = styled.section<Props>`
     display: block;
     height: 100%;
     width: ${({ width }) => (width ? width : "50%")};
-    padding-block: 4rem;
+    padding-block: 2rem;
 
     & p {
       margin-block: 10px;

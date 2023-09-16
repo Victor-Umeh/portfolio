@@ -12,7 +12,7 @@ const About = () => {
   return (
     <>
       <AboutWrapper>
-        <StyledCanvas width="55%">
+        <StyledCanvas width="50%">
           <m.div
             className="article"
             variants={variants}
