@@ -339,14 +339,15 @@ export const SocialLink = styled.a`
 export const NameTag = styled.span`
   position: absolute;
   top: 0.5rem;
-  font-size: 1.1rem;
+  right: 2.5rem;
+  font-size: 1rem;
   font-family: "poppins";
   color: ${({ theme }) => theme.colors.text};
   width: max-content;
 
   @media (min-width: 768px) {
     top: 5rem;
-    right: 0;
+    // right: 0;
   }
 `;
 export const Overlay = styled(m.div)`
