@@ -15,6 +15,16 @@ html{
   font-size: 62.5%;
 }
 
+::-webkit-scrollbar {
+  width: 7px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: grey;
+  border-radius: 5px;
+}
+
 img{
   display: block;
   max-width: 100%;
